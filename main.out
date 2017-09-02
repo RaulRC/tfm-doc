@@ -23,46 +23,33 @@
 \BOOKMARK [1][-]{section.2.4}{Alcance}{chapter.2}% 23
 \BOOKMARK [1][-]{section.2.5}{Equipo de trabajo}{chapter.2}% 24
 \BOOKMARK [1][-]{section.2.6}{Marco tecnol\363gico}{chapter.2}% 25
-\BOOKMARK [0][-]{chapter.3}{Antecedentes}{}% 26
-\BOOKMARK [1][-]{section.3.1}{Estilos de texto}{chapter.3}% 27
-\BOOKMARK [1][-]{section.3.2}{Vi\361etas y enumerados}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.3}{Figuras}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.4}{Cuadros}{chapter.3}% 30
-\BOOKMARK [1][-]{section.3.5}{Listados de c\363digo}{chapter.3}% 31
-\BOOKMARK [1][-]{section.3.6}{Citas y referencias cruzadas}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.7}{P\341ginas}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.8}{Calidad de Datos}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.9}{Web Sem\341ntica}{chapter.3}% 35
-\BOOKMARK [1][-]{section.3.10}{Concepto de Big Data}{chapter.3}% 36
-\BOOKMARK [1][-]{section.3.11}{Desaf\355o sde Big Data}{chapter.3}% 37
-\BOOKMARK [1][-]{section.3.12}{Tecnolog\355as Big Data}{chapter.3}% 38
-\BOOKMARK [1][-]{section.3.13}{Machine Learning}{chapter.3}% 39
-\BOOKMARK [1][-]{section.3.14}{T\351cnicas Machine Learning}{chapter.3}% 40
-\BOOKMARK [1][-]{section.3.15}{Inteligencia Artificial}{chapter.3}% 41
-\BOOKMARK [0][-]{chapter.4}{Estado del Arte}{}% 42
-\BOOKMARK [1][-]{section.4.1}{Web Sem\341ntica}{chapter.4}% 43
-\BOOKMARK [2][-]{subsection.4.1.1}{Concepto}{section.4.1}% 44
-\BOOKMARK [2][-]{subsection.4.1.2}{Terminolog\355a de Web Sem\341ntica}{section.4.1}% 45
-\BOOKMARK [2][-]{subsection.4.1.3}{Est\341ndares}{section.4.1}% 46
-\BOOKMARK [2][-]{subsection.4.1.4}{Arquitectura}{section.4.1}% 47
-\BOOKMARK [2][-]{subsection.4.1.5}{Ontolog\355as}{section.4.1}% 48
-\BOOKMARK [2][-]{subsection.4.1.6}{Vocabularios}{section.4.1}% 49
-\BOOKMARK [2][-]{subsection.4.1.7}{Frameworks para el desarrollo de aplicaci\363nes de Web Sem\341ntica}{section.4.1}% 50
-\BOOKMARK [1][-]{section.4.2}{Datos Enlazados \(LD\)}{chapter.4}% 51
-\BOOKMARK [2][-]{subsection.4.2.1}{Definici\363n de LD}{section.4.2}% 52
-\BOOKMARK [2][-]{subsection.4.2.2}{Datos Abiertos \(OD\) y Datos Enlazados Abiertos \(LOD\)}{section.4.2}% 53
-\BOOKMARK [2][-]{subsection.4.2.3}{LOD en la actualidad}{section.4.2}% 54
-\BOOKMARK [1][-]{section.4.3}{Calidad de Datos}{chapter.4}% 55
-\BOOKMARK [2][-]{subsection.4.3.1}{Dimensiones de Calidad de Datos}{section.4.3}% 56
-\BOOKMARK [2][-]{subsection.4.3.2}{Completeness}{section.4.3}% 57
-\BOOKMARK [2][-]{subsection.4.3.3}{Accesibility}{section.4.3}% 58
-\BOOKMARK [1][-]{section.4.4}{Calidad de Datos en LD}{chapter.4}% 59
-\BOOKMARK [0][-]{chapter.5}{M\351todo de Trabajo}{}% 60
-\BOOKMARK [0][-]{chapter.6}{Resultados}{}% 61
-\BOOKMARK [0][-]{chapter.7}{Conclusiones}{}% 62
-\BOOKMARK [1][-]{section.7.1}{Conclusiones}{chapter.7}% 63
-\BOOKMARK [1][-]{section.7.2}{Propuestas de trabajos futuros}{chapter.7}% 64
-\BOOKMARK [1][-]{section.7.3}{Publicaciones}{chapter.7}% 65
-\BOOKMARK [1][-]{section.7.4}{Opini\363n personal}{chapter.7}% 66
-\BOOKMARK [0][-]{appendix.Alph1}{Ejemplo de anexo}{}% 67
-\BOOKMARK [0][-]{appendix*.34}{Referencias}{}% 68
+\BOOKMARK [0][-]{chapter.3}{Estado del Arte}{}% 26
+\BOOKMARK [1][-]{section.3.1}{Web Sem\341ntica}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.1.1}{Concepto}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.2}{Terminolog\355a de Web Sem\341ntica}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.3}{Est\341ndares}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.4}{Arquitectura}{section.3.1}% 31
+\BOOKMARK [2][-]{subsection.3.1.5}{Ontolog\355as}{section.3.1}% 32
+\BOOKMARK [2][-]{subsection.3.1.6}{Vocabularios}{section.3.1}% 33
+\BOOKMARK [2][-]{subsection.3.1.7}{Frameworks para el desarrollo de aplicaci\363nes de Web Sem\341ntica}{section.3.1}% 34
+\BOOKMARK [1][-]{section.3.2}{Datos Enlazados \(LD\)}{chapter.3}% 35
+\BOOKMARK [2][-]{subsection.3.2.1}{Definici\363n de LD}{section.3.2}% 36
+\BOOKMARK [2][-]{subsection.3.2.2}{Datos Abiertos \(OD\) y Datos Enlazados Abiertos \(LOD\)}{section.3.2}% 37
+\BOOKMARK [2][-]{subsection.3.2.3}{LOD en la actualidad}{section.3.2}% 38
+\BOOKMARK [1][-]{section.3.3}{Calidad de Datos}{chapter.3}% 39
+\BOOKMARK [2][-]{subsection.3.3.1}{Dimensiones de Calidad de Datos}{section.3.3}% 40
+\BOOKMARK [2][-]{subsection.3.3.2}{Completeness}{section.3.3}% 41
+\BOOKMARK [2][-]{subsection.3.3.3}{Accesibility}{section.3.3}% 42
+\BOOKMARK [1][-]{section.3.4}{Calidad de Datos en LD}{chapter.3}% 43
+\BOOKMARK [1][-]{section.3.5}{Big Data}{chapter.3}% 44
+\BOOKMARK [2][-]{subsection.3.5.1}{Concepto}{section.3.5}% 45
+\BOOKMARK [2][-]{subsection.3.5.2}{Frameworks}{section.3.5}% 46
+\BOOKMARK [0][-]{chapter.4}{M\351todo de Trabajo}{}% 47
+\BOOKMARK [0][-]{chapter.5}{Resultados}{}% 48
+\BOOKMARK [0][-]{chapter.6}{Conclusiones}{}% 49
+\BOOKMARK [1][-]{section.6.1}{Conclusiones}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.2}{Propuestas de trabajos futuros}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.3}{Publicaciones}{chapter.6}% 52
+\BOOKMARK [1][-]{section.6.4}{Opini\363n personal}{chapter.6}% 53
+\BOOKMARK [0][-]{appendix.Alph1}{Ejemplo de anexo}{}% 54
+\BOOKMARK [0][-]{appendix*.34}{Referencias}{}% 55

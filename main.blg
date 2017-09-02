@@ -18,45 +18,45 @@ Warning--to sort, need author or key in APPS
 Warning--empty booktitle in HALPIN
 Warning--empty institution in citeulike:5717734
 Warning--empty year in citeulike:5717734
-You've used 38 entries,
+You've used 36 entries,
             2580 wiz_defined-function locations,
-            795 strings with 10845 characters,
-and the built_in function-call counts, 13596 in all, are:
-= -- 1313
-> -- 599
+            785 strings with 10606 characters,
+and the built_in function-call counts, 12812 in all, are:
+= -- 1246
+> -- 543
 < -- 14
-+ -- 210
-- -- 203
-* -- 953
-:= -- 2083
-add.period$ -- 122
-call.type$ -- 38
-change.case$ -- 187
-chr.to.int$ -- 36
-cite$ -- 65
-duplicate$ -- 566
-empty$ -- 1161
-format.name$ -- 232
-if$ -- 2892
++ -- 189
+- -- 182
+* -- 898
+:= -- 1945
+add.period$ -- 116
+call.type$ -- 36
+change.case$ -- 174
+chr.to.int$ -- 34
+cite$ -- 63
+duplicate$ -- 534
+empty$ -- 1107
+format.name$ -- 209
+if$ -- 2738
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 28
-newline$ -- 198
-num.names$ -- 82
-pop$ -- 327
+missing$ -- 24
+newline$ -- 188
+num.names$ -- 76
+pop$ -- 304
 preamble$ -- 1
-purify$ -- 262
+purify$ -- 245
 quote$ -- 0
-skip$ -- 486
+skip$ -- 464
 stack$ -- 0
-substring$ -- 535
-swap$ -- 78
+substring$ -- 521
+swap$ -- 76
 text.length$ -- 14
 text.prefix$ -- 6
 top$ -- 0
-type$ -- 276
+type$ -- 268
 warning$ -- 15
-while$ -- 95
-width$ -- 40
-write$ -- 476
+while$ -- 89
+width$ -- 38
+write$ -- 452
 (There were 15 warnings)

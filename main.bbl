@@ -38,12 +38,6 @@ Tim Berners-Lee, James Hendler, y Ora Lassila.
 \newblock url:
   \url{http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21}.
 
-\bibitem[CMC08]{conf/webist/CaballeroMACC}
-Ismael Caballero, M.A. Moraga, y Coral Calero.
-\newblock Integraci\'on de {A}spectos de {C}alidad de {D}atos en {S}istemas de
-  {I}nformaci\'on.
-\newblock 2008.
-
 \bibitem[CUB]{CUBIC}
 {CubicWeb} Semantic Web Framework.
 \newblock url: \url{http://www.cubicweb.org/}.
@@ -94,11 +88,6 @@ Christian F\"{u}rber y Martin Hepp.
 The Friend of a Friend ({FOAF}) project {\textbar} {FOAF} project.
 \newblock url: \url{http://www.foaf-project.org/}.
 
-\bibitem[GHJV96]{design_patterns}
-E.~Gamma, R.~Helm, R.~Johnson, y J.~Vlissides.
-\newblock {\em Dessign Patterns}.
-\newblock Addison-Wesley, 1996.
-
 \bibitem[Gru]{GRUBER}
 Tom Gruber.
 \newblock Ontology (Computer Science) - definition in Encyclopedia of Database
@@ -123,10 +112,6 @@ Harry Halpin y Henry~S. Thompson.
 \newblock página 679. {ACM} Press, 2006.
 \newblock url: \url{http://portal.acm.org/citation.cfm?doid=1135777.1135877}.
 
-\bibitem[ISH85]{ISHI}
-What is Total Quality Control?: The Japanese Way: Amazon.es: Kaoru Ishikawa:
-  Libros en idiomas extranjeros, 1985.
-
 \bibitem[ISO]{citeulike:5717734}
 ISO25012.
 \newblock {ISO/IEC 25012 x ISO/IEC 25012 Software-Engineering -
@@ -138,11 +123,10 @@ ISO25012.
 Apache Jena - Home, 2014.
 \newblock url: \url{http://jena.apache.org/}.
 
-\bibitem[Los13]{loshin_big_2013}
-David Loshin.
-\newblock {\em Big data analytics: from strategic planning to enterprise
-  integration with tools, techniques, {NoSQL}, and graph}.
-\newblock 2013.
+\bibitem[{Mar}08]{sousa}
+J.~{Martínez de Sousa}.
+\newblock {\em Ortografía y ortotipografía del español actual}.
+\newblock Trea, 2008.
 
 \bibitem[NMo01]{noy_ontology_2001}
 Natalya~F. Noy, Deborah~L. McGuinness, y {others}.
@@ -167,24 +151,9 @@ Leo~L. Pipino, Yang~W. Lee, y Richard~Y. Wang.
 \newblock {\em Communications of the {ACM}}, 45(4):211–218, 2002.
 \newblock url: \url{http://dl.acm.org/citation.cfm?id=506010}.
 
-\bibitem[RCCMnR]{AntePFC}
-Ra\'ul Reguillo~Carmona y Ismael Caballero Mu\~noz Reja.
-\newblock Anteproyecto {F}in de {C}arrera: {E}xtending {J}ena to {S}upport
-  {D}ata {Q}uality {C}ontext-{A}ware {A}ssessment of {L}inked {O}pen {D}ata.
-
 \bibitem[RDF]{RDF}
 {RDF} - Semantic Web Standards.
 \newblock url: \url{http://www.w3.org/RDF/}.
-
-\bibitem[RJB]{rumbaugh_jacobson_pud}
-James Rumbaugh, Ivar Jacobson, y Grady Booch.
-\newblock {\em {EL} {PROCESO} {UNIFICADO} {DE} {DESARROLLO} {DE} {SOFTWARE}}.
-\newblock Addison Wesley.
-
-\bibitem[RJB04]{rumbaugh_unified_2004}
-James Rumbaugh, Ivar Jacobson, y Grady Booch.
-\newblock {\em The Unified Modeling Language Reference Manual,}.
-\newblock Addison Wesley Pub Co Inc, Boston, edición Second, Julio 2004.
 
 \bibitem[San11]{PASTOR}
 Juan Antonio~Pastor Sanchez.
@@ -213,13 +182,13 @@ Diane~M. Strong, Yang~W. Lee, y Richard~Y. Wang.
 {SPARQL} Query Language for {RDF}.
 \newblock url: \url{http://www.w3.org/TR/rdf-sparql-query/}.
 
-\bibitem[W3Ca]{W3CSW}
-Semantic Web - W3C.
-\newblock url: \url{http://www.w3.org/standards/semanticweb/}.
-
-\bibitem[W3Cb]{W3CSWES}
+\bibitem[W3Ca]{W3CSWES}
 Semantic Web - W3C.
 \newblock url: \url{http://www.w3.es/Divulgacion/GuiasBreves/WebSemantica}.
+
+\bibitem[W3Cb]{W3CSW}
+Semantic Web - W3C.
+\newblock url: \url{http://www.w3.org/standards/semanticweb/}.
 
 \bibitem[W3Cc]{W3CTools}
 Tools - Semantic Web Standards.
@@ -230,12 +199,6 @@ Richard~Y. Wang.
 \newblock A Product Perspective on Total Data Quality Management.
 \newblock {\em Commun. ACM}, 41(2):58--65, Febrero 1998.
 \newblock url: \url{http://doi.acm.org/10.1145/269012.269022}.
-
-\bibitem[WS96]{Wang:1996:BAD:1189570.1189572}
-Richard~Y. Wang y Diane~M. Strong.
-\newblock Beyond Accuracy: What Data Quality Means to Data Consumers.
-\newblock {\em J. Manage. Inf. Syst.}, 12(4):5--33, Marzo 1996.
-\newblock url: \url{http://dl.acm.org/citation.cfm?id=1189570.1189572}.
 
 \bibitem[XML]{XML}
 Extensible Markup Language ({XML}).
