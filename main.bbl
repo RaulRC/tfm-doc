@@ -149,6 +149,10 @@ Y.3600:Big data - Requisitos y capacidades basados en la computación en la
   nube.
 \newblock url: \url{https://www.itu.int/rec/T-REC-Y.3600-201511-I/es}.
 
+\bibitem[jen]{jena-elephas}
+Apache Jena Elephas.
+\newblock url: \url{https://jena.apache.org/documentation/hadoop/}.
+
 \bibitem[JEN14]{JENA}
 Apache Jena - Home, 2014.
 \newblock url: \url{http://jena.apache.org/}.
@@ -179,6 +183,10 @@ Leo~L. Pipino, Yang~W. Lee, y Richard~Y. Wang.
 \bibitem[RDF]{RDF}
 {RDF} - Semantic Web Standards.
 \newblock url: \url{http://www.w3.org/RDF/}.
+
+\bibitem[san]{sansa-stack}
+SANSA-Stack.
+\newblock url: \url{http://sansa-stack.net/}.
 
 \bibitem[San11]{PASTOR}
 Juan Antonio~Pastor Sanchez.
