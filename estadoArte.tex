@@ -1085,15 +1085,28 @@ de las Redes Sociales.
 
 El desarrollo y explotación de estas tecnologías ha propiciado que la cantidad
 de los datos que se generan por unidad de tiempo se haya incrementado a una
-velocidad sin precedentes. De esta manera, el concepto \textit{Big Data} se
+velocidad sin precedentes, trayendo consigo la necesidad de cómputo de tales
+volúmenes de información heterogénea, en tiempos razonables y de manera escalable.
+
+\textit{Big Data} es por lo tanto un concepto que surge debido a la necesidad del
+uso de herramientas y técnicas específicas para procesar esta información,
+imposible para los sistemas transaccionales comunes ~\cite{BARR:que-es-big-data}.
+
+
+De esta manera, el concepto \textit{Big Data} se
 puede caracterizar según la definición de las tres V's:
 
 \begin{itemize}
-\item Volumen: en referencia al tamño del conjunto de datos. 
-\item Velocidad: referenciando a las necesidades relativas al consumo o proceso
+\item \textbf{Volumen}: en referencia al tamaño del conjunto de datos. No hay un
+  número estándar que defina a partir de qué tamaño del conjunto de datos se
+  pueda empezar a hablar de Big Data. No obstante, cuando el conjunto de datos
+  no es susceptible de ser procesado en un único nodo, y requiere la presencia
+  de varios de éstos, puede decirse que es Big Data. Luego el orden de magnitud
+  puede ir desde los cientos de GB hasta los Petabytes. 
+\item \textbf{Velocidad}: referenciando a las necesidades relativas al consumo o proceso
   de datos en tanto se aproximen al tiempo real (\textit{real time}) o próximos
   al tiempo real (\textit{near real time}).
-\item Variedad: en relación ala heterogeneidad de los datos. Esto incluye
+\item \textbf{Variedad}: en relación ala heterogeneidad de los datos. Esto incluye
   representaciones diversas de datos estructurados, como diversas fuentes
   relacionales, datos semiestructurados o datos no estructurados, como pudieran
   ser imágenes o vídeo. 
@@ -1103,13 +1116,18 @@ Adicionalmente se ha extendido esta definición a medida que las tecnologías y 
 problemática ha cambiado, encontrando:
 
 \begin{itemize}
-\item Valor: considerando el beneficio que se puede extraer de los datos bajo la
+\item \textbf{Valor}: considerando el beneficio que se puede extraer de los datos bajo la
   premisa que tanto la complejidad de la extracción del valor, como dicho
   beneficio en sí mismo se incrementa junto con el volumen.
   
-\item Veracidad: entendiendo como el grado de confianza que se establece sobre
+\item \textbf{Veracidad}: entendiendo como el grado de confianza que se establece sobre
   los datos. 
 \end{itemize}
+
+Cada dimensión deja de manifiesto un problema concreto que hay que afrontar en
+un contexto Big Data. No obstante estas definiciones, a medida que las
+tecnologías evolucionan, se adaptan y renuevan, pudiendo hablar sobre la
+existencia de hasta 9Vs. 
 
 
 \begin{figure}[!h]
@@ -1195,7 +1213,7 @@ continuación.
 El ecosistema Hadoop se ha convertido en el estándar \textit{de facto} a la hora
 de llevar a cabo proyectos Big Data. Se organiza a través de una serie de
 módulos encargados de diversas operaciones en el contexto de un cluster Big
-Data.
+Data ~\cite{HADOOP-ecosystem}.
 
 Entre sus principales componentes caben destacar los siguientes:
 
@@ -1232,10 +1250,29 @@ destinados a cubrir necesidades específicas o a mejorar el rendimiento de los
 actuales:
 
 \begin{itemize}
-\item \textbf{Spark}: framework para el procesado de grandes volúmenes de
+\item \textbf{Spark}: ~\cite{SPARK} es un framework para el procesado de grandes volúmenes de
   información. La ventaja principal respecto de Hadoop MapReduce es que el
   procesamiento se realiza en memoria en lugar de en disco, con lo cual la
-  velocidad se incrementa en varios órdenes de magnitud. 
+  velocidad se incrementa en varios órdenes de magnitud. Ofrece una serie de
+  herramientas de alto nivel:
+  \begin{itemize}
+  \item \textbf{SparkSQL}: módulo para el procesamiento distribuido de datos
+    estructurados. Ofrece una interfaz parecida a consultas SQL y mantiene
+    información estructural acerca de los datos distribuidos. 
+  \item \textbf{MLlib}: librería de machine learning que incluye una serie de
+    algoritmos distribuidos, supervisados y no supervisados, pipelines,
+    persistencia y utilidades para dar soporte al proceso de aprendizaje
+    automático de manera distribuida. 
+  \item \textbf{GraphX}: es uno de los componentes más recientes de
+    Spark. Incluye una abstracción \textit{Graph} que trabaja directamente sobre los
+    dataset distribuidos permitiendo operaciones básicas en el manejo de
+    grafos.
+  \item \textbf{Spark Streaming}: es una extensión del núcleo de Spark, que
+    introduce el concepto de mini-batch como unidad operativa básica y ofrece un
+    procesamiento distribuido y tolerante a fallos en streaming. Los datos
+    pueden ser ingestados desde distintas fuentes, tales como Kafka, Kinesis o
+    sockets TCP. 
+  \end{itemize}
 \item \textbf{Kafka}: plataforma de streaming distribuida, ideada para dar
   soporte a aplicaciones real-time. 
 \item \textbf{Mahout}: framework que ofrece una serie de algoritmos distribuidos
@@ -1276,9 +1313,9 @@ referencias que están comenzando a abrir esta vía:
 \item \textbf{Jena Elephas}: como parte del stack de Jena, Elephas es un
   conjunto de librerías que proveen de herramientas para el procesado de datos
   RDF sobre Hadoop. No obstante el módulo se encuentra actualmente en una fase
-  Beta ~\cite{jena-elephas}. 
+  Beta ~\cite{JENE:jena-elephas}. 
 \item \textbf{Sansa Stack}: Scalable Semantic Analytics Stack, es un motor de
   procesamiento tolerante a fallos que permite computación distribuida sobre
-  datos RDF. Actualmente en la versión 0.2 y en desarrollo ~\cite{sansa-stack}.
+  datos RDF. Actualmente en la versión 0.2 y en desarrollo ~\cite{SANSA-stack}.
 \end{itemize}
 

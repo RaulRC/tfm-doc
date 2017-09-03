@@ -56,10 +56,10 @@
 \contentsline {subsubsection}{M\IeC {\'e}tricas para Accessibility}{27}{lstnumber.3.3.11}
 \contentsline {section}{\numberline {3.5}Big Data}{29}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Concepto}{29}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Desaf\IeC {\'\i }os}{31}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.2}Desaf\IeC {\'\i }os}{30}{subsection.3.5.2}
 \contentsline {subsection}{\numberline {3.5.3}Frameworks}{31}{subsection.3.5.3}
-\contentsline {subsubsection}{Ecosistema Apache Hadoop}{31}{subsection.3.5.3}
-\contentsline {subsubsection}{Soluciones Amazon Web Services}{32}{subsection.3.5.3}
+\contentsline {subsubsection}{Ecosistema Apache Hadoop}{32}{subsection.3.5.3}
+\contentsline {subsubsection}{Soluciones Amazon Web Services}{33}{subsection.3.5.3}
 \contentsline {subsection}{\numberline {3.5.4}Datos Sem\IeC {\'a}nticos en entornos Big Data}{33}{subsection.3.5.4}
 \contentsline {chapter}{\numberline {4}M\IeC {\'e}todo de Trabajo}{35}{chapter.4}
 \contentsline {chapter}{\numberline {5}Resultados}{37}{chapter.5}

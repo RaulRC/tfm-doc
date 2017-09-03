@@ -3,6 +3,11 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: es-alpha.bst
 Database file #1: main.bib
+I was expecting a `,' or a `}'---line 389 of file main.bib
+ :  
+ :  title = {Hadoop ecosystem},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in W3CTools
 Warning--to sort, need author or key in JENA
 Warning--to sort, need author or key in W3CSW
@@ -16,52 +21,55 @@ Warning--to sort, need author or key in FOAF
 Warning--to sort, need author or key in OPENRDF
 Warning--to sort, need author or key in CUBIC
 Warning--to sort, need author or key in APPS
+Warning--to sort, need author or key in BARR:que-es-big-data
 Warning--to sort, need author or key in ITU
-Warning--to sort, need author or key in jena-elephas
-Warning--to sort, need author or key in sansa-stack
+Warning--to sort, need author or key in HADOOP-ecosystem
+Warning--to sort, need author or key in SPARK
+Warning--to sort, need author or key in JENE:jena-elephas
+Warning--to sort, need author or key in SANSA-stack
 Warning--empty booktitle in conf/webist/CaballeroMACC
 Warning--empty booktitle in HALPIN
 Warning--empty institution in citeulike:5717734
 Warning--empty year in citeulike:5717734
-You've used 43 entries,
+You've used 46 entries,
             2580 wiz_defined-function locations,
-            827 strings with 11893 characters,
-and the built_in function-call counts, 15019 in all, are:
-= -- 1472
-> -- 621
+            839 strings with 12126 characters,
+and the built_in function-call counts, 15646 in all, are:
+= -- 1528
+> -- 624
 < -- 13
-+ -- 214
++ -- 215
 - -- 207
-* -- 1048
-:= -- 2256
-add.period$ -- 136
-call.type$ -- 43
-change.case$ -- 203
-chr.to.int$ -- 41
-cite$ -- 79
-duplicate$ -- 626
-empty$ -- 1322
+* -- 1082
+:= -- 2316
+add.period$ -- 141
+call.type$ -- 46
+change.case$ -- 212
+chr.to.int$ -- 43
+cite$ -- 88
+duplicate$ -- 659
+empty$ -- 1409
 format.name$ -- 236
-if$ -- 3223
-int.to.chr$ -- 3
+if$ -- 3372
+int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 26
-newline$ -- 221
+newline$ -- 232
 num.names$ -- 85
-pop$ -- 358
+pop$ -- 389
 preamble$ -- 1
-purify$ -- 288
+purify$ -- 303
 quote$ -- 0
-skip$ -- 552
+skip$ -- 589
 stack$ -- 0
-substring$ -- 615
-swap$ -- 83
+substring$ -- 639
+swap$ -- 86
 text.length$ -- 13
 text.prefix$ -- 5
 top$ -- 0
-type$ -- 328
-warning$ -- 20
+type$ -- 352
+warning$ -- 23
 while$ -- 103
-width$ -- 45
-write$ -- 533
-(There were 20 warnings)
+width$ -- 48
+write$ -- 557
+(There was 1 error message)

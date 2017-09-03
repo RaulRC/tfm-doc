@@ -11,6 +11,11 @@ Dean Allemang y James Hendler.
 Your City Needs These 7 Open Data Apps.
 \newblock url: \url{http://mashable.com/2012/11/07/open-data-city-apps/}.
 
+\bibitem[BAR]{BARR:que-es-big-data}
+¿Qué es Big Data?
+\newblock url:
+  \url{https://www.ibm.com/developerworks/ssa/local/im/que-es-big-data/}.
+
 \bibitem[BH12]{BPM}
 Peter Benson y Melissa Hildebrand.
 \newblock {\em Managing Blind: A Data Quality and Data Governance Vade Mecum}.
@@ -121,6 +126,9 @@ Nicola Guarino.
   international conference ({FOIS}'98), June 6-8, Trento, Italy}, volume~46.
 \newblock {IOS} press, 1998.
 
+\bibitem[HAD]{HADOOP-ecosystem}
+
+
 \bibitem[HBLM02]{HJBL}
 James Hendler, Tim Berners-Le, y Eric Miller.
 \newblock Integrating Applications on the Semantic Web, 2002.
@@ -149,7 +157,7 @@ Y.3600:Big data - Requisitos y capacidades basados en la computación en la
   nube.
 \newblock url: \url{https://www.itu.int/rec/T-REC-Y.3600-201511-I/es}.
 
-\bibitem[jen]{jena-elephas}
+\bibitem[JEN]{JENE:jena-elephas}
 Apache Jena Elephas.
 \newblock url: \url{https://jena.apache.org/documentation/hadoop/}.
 
@@ -184,7 +192,7 @@ Leo~L. Pipino, Yang~W. Lee, y Richard~Y. Wang.
 {RDF} - Semantic Web Standards.
 \newblock url: \url{http://www.w3.org/RDF/}.
 
-\bibitem[san]{sansa-stack}
+\bibitem[SAN]{SANSA-stack}
 SANSA-Stack.
 \newblock url: \url{http://sansa-stack.net/}.
 
@@ -211,7 +219,11 @@ Diane~M. Strong, Yang~W. Lee, y Richard~Y. Wang.
 \newblock {\em Commun. ACM}, 40(5):103--110, Mayo 1997.
 \newblock url: \url{http://doi.acm.org/10.1145/253769.253804}.
 
-\bibitem[SPA]{SPARQL}
+\bibitem[SPAa]{SPARK}
+Apache Spark.
+\newblock url: \url{http://spark.apache.org}.
+
+\bibitem[SPAb]{SPARQL}
 {SPARQL} Query Language for {RDF}.
 \newblock url: \url{http://www.w3.org/TR/rdf-sparql-query/}.
 
