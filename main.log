@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  3 SEP 2017 15:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  3 SEP 2017 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3836,63 +3836,70 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 1184.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1184.
-) (./metodo.tex
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1.
- [31]
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 1.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 1.
- [32
 
-]
+Overfull \hbox (1.00935pt too wide) in paragraph at lines 1205--1208
+[]\T1/ptm/b/n/12 Hadoop Ma-pRe-du-ce\T1/ptm/m/n/12 : fra-me-work pa-ra es-cri-b
+ir apli-ca-cio-nes que pue-dan pro-ce-sar gran-
+ []
+
+LaTeX Info: Redefining \. on input line 1217.
+LaTeX Info: Redefining \% on input line 1217.
+LaTeX Info: Redefining \. on input line 1217.
+LaTeX Info: Redefining \% on input line 1217.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1217.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1217.
+[31]) (./metodo.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+ [32]
 Cap\'{\i }tulo 4.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
@@ -3931,7 +3938,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
- [33]
+ [33
+
+]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -4526,10 +4535,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 13548 strings out of 494891
- 186195 string characters out of 6179039
- 363849 words of memory out of 5000000
- 16191 multiletter control sequences out of 15000+600000
+ 13550 strings out of 494891
+ 186221 string characters out of 6179039
+ 363914 words of memory out of 5000000
+ 16193 multiletter control sequences out of 15000+600000
  157758 words of font info for 114 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  48i,13n,42p,905b,1477s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4547,7 +4556,7 @@ onts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10
 /type1/public/lm/lmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (80 pages, 1031078 bytes).
+Output written on main.pdf (80 pages, 1033876 bytes).
 PDF statistics:
  1478 PDF objects out of 1728 (max. 8388607)
  1344 compressed objects within 14 object streams

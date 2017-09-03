@@ -1183,16 +1183,64 @@ serie de desafíos que deben afrontarse a la hora de acometer un proyecto ~\cite
 
 \subsection{Frameworks}
 
+Existe una gran cantidad de frameworks y ecosistemas dedicados al procesamiento
+distribuido de grandes volúmenes de información. Entre ellos caben destacar el
+ecosistema Hadoop y las soluciones de Amazon Web Services, que serán descritos a
+continuación.
+
+
 \subsubsection{Ecosistema Apache Hadoop}
 \label{sec:eco-hadoop}
 
-- Hadoop
+El ecosistema Hadoop se ha convertido en el estándar \textit{de facto} a la hora
+de llevar a cabo proyectos Big Data. Se organiza a través de una serie de
+módulos encargados de diversas operaciones en el contexto de un cluster Big
+Data.
 
-- Spark
+Entre sus principales componentes caben destacar los siguientes:
 
-- Kafka
+\begin{itemize}
+\item \textbf{HDFS}: Hadoop Distributed File System, como sistema de archivos
+  distribuido y escalable. 
+\item \textbf{Hadoop MapReduce}: framework para escribir aplicaciones que puedan
+  procesar grandes volúmenes de información en paralelo en el contexto de un
+  cluster, de una manera tolerante a fallos, siguiendo el modelo MapReduce. 
+\item \textbf{YARN}: Yet ANother Resource Negotiator es un framework para la
+  gestión de recursos de un cluster, encargado de balancear la carga, asignar
+  nodos a los distintos trabajos y liberar recursos. 
+\item \textbf{Pig}: plataforma de alto nivel para crear programas que se
+  ejecutan sobre HDFS, a través de un lenguaje de programación de scripts que
+  permiten realizar operaciones ETL (Extract, Transform and Load) sobre datos
+  guardados en HDFS. 
+\item \textbf{Hive}: proyecto que se ejecuta sobre HDFS con el fin de establecer
+  una plataforma de consulta y análisis a través de una interfaz SQL. 
+\item \textbf{Oozie}: orquestador de tareas dentro del ecosistema Hadoop. 
+\item \textbf{Sqoop}: herramienta para el traspaso eficiente de datos entre HDFS
+  y otras soluciones de almacenamiento, tales como bases de datos relacionales o
+  ficheros de texto plano. 
 
-- HBase
+\item \textbf{Flume}: solución de recolección y distribución de grandes
+  volúmenes de datos entre distintas fuentes.
+\item \textbf{HBase}: base de datos distribuida, escalable y no relacional. 
+\item \textbf{Zookeeper}: servicio centralizado para el mantenimiento, la
+  configuración, nombrado y sincronización de los distintos servicios
+  ejecutándose en el contexto de un cluster Hadoop. 
+\end{itemize}
 
-- Cassandra
+Posteriormente se han ido agregando a proyectos apache nuevos frameworks
+destinados a cubrir necesidades específicas o a mejorar el rendimiento de los
+actuales:
 
+\begin{itemize}
+\item \textbf{Spark}: framework para el procesado de grandes volúmenes de
+  información. La ventaja principal respecto de Hadoop MapReduce es que el
+  procesamiento se realiza en memoria en lugar de en disco, con lo cual la
+  velocidad se incrementa en varios órdenes de magnitud. 
+\item \textbf{Kafka}: plataforma de streaming distribuida, ideada para dar
+  soporte a aplicaciones real-time. 
+\item \textbf{Mahout}: framework que ofrece una serie de algoritmos distribuidos
+  de Machine Learning. 
+\end{itemize}
+
+\subsubsection{Soluciones Amazon Web Services}
+\label{sec:eco-aws}
