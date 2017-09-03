@@ -21,45 +21,45 @@ Warning--empty booktitle in conf/webist/CaballeroMACC
 Warning--empty booktitle in HALPIN
 Warning--empty institution in citeulike:5717734
 Warning--empty year in citeulike:5717734
-You've used 40 entries,
+You've used 41 entries,
             2580 wiz_defined-function locations,
-            813 strings with 11526 characters,
-and the built_in function-call counts, 14155 in all, are:
-= -- 1383
-> -- 600
+            821 strings with 11772 characters,
+and the built_in function-call counts, 14585 in all, are:
+= -- 1430
+> -- 619
 < -- 13
-+ -- 208
-- -- 201
-* -- 992
-:= -- 2141
-add.period$ -- 128
-call.type$ -- 40
-change.case$ -- 192
-chr.to.int$ -- 38
-cite$ -- 72
-duplicate$ -- 589
-empty$ -- 1232
-format.name$ -- 229
-if$ -- 3031
++ -- 214
+- -- 207
+* -- 1024
+:= -- 2212
+add.period$ -- 132
+call.type$ -- 41
+change.case$ -- 197
+chr.to.int$ -- 39
+cite$ -- 73
+duplicate$ -- 604
+empty$ -- 1264
+format.name$ -- 236
+if$ -- 3119
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 25
-newline$ -- 207
-num.names$ -- 82
-pop$ -- 335
+missing$ -- 26
+newline$ -- 213
+num.names$ -- 85
+pop$ -- 338
 preamble$ -- 1
-purify$ -- 271
+purify$ -- 278
 quote$ -- 0
-skip$ -- 515
+skip$ -- 528
 stack$ -- 0
-substring$ -- 567
-swap$ -- 80
+substring$ -- 599
+swap$ -- 81
 text.length$ -- 13
 text.prefix$ -- 5
 top$ -- 0
-type$ -- 304
+type$ -- 312
 warning$ -- 18
-while$ -- 98
-width$ -- 42
-write$ -- 500
+while$ -- 103
+width$ -- 43
+write$ -- 515
 (There were 18 warnings)

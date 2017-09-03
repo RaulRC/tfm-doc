@@ -1140,7 +1140,14 @@ se encuentra el ecosistema Hadoop que se describirá con detalle en la sección
 \end{figure}
 
 
-Finalmente, al cierre del 2015, los miembros de la ITU (Unión Internacional de
+Este modelo consiste en el particionado de los datos de entrada y procesado en
+paralelo de dichas particiones por varios nodos, gestionados por un nodo maestro
+que ejerce de árbitro y orquestador. En la etapa final, la
+unificación de los resultados parciales en torno a una solución final se lleva a
+cabo por otro conjunto de nodos que combinarán el resultado en uno o varios
+archivos de salida.
+
+Al cierre del 2015, los miembros de la ITU (Unión Internacional de
 Telecomunicaciones), aprobaron la primera norma de Big Data, estableciendo la
 primera definición oficial ~\cite{ITU}:
 
@@ -1148,10 +1155,30 @@ primera definición oficial ~\cite{ITU}:
   gestión, el análisis y la visualización, potencialmente en condiciones de
   tiempo real, de grandes conjuntos de datos con características heterogéneas}.
 
-
-
 \subsection{Desafíos}
 
+Cuando la volumetría y la disparidad de los datos está presente, existe una
+serie de desafíos que deben afrontarse a la hora de acometer un proyecto ~\cite{DBLP:journals/isci/ChenZ14a}:
+
+\begin{itemize}
+\item \textbf{Captura y almacenamiento}: debido al ritmo de crecimiento de los
+  datos así como a su origen disperso, el modo en el que se acceden, capturan y
+  almacenan representa una primera barrera a superar. 
+\item \textbf{Descubrimiento y limpieza}: referente a tratamiento de la información previo a
+  su procesamiento, análisis exploratorio, gestión de datos perdidos o
+  corruptos. 
+\item \textbf{Transmisión}: el ancho de banda es un factor limitante cuando se
+  habla en un contexto de Big Data y puede representar el cuello de botella de
+  un sistema si no se gestiona correctamente el movimiento de tales volúmenes de
+  datos.
+  
+\item \textbf{Análisis y visualización}: llevar a cabo un análisis de volúmenes
+  masivos de datos implica desarrollar técnicas tanto a nivel hardware como
+  software para permitir dichos análisis. Igualmente la visualización resulta un
+  factor crucial a la hora de obtener lecturas fiables de cara a la
+  interpretabilidad de dichos datos.
+  
+\end{itemize}
 
 
 \subsection{Frameworks}

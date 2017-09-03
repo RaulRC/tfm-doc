@@ -57,6 +57,13 @@ Ismael Caballero, Eugenio Verbo, Coral Calero, y Mario Piattini.
 \newblock url:
   \url{http://dblp.uni-trier.de/db/conf/webist/webist2008-1.html#CaballeroVCP08}.
 
+\bibitem[CZ14]{DBLP:journals/isci/ChenZ14a}
+C.~L.~Philip Chen y Chun{-}Yang Zhang.
+\newblock Data-intensive applications, challenges, techniques and technologies:
+  {A} survey on Big Data.
+\newblock {\em Inf. Sci.}, 275:314--347, 2014.
+\newblock url: \url{https://doi.org/10.1016/j.ins.2014.01.015}.
+
 \bibitem[DFP{\etalchar{+}}05]{ding_tracking_2005}
 Li~Ding, Tim Finin, Yun Peng, Paulo~Pinheiro Da~Silva, y Deborah~L. McGuinness.
 \newblock Tracking rdf graph provenance using rdf molecules.
