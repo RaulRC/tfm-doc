@@ -1,66 +1,64 @@
 \chapter{Objetivos}
 \label{chap:objetivos}
 
-\noindent
-De acuerdo a la Introducción, el alumno deberá especificar cuál(es) es(son)
-la(s) hipótesis de trabajo de la(s) que se parte(n), qué se pretende(n) resolver
-en el presente TFM.
+\section{Objetivo principal}
 
-Es importante formular con claridad cuál es el objetivo general y el alcance
-correspondiente a las hipótesis de trabajo. Del mismo modo, se deberán
-establecer los objetivos parciales derivados del objetivo general y los
-resultados esperados.
+El objetivo de este proyecto fin de carrera (PFC) es la elaboración de una
+extensión para el framework Jena con el fin de dar soporte a primitivas de evaluación de
+calidad de datos.
 
-Como preámbulo a la formulación de los objetivos parciales, el alumno deberá
-discutir sobre las limitaciones y condicionantes a tener en cuenta en el
-desarrollo del TFM (lenguaje de desarrollo, equipos, madurez de la tecnología,
-etcétera).
+Dicha extensión se generará como una \acs{API} cuya finalidad será encapsular todas
+las primitivas desarrolladas y facilitar al usuario la utilización de dicha
+extensión. 
 
-\emph{A modo de referencia, este capítulo tendrá una longitud aproximada de
-  entre 2 y 10 páginas}.
+\section{Objetivos parciales}
 
-\section{Objetivo general}
-
-El hito final que se pretende lograr, destacando el dominio concreto estudiado,
-el problema específico que resuelve y/o la funcionalidad que se aporta en el
-presente trabajo.
+El objetivo principal implica el abordar una serie de objetivos parciales
+relacionados con la arquitectura y funcionalidades del sistema que se pretenden
+desarrollar. Dichos objetivos parciales se detallan a continuación. 
 
 
-\section{Objetivos específicos}
+\begin{definitionlist}
+%1
+\item[O1. Representación del contexto de evaluación de calidad de datos]
+Implementar  las  reglas  de  negocio  que representen el contexto necesario
+para la evaluación de
+calidad  de datos usando la tecnología más adecuadas.
+\label{sec:reglas}
 
-Los objetivos específicos son las partes independientes del proyecto que tienen
-valor por sí mismas.
-
-Por ejemplo, si el objetivo general fuera destruir una flota enemiga, los
-objetivos específicos podrían ser: hundir el portaaviones, inutilizar las
-torretas de los destructores, eliminar los cazas enemigos, etc.
-
-Los objetivos específicos no son tareas; análisis, diseño, etc. no tienen valor
-intrínseco para el cliente, si por ejemplo el proyecto se cancela en la fase de
-diseño no se le entrega nada de valor al cliente, luego no se cubre ningún
-objetivo.
-
-No se deben confundir los objetivos del proyecto con los objetivos del
-alumno. Indicar como objetivo que el alumno va a aprender o a estudiar
-determinada disciplina o herramienta no aporta nada al cliente. Deben ser
-entregables que el cliente puede valorar y por los que estaría dispuesto
-a pagar. Resumiendo, son \textbf{objetivos}, no subjetivos.
-
-\subsection{Objetivo 1}
-
-\subsection{Objetivo 2}
-
-\subsection{Objetivo 3}
-
-\section{Limitaciones y condicionantes}
-\section{Alcance}
-\section{Equipo de trabajo}
-\section{Marco tecnológico}
+%2
+\item[O2. Desarrollo de un vocabulario para los resultados
+  de evaluaciones de calidad de datos]
+El fin de dicho vocabulario será el de permitir publicar los
+resultados de las evaluaciones que se lleven a cabo de manera formal y basándose
+en los paradigmas de la Web Semántica. Los conceptos de ontología y vocabulario
+serán detallados en la Sección \ref{sbs:ontologia}. 
 
 
-% Local Variables:
-%  coding: utf-8
-%  mode: latex
-%  mode: flyspell
-%  ispell-local-dictionary: "castellano8"
-% End:
+%3
+\item[O3. Diseño e implementación de las primitivas de evaluación de calidad de datos]
+
+Diseñar e implementar primitivas para la evaluación de calidad de los datos como una
+extensión del framework elegido, considerando el contexto de uso mediante el uso
+de reglas semánticas.
+
+Estas primitivas se desarrollarán tomando diferentes perspectivas de la calidad
+de los datos, que se pueden consultar en la Sección \ref{sec:dqREF}. 
+
+
+%4
+\item[O4. Elección de un razonador de reglas para datos semánticos]
+
+Se realizará un estudio sobre los razonadores de reglas de inferencia para
+datos semánticos. Las reglas definidas deberán ser
+ejecutadas por un razonador que generará los resultados finales del proceso de
+medición. 
+
+
+%5
+\item[O5. Desarrollo de una aplicación de prueba de concepto (LiDQA Tool)]
+Elaborar una aplicación de Web Semántica que haga uso de la extensión
+previamente desarrollada. Para ello se deberá implementar la arquitectura de
+la aplicación teniendo en cuenta las restricciones de la tecnología a utilizar.
+
+\end{definitionlist}

@@ -1078,4 +1078,94 @@ categoría que a su vez contiene cuatro dimensiones, cada una con sus métricas:
 
 \subsection{Concepto}
 
+Desde los comienzos del siglo XXI han tiendo lugar una serie de cambios muy
+significativos en la industria de las tecnologías de la información, tales como
+el nacimiento del Internet de las Cosas, Computación en la Nube y la aparición
+de las Redes Sociales.
+
+El desarrollo y explotación de estas tecnologías ha propiciado que la cantidad
+de los datos que se generan por unidad de tiempo se haya incrementado a una
+velocidad sin precedentes. De esta manera, el concepto \textit{Big Data} se
+puede caracterizar según la definición de las tres V's:
+
+\begin{itemize}
+\item Volumen: en referencia al tamño del conjunto de datos. 
+\item Velocidad: referenciando a las necesidades relativas al consumo o proceso
+  de datos en tanto se aproximen al tiempo real (\textit{real time}) o próximos
+  al tiempo real (\textit{near real time}).
+\item Variedad: en relación ala heterogeneidad de los datos. Esto incluye
+  representaciones diversas de datos estructurados, como diversas fuentes
+  relacionales, datos semiestructurados o datos no estructurados, como pudieran
+  ser imágenes o vídeo. 
+\end{itemize}
+
+Adicionalmente se ha extendido esta definición a medida que las tecnologías y la
+problemática ha cambiado, encontrando:
+
+\begin{itemize}
+\item Valor: considerando el beneficio que se puede extraer de los datos bajo la
+  premisa que tanto la complejidad de la extracción del valor, como dicho
+  beneficio en sí mismo se incrementa junto con el volumen.
+  
+\item Veracidad: entendiendo como el grado de confianza que se establece sobre
+  los datos. 
+\end{itemize}
+
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{/5Vs.png} 
+    \caption{5vs del Big Data}
+    \label{fig:5Vs}
+  \end{center}
+\end{figure}
+
+En ~\cite{map_reduce} se define por primera vez un modelo de procesamiento y
+generación de grandes conjuntos de datos, a través de funciones \textit{map} y
+\textit{reduce}, apoyándose en que muchos problemas del mundo real son
+expresables en estos términos.
+
+En adelante se desarrollaron multitud de frameworks y herramientas que basándose
+en estos principios optimizarán y permitirán el procesado escalable de grandes
+volúmenes de información, cumpliendo con el paradigma de las 5Vs. Entre ellos,
+se encuentra el ecosistema Hadoop que se describirá con detalle en la sección
+\nameref{sec:eco-hadoop}.
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=1\textwidth]{/mapred.png} 
+    \caption{MapReduce: ejecución ~\cite{map_reduce}}
+    \label{fig:mapred}
+  \end{center}
+\end{figure}
+
+
+Finalmente, al cierre del 2015, los miembros de la ITU (Unión Internacional de
+Telecomunicaciones), aprobaron la primera norma de Big Data, estableciendo la
+primera definición oficial ~\cite{ITU}:
+
+\textit{Paradigma para hacer posible la recopilación, el almacenamiento, la
+  gestión, el análisis y la visualización, potencialmente en condiciones de
+  tiempo real, de grandes conjuntos de datos con características heterogéneas}.
+
+
+
+\subsection{Desafíos}
+
+
+
 \subsection{Frameworks}
+
+\subsubsection{Ecosistema Apache Hadoop}
+\label{sec:eco-hadoop}
+
+- Hadoop
+
+- Spark
+
+- Kafka
+
+- HBase
+
+- Cassandra
+

@@ -5,58 +5,61 @@ The style file: es-alpha.bst
 Database file #1: main.bib
 Warning--to sort, need author or key in W3CTools
 Warning--to sort, need author or key in JENA
+Warning--to sort, need author or key in W3CSW
+Warning--to sort, need author or key in ISHI
 Warning--to sort, need author or key in W3CSWES
 Warning--to sort, need author or key in XML
 Warning--to sort, need author or key in RDF
 Warning--to sort, need author or key in OWL
 Warning--to sort, need author or key in SPARQL
-Warning--to sort, need author or key in W3CSW
 Warning--to sort, need author or key in FOAF
 Warning--to sort, need author or key in OPENRDF
 Warning--to sort, need author or key in CUBIC
 Warning--to sort, need author or key in APPS
+Warning--to sort, need author or key in ITU
+Warning--empty booktitle in conf/webist/CaballeroMACC
 Warning--empty booktitle in HALPIN
 Warning--empty institution in citeulike:5717734
 Warning--empty year in citeulike:5717734
-You've used 36 entries,
+You've used 40 entries,
             2580 wiz_defined-function locations,
-            785 strings with 10606 characters,
-and the built_in function-call counts, 12812 in all, are:
-= -- 1246
-> -- 543
-< -- 14
-+ -- 189
-- -- 182
-* -- 898
-:= -- 1945
-add.period$ -- 116
-call.type$ -- 36
-change.case$ -- 174
-chr.to.int$ -- 34
-cite$ -- 63
-duplicate$ -- 534
-empty$ -- 1107
-format.name$ -- 209
-if$ -- 2738
+            813 strings with 11526 characters,
+and the built_in function-call counts, 14155 in all, are:
+= -- 1383
+> -- 600
+< -- 13
++ -- 208
+- -- 201
+* -- 992
+:= -- 2141
+add.period$ -- 128
+call.type$ -- 40
+change.case$ -- 192
+chr.to.int$ -- 38
+cite$ -- 72
+duplicate$ -- 589
+empty$ -- 1232
+format.name$ -- 229
+if$ -- 3031
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 188
-num.names$ -- 76
-pop$ -- 304
+missing$ -- 25
+newline$ -- 207
+num.names$ -- 82
+pop$ -- 335
 preamble$ -- 1
-purify$ -- 245
+purify$ -- 271
 quote$ -- 0
-skip$ -- 464
+skip$ -- 515
 stack$ -- 0
-substring$ -- 521
-swap$ -- 76
-text.length$ -- 14
-text.prefix$ -- 6
+substring$ -- 567
+swap$ -- 80
+text.length$ -- 13
+text.prefix$ -- 5
 top$ -- 0
-type$ -- 268
-warning$ -- 15
-while$ -- 89
-width$ -- 38
-write$ -- 452
-(There were 15 warnings)
+type$ -- 304
+warning$ -- 18
+while$ -- 98
+width$ -- 42
+write$ -- 500
+(There were 18 warnings)

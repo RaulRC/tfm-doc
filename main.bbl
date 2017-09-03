@@ -38,6 +38,12 @@ Tim Berners-Lee, James Hendler, y Ora Lassila.
 \newblock url:
   \url{http://www.sciam.com/article.cfm?articleID=00048144-10D2-1C70-84A9809EC588EF21}.
 
+\bibitem[CMC08]{conf/webist/CaballeroMACC}
+Ismael Caballero, M.A. Moraga, y Coral Calero.
+\newblock Integraci\'on de {A}spectos de {C}alidad de {D}atos en {S}istemas de
+  {I}nformaci\'on.
+\newblock 2008.
+
 \bibitem[CUB]{CUBIC}
 {CubicWeb} Semantic Web Framework.
 \newblock url: \url{http://www.cubicweb.org/}.
@@ -58,6 +64,14 @@ Li~Ding, Tim Finin, Yun Peng, Paulo~Pinheiro Da~Silva, y Deborah~L. McGuinness.
   (Poster)}, página~42, 2005.
 \newblock url:
   \url{ftp://www.ksl.stanford.edu/local/pub/KSL_Reports/KSL-05-06.pdf}.
+
+\bibitem[DG04]{map_reduce}
+Jeffrey Dean y Sanjay Ghemawat.
+\newblock MapReduce: Simplified Data Processing on Large Clusters.
+\newblock En {\em Proceedings of the 6th Conference on Symposium on Opearting
+  Systems Design \& Implementation - Volume 6}, OSDI'04, Berkeley, CA, USA,
+  2004. USENIX Association.
+\newblock url: \url{http://dl.acm.org/citation.cfm?id=1251254.1251264}.
 
 \bibitem[DMVH{\etalchar{+}}00]{decker_semantic_2000}
 Stefan Decker, Sergey Melnik, Frank Van~Harmelen, Dieter Fensel, Michel Klein,
@@ -112,6 +126,10 @@ Harry Halpin y Henry~S. Thompson.
 \newblock página 679. {ACM} Press, 2006.
 \newblock url: \url{http://portal.acm.org/citation.cfm?doid=1135777.1135877}.
 
+\bibitem[ISH85]{ISHI}
+What is Total Quality Control?: The Japanese Way: Amazon.es: Kaoru Ishikawa:
+  Libros en idiomas extranjeros, 1985.
+
 \bibitem[ISO]{citeulike:5717734}
 ISO25012.
 \newblock {ISO/IEC 25012 x ISO/IEC 25012 Software-Engineering -
@@ -119,14 +137,14 @@ ISO25012.
   der Datenqualit\"{a}t}.
 \newblock Technical report.
 
+\bibitem[ITU]{ITU}
+Y.3600:Big data - Requisitos y capacidades basados en la computación en la
+  nube.
+\newblock url: \url{https://www.itu.int/rec/T-REC-Y.3600-201511-I/es}.
+
 \bibitem[JEN14]{JENA}
 Apache Jena - Home, 2014.
 \newblock url: \url{http://jena.apache.org/}.
-
-\bibitem[{Mar}08]{sousa}
-J.~{Martínez de Sousa}.
-\newblock {\em Ortografía y ortotipografía del español actual}.
-\newblock Trea, 2008.
 
 \bibitem[NMo01]{noy_ontology_2001}
 Natalya~F. Noy, Deborah~L. McGuinness, y {others}.
@@ -182,13 +200,13 @@ Diane~M. Strong, Yang~W. Lee, y Richard~Y. Wang.
 {SPARQL} Query Language for {RDF}.
 \newblock url: \url{http://www.w3.org/TR/rdf-sparql-query/}.
 
-\bibitem[W3Ca]{W3CSWES}
-Semantic Web - W3C.
-\newblock url: \url{http://www.w3.es/Divulgacion/GuiasBreves/WebSemantica}.
-
-\bibitem[W3Cb]{W3CSW}
+\bibitem[W3Ca]{W3CSW}
 Semantic Web - W3C.
 \newblock url: \url{http://www.w3.org/standards/semanticweb/}.
+
+\bibitem[W3Cb]{W3CSWES}
+Semantic Web - W3C.
+\newblock url: \url{http://www.w3.es/Divulgacion/GuiasBreves/WebSemantica}.
 
 \bibitem[W3Cc]{W3CTools}
 Tools - Semantic Web Standards.
@@ -199,6 +217,12 @@ Richard~Y. Wang.
 \newblock A Product Perspective on Total Data Quality Management.
 \newblock {\em Commun. ACM}, 41(2):58--65, Febrero 1998.
 \newblock url: \url{http://doi.acm.org/10.1145/269012.269022}.
+
+\bibitem[WS96]{Wang:1996:BAD:1189570.1189572}
+Richard~Y. Wang y Diane~M. Strong.
+\newblock Beyond Accuracy: What Data Quality Means to Data Consumers.
+\newblock {\em J. Manage. Inf. Syst.}, 12(4):5--33, Marzo 1996.
+\newblock url: \url{http://dl.acm.org/citation.cfm?id=1189570.1189572}.
 
 \bibitem[XML]{XML}
 Extensible Markup Language ({XML}).

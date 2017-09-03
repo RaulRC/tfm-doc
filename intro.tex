@@ -1,63 +1,186 @@
 \chapter{Introducción}
+\label{chap:Introduccion}
 
-\drop{E}{sto} se llama «letra capital» y debería utilizarse únicamente al
-comienzo de capítulo como artificio decorativo. Para que resulte estéticamente
-adecuada, este primer párrafo debería tener más del doble de líneas de lo que
-ocupe verticalmente la letra capital (dos en este caso). El capítulo de
-introducción debe dar al lector una perspectiva básica ---pero completa--- del
-problema que se pretende abordar, pero también de la estrategia y enfoque que el
-autor propone para su resolución. El lector debería poder determinar si este
-documento le interesa leyendo únicamente la introducción.
-
-\emph{A modo de referencia, este capítulo tendrá una longitud aproximada de
-  entre 3 y 10 páginas}.
+\section{Descripción del problema}
 
 
-\section{Título del proyecto}
+\drop{E}{n} \cite{bernerslee2001semantic} se define la Web Semántica como
+un tipo de Web cuyo contenido resulta procesable de manera automática. Para
+conseguir un contenido procesable se debe antes llevar a cabo una
+representación o formalización del conocimiento que se pretende exponer. Esto ha
+sido posible gracias al concepto de \textit{tripla}
+que no es más que la relación, expresada en un lenguaje formal, existente entre un sujeto y un objeto a través de
+un predicado que los relaciona. De esta manera, si se desea expresar formalmente una sentencia
+respecto de cualquier concepto bastará con establecer un sujeto o recurso (el
+propio concepto) una relación o propiedad que se desee modelar, y un objeto que
+a su vez puede ser un nuevo recurso de manera que agrupando conjuntos de triplas
+se logra definir conceptos completos de manera formal. 
 
-En la portada ---y otras páginas de presentación--- el nombre o título del
-proyecto debe aparecer sin comillas, cursiva u otros formatos. Si se cita el
-título de otra obra, o el nombre de un capítulo sí debe aparecer entre
-comillas. Por cierto, las comillas que deben usarse en castellano son las
-«latinas», dejando las ``inglesas'' para los raros casos en los que aparezca una
-cita en el cuerpo otra~\cite{sousa}.
 
-\section{Contexto del proyecto}
-\section{Evolución respecto al PFC}
+Durante los últimos años se han desarrollado lenguajes como \acs{RDF} y
+\acs{OWL}, y
+especificaciones, con el fin de dar soporte a 
+la interoperabilidad semántica \cite{Shadbolt:2006:SWR:1155313.1155373}. En
+1997 el \acf{W3C} ~\cite{W3CSW} define la primera especificación de \acs{RDF} lo que sentará los cimientos de la Web Semántica: el
+objetivo de \acs{RDF} será aportar una descripción semántica del conocimiento en la
+Web \cite{Shadbolt:2006:SWR:1155313.1155373} como lenguaje de definición de
+recursos, haciendo posible trabajar con la totalidad de la Web
+como un conjunto de recursos y sus interrelaciones. 
+
+Posteriormente surge el paradigma Linked Data \cite{bernerslee:2009}, que se puede definir
+como el uso del modelo Web para publicar datos estructurados de manera que
+puedan ser fácilmente consumidos y combinados con otros ~\cite{bizer_linked_2009}. Valiéndose del concepto
+de \acf{URI}, se consiguen identifcar recursos en la red de forma unívoca y así
+poder enlazarlos sin ambigüedad. Linked Data
+aprovecha la potencia descriptiva de \acs{RDF} para facilitar el procesado
+y razonamiento automático sobre grandes conjuntos de datos. En
+\cite{bernerslee:2009} se enumera una serie de principios que deben cumplir los
+datos para ser considerados Linked Data: 
 
 
-\section{Competencias adquiridas}
+\begin{enumerate}
+\item{Usar \acs{URI} como identificadores de los recursos publicados en la Web.}
+\item{Usar las URL de estas \acs{URI} para que la gente pueda localizar y consultar
+  estos recursos.}
+\item{Proporcionar información útil cuando la \acs{URI} sea desreferenciada.}
+\item{Incluir vínculos a otras \acs{URI} relacionadas con los datos en el recurso.}
+\end{enumerate}
 
-El estudiante deberá enumerar y detallar, en un apartado específico, en qué
-forma se han alcanzado las competencias específicas del proyecto (en base a las
-indicadas en la propuesta inicial).
+
+Por otra parte, el concepto de \textit{Calidad} puede aplicarse a cualquier tarea u objeto. Es
+importante matizar para el contexto del proyecto qué se entiende por calidad y
+más concretamente por calidad de los datos (\acs{DQ}). 
+
+
+Existen varias definiciones de calidad que conviene considerar a la hora de
+abordar el proyecto. En primer lugar, se va a exponer la definición que la Real
+Academia Española de la lengua otorga a este término: 
+
+\textit{Propiedad o conjunto de propiedades
+  inherentes a algo que permiten juzgar su valor}.
+
+Sin embargo este concepto ha ido variando con el tiempo, adaptándose a las
+necesidades y a los procesos. Relacionando este concepto con la
+\textit{fabricación} de un determinado bien, en ~\cite{ISHI} se define la calidad
+como: 
+
+\textit{Un producto tiene calidad cuando es desarrollado, diseñado y mantenido
+  de la forma más económica, útil y satisfactoria para el consumidor}. 
+
+
+Autores como \cite{conf/webist/CaballeroMACC} o \cite{conf/ekaw/FurberH10} dejan constancia de cómo la calidad de los datos resulta imprescindible en el
+desarrollo con éxito de cualquier tarea o toma de decisión. Un nivel inadecuado de calidad en los datos puede tener impactos sustanciales en ámbitos
+sociales y económicos. Las empresas están mejorando la calidad de los datos con
+enfoques y herramientas prácticas \cite{Wang:1996:BAD:1189570.1189572}. 
+
+En el ámbito de las tecnologías semánticas, la comunidad ha prestado poca
+atención a la calidad de los datos que han sido representados mediante la
+utilización de tecnologías semánticas
+\cite{conf/ekaw/FurberH10}. Existen en la actualidad un número considerable de
+frameworks disponibles para el desarrollo de aplicaciones basadas en el uso de
+tecnologías semánticas, no obstante, ninguno de ellos incluye funcionalidades
+específicas que permitan procesar una evaluación del nivel de calidad de los
+datos que se están usando.
+
+Puesto que ningún framework de desarrollo de Web Semántica facilita este tipo de
+operaciones de medición, existe una necesidad de elaborar
+mecanismos que permitan llevar a cabo evaluaciones de calidad de los datos
+usados en aplicaciones de tecnología semántica en general y Web Semántica en
+particular.
+
+Considerando la no disponibilidad de operaciones de evaluación de calidad de datos en los
+frameworks de desarrollo de tecnologías semánticas, el objetivo del \acf{PFC}
+consiste en el desarrollo de una
+extensión para uno de estos frameworks. La finalidad de
+dicha extensión será la de diseñar, implementar y poner a disposición de la
+comunidad un conjunto de primitivas de evaluación de calidad de datos para uno de
+los frameworks de desarrollo de aplicaciones de tecnología semántica más
+importantes, considerando el contexto en el que los
+datos deben son usados. 
+
+Tras llevar a cabo un estudio acerca del estado actual de los frameworks de
+desarrollo de Web Semántica y Linked Data, se ha escogido uno de ellos basado en
+Java, \textbf{Apache Jena}, y se ha extendido con la finalidad de ofrecer estos
+mecanismos para la evaluación de la calidad de datos semánticos. Jena se está
+convirtiendo en un referente en la comunidad debido al amplio abanico
+de tecnologías que implementa, que permite desde el manejo de datos semánticos
+hasta su almacenamiento y publicación. 
+
+El modo en que
+se ha diseñado dicha extensión facilitaría en un futuro el trabajo de reciclado
+y expansión del presente trabajo.
+
 
 
 \section{Estructura del documento}
 
-Pueden incluirse aquí una sección con algunos consejos para la lectura del
-documento dependiendo de la motivación o conocimientos del lector.  También
-puede ser útil incluir una lista con el nombre y finalidad de cada uno de los
-capítulos restantes.
+La forma en la que se ha organizado el presente documento se expone a
+continuación: 
 
 \begin{definitionlist}
-\item[Capítulo \ref{chap:objetivos}: \nameref{chap:objetivos}] Finalidad y
-  justificación (con todo detalle) del presente documento.
-\item[Capítulo \ref{chap:antecedentes}: \nameref{chap:antecedentes}] Explica
-  herramientas y aspectos básicos de edición con \LaTeX.
+\item[Capítulo \ref{chap:Introduccion}: \nameref{chap:Introduccion}] En este
+  apartado se introduce el problema y se plantea el trabajo en base a los
+  objetivos fijados. 
+
+
+\item[Capítulo \ref{chap:objetivos}: \nameref{chap:objetivos}] En este capítulo
+  se describe el principal objetivo del \acs{PFC} así como un conjunto de
+  objetivos parciales que es necesario alcanzar para cubrir el objetivo
+  final. 
+
+\item[Capítulo \ref{chap:estadoarte}: \nameref{chap:estadoarte}] Esta sección
+  introducirá los conceptos más importantes tratados en el documento y el
+  proyecto, acompañado de conceptos y definiciones. Incluirá referencias al
+  ámbito de la calidad de los datos, la Web Semántica y las tecnologías
+  asociadas a ésta. 
+
+\item[Capítulo \ref{chap:metodologia}: \nameref{chap:metodologia}] Se expondrá
+  detalladamente cómo se ha utilizado la metodología de desarrollo elegida para la realización del \acs{PFC}, que
+  será \acf{PUD}. Se incluirá la planificación de las iteraciones y finalmente
+  un resumen de todo el ecosistema tecnológico utilizado para el desarrollo.
+
+\item[Capítulo \ref{chap:resultados}: \nameref{chap:resultados}] En este
+  capítulo se expondrán los resultados obtenidas durante las diferentes
+  iteraciones del \acs{PUD} que se han llevado a cabo durante el desarrollo del
+  \acs{PFC}. 
+
+\item[Capítulo \ref{chap:conclusiones}: \nameref{chap:conclusiones}] En este
+  capítulo se expondrán las conclusiones que se han obtenido tras la realización
+  de este \acs{PFC} además de una serie de propuestas de trabajo futuro. 
+
+\item[Anexo \ref{chap:manualusuario}: \nameref{chap:manualusuario}] Este anexo
+  se corresponde con el manual de usuario de la aplicación de prueba de
+  concepto, LiDQA Tool. 
+
+\item[Anexo \ref{chap:instalacion}: \nameref{chap:instalacion}] Este anexo
+  se corresponde con el manual de instalación de la aplicación de prueba de
+  concepto, LiDQA Tool. 
+
+\item[Anexo \ref{chap:ontologia}: \nameref{chap:ontologia}] Se
+  corresponde con el listado de código del vocabulario creado para formalizar
+  los resultados de evaluaciones de calidad de datos enlazados. 
+
+\item[Anexo \ref{chap:variouscodes}: \nameref{chap:variouscodes}] El último de
+  los anexos muestra algunos fragmentos de código que pueden resultar de
+  interés. 
+
+\item[Contenido del \acs{DVD} adjunto] En el \acs{DVD} adjunto a este documento
+  se incluyen los siguientes artefactos generados durante la elaboración del
+  \acs{PFC}: 
+  \begin{itemize}
+  \item Documentación del \acs{PFC} en formato \acs{PDF}.
+  \item Código de \textbf{JenaDQ} incluido como proyecto para Eclipse. 
+  \item Código de \textbf{LiDQA Tool} incluido como proyecto para Eclipse. 
+  \item Archivo \texttt{.war} preparado para despliegue de la herramienta
+    LiDQA Tool: \texttt{SemanticAnalytics.war}. 
+  \item Vocabulario generado para la descripción de
+    evaluaciones de calidad de datos en el fichero\texttt{DQA.owl} 
+  \item Vídeo de demostración de uso de LiDQA Tool. 
+  \item Documentación generada para la \acs{API} de JenaDQ en formato \acs{HTML}. 
+  \end{itemize}
+
 \end{definitionlist}
 
 
 
 
-\blindtext
-\blinditemize[4]
-\blindmathpaper
-
-
-% Local Variables:
-%  coding: utf-8
-%  mode: latex
-%  mode: flyspell
-%  ispell-local-dictionary: "castellano8"
-% End:
