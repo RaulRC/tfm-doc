@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  3 SEP 2017 17:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  3 SEP 2017 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1043,7 +1043,7 @@ LaTeX Info: Redefining \nameref on input line 6.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 8.
 
-</usr/share/arco/figures/informatica_gray.pdf, id=192, 618.11432pt x 737.07487p
+</usr/share/arco/figures/informatica_gray.pdf, id=200, 618.11432pt x 737.07487p
 t>
 File: /usr/share/arco/figures/informatica_gray.pdf Graphic file (type pdf)
  <use /usr/share/arco/figures/informatica_gray.pdf>
@@ -1168,7 +1168,7 @@ Package pdftex.def Info: /usr/share/arco/figures/informatica_gray.pdf used on i
 nput line 10.
 (pdftex.def)             Requested size: 85.35826pt x 101.78392pt.
 
-</usr/share/arco/figures/uclm_logomarca_1.pdf, id=380, 118.39479pt x 98.00206pt
+</usr/share/arco/figures/uclm_logomarca_1.pdf, id=388, 118.39479pt x 98.00206pt
 >
 File: /usr/share/arco/figures/uclm_logomarca_1.pdf Graphic file (type pdf)
  <use /usr/share/arco/figures/uclm_logomarca_1.pdf>
@@ -1176,7 +1176,7 @@ Package pdftex.def Info: /usr/share/arco/figures/uclm_logomarca_1.pdf used on i
 nput line 10.
 (pdftex.def)             Requested size: 103.12186pt x 85.35826pt.
 
-</usr/share/arco/figures/esi.pdf, id=381, 989.60603pt x 308.23795pt>
+</usr/share/arco/figures/esi.pdf, id=389, 989.60603pt x 308.23795pt>
 File: /usr/share/arco/figures/esi.pdf Graphic file (type pdf)
 
 <use /usr/share/arco/figures/esi.pdf>
@@ -1611,31 +1611,32 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <10> not available
 (Font)              Font shape `T1/ptm/b/sc' tried instead on input line 4.
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <9.30756> not available
 (Font)              Font shape `T1/ptm/b/sc' tried instead on input line 4.
+) (./thanks.tex
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 66.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 66.
- [9]) (./thanks.tex
+(babel)             in language  on input line 1.
+ [9]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -1799,38 +1800,38 @@ LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <12> not available
 (Font)              Font shape `T1/ptm/b/sc' tried instead on input line 2.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 35.
+(babel)             in language  on input line 29.
  [15
 
 ]
 Package acronym Info: Label `acro:LD' newly defined as it shall be overridden
-although it is yet undefined on input line 40.
+although it is yet undefined on input line 42.
 Package acronym Info: Label `acro:OD' newly defined as it shall be overridden
-although it is yet undefined on input line 42.
+although it is yet undefined on input line 44.
 Package acronym Info: Label `acro:LOD' newly defined as it shall be overridden
-although it is yet undefined on input line 42.
+although it is yet undefined on input line 44.
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -2114,14 +2115,8 @@ l.13   \acro{DQ}      {Calidad de Datos}
                    \relax 
 l.14 ...{DQD}     {Dimensión de Calidad de Datos}
                                                   pdfTeX warning (ext4): destin
-ation with the same identifier (name{DVD}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.15   \acro{DVD}     {Digital Versatile Disc}
-                                              pdfTeX warning (ext4): destinatio
-n with the same identifier (name{DOAP}) has been already used, duplicate ignore
-d
+ation with the same identifier (name{DOAP}) has been already used, duplicate ig
+nored
 <to be read again> 
                    \relax 
 l.16   \acro{DOAP}    {Description Of A Project}
@@ -2177,26 +2172,14 @@ he same identifier (name{OWL}) has been already used, duplicate ignored
                    \relax 
 l.38   \acro{OWL}     {Lenguaje de Ontología Web}
                                                   pdfTeX warning (ext4): destin
-ation with the same identifier (name{PDF}) has been already used, duplicate ign
+ation with the same identifier (name{PFC}) has been already used, duplicate ign
 ored
-<to be read again> 
-                   \relax 
-l.40   \acro{PDF}     {Portable Document Format}
-                                                pdfTeX warning (ext4): destinat
-ion with the same identifier (name{PFC}) has been already used, duplicate ignor
-ed
 <to be read again> 
                    \relax 
 l.41   \acro{PFC}     {Proyecto Fin de Carrera}
                                                pdfTeX warning (ext4): destinati
-on with the same identifier (name{PUD}) has been already used, duplicate ignore
+on with the same identifier (name{RDF}) has been already used, duplicate ignore
 d
-<to be read again> 
-                   \relax 
-l.42 ...PUD}     {Proceso Unificado de Desarrollo}
-                                                  pdfTeX warning (ext4): destin
-ation with the same identifier (name{RDF}) has been already used, duplicate ign
-ored
 <to be read again> 
                    \relax 
 l.45 ...   {Framework de Descripción de Recursos}
@@ -2237,53 +2220,60 @@ red
                    \relax 
 l.56   \acro{TDB}     {Triple Data Base}
                                         pdfTeX warning (ext4): destination with
- the same identifier (name{URI}) has been already used, duplicate ignored
+ the same identifier (name{TFM}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.60 ...I}     {Identificador Uniforme de Recurso}
+l.57   \acro{TFM}     {Trabajo Fin de Máster}
+                                              pdfTeX warning (ext4): destinatio
+n with the same identifier (name{URI}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.61 ...I}     {Identificador Uniforme de Recurso}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{URL}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.61 ...URL}     {Localizador Uniforme de Recurso}
+l.62 ...URL}     {Localizador Uniforme de Recurso}
                                                   pdfTeX warning (ext4): destin
 ation with the same identifier (name{W3C}) has been already used, duplicate ign
 ored
 <to be read again> 
                    \relax 
-l.65 ...3C}     {Consorcio para la World Wide Web}
-                                                  
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 66.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 66.
- [23]pdfTeX warning (ext4): destination with the same identifier (name{XML}) ha
-s been already used, duplicate ignored
+l.66 ...3C}     {Consorcio para la World Wide Web}
+                                                  pdfTeX warning (ext4): destin
+ation with the same identifier (name{XML}) has been already used, duplicate ign
+ored
 <to be read again> 
                    \relax 
-l.66 ...o{XML}     {Lenguaje de Marcas Extensible}
+l.67 ...o{XML}     {Lenguaje de Marcas Extensible}
                                                   )
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 29.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 29.
+ [23]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand >>
@@ -2376,130 +2366,130 @@ l.46 \item{
 
 
 ]
-Package acronym Info: Label `acro:PFC' newly defined as it shall be overridden
-although it is yet undefined on input line 92.
-LaTeX Info: Redefining \. on input line 108.
-LaTeX Info: Redefining \% on input line 108.
-LaTeX Info: Redefining \. on input line 108.
-LaTeX Info: Redefining \% on input line 108.
+Package acronym Info: Label `acro:TFM' newly defined as it shall be overridden
+although it is yet undefined on input line 98.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 108.
+(babel)             in language  on input line 106.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.108 
+l.106 
        [2]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 108.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 115.
+(babel)             in language  on input line 108.
+Package acronym Info: Label `acro:PFC' newly defined as it shall be overridden
+although it is yet undefined on input line 111.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 121.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 121.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 121.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 121.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 121.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 121.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 127.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 127.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 127.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 127.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 127.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 127.
 
 
 LaTeX Warning: Reference `chap:metodologia' on page 3 undefined on input line 1
-37.
+49.
 
 
 LaTeX Warning: Reference `chap:metodologia' on page 3 undefined on input line 1
-37.
+49.
 
-Package acronym Info: Label `acro:PUD' newly defined as it shall be overridden
-although it is yet undefined on input line 139.
-
-LaTeX Warning: Reference `chap:manualusuario' on page 3 undefined on input line
- 151.
-
-
-LaTeX Warning: Reference `chap:manualusuario' on page 3 undefined on input line
- 151.
-
-
-LaTeX Warning: Reference `chap:instalacion' on page 3 undefined on input line 1
-55.
-
-
-LaTeX Warning: Reference `chap:instalacion' on page 3 undefined on input line 1
-55.
-
-LaTeX Info: Redefining \. on input line 159.
-LaTeX Info: Redefining \% on input line 159.
-LaTeX Info: Redefining \. on input line 159.
-LaTeX Info: Redefining \% on input line 159.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 159.
+(babel)             in language  on input line 156.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.159 ...hap:ontologia}: \nameref{chap:ontologia}]
-                                                   Se [3]
+l.156 
+       [3]
 
-LaTeX Warning: Reference `chap:ontologia' on page 4 undefined on input line 159
+LaTeX Warning: Reference `chap:ontologia' on page 4 undefined on input line 161
 .
 
 
-LaTeX Warning: Reference `chap:ontologia' on page 4 undefined on input line 159
+LaTeX Warning: Reference `chap:ontologia' on page 4 undefined on input line 161
 .
-
-
-LaTeX Warning: Reference `chap:variouscodes' on page 4 undefined on input line 
-163.
-
-
-LaTeX Warning: Reference `chap:variouscodes' on page 4 undefined on input line 
-163.
 
 ) (./objetivos.tex
 LaTeX Info: Redefining \. on input line 1.
@@ -2574,35 +2564,35 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 14.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 59.
+(babel)             in language  on input line 55.
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.59 ...ación de prueba de concepto (LiDQA Tool)]
-                                                   [5
+l.55 
+      [5
 
 ]) (./estadoArte.tex
 LaTeX Info: Redefining \. on input line 1.
@@ -2807,14 +2797,14 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 153.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 153.
- [9] <figures//triple.png, id=828, 140.525pt x 194.7275pt>
+ [9] <figures//triple.png, id=833, 140.525pt x 194.7275pt>
 File: figures//triple.png Graphic file (type png)
 
 <use figures//triple.png>
 Package pdftex.def Info: figures//triple.png used on input line 176.
 (pdftex.def)             Requested size: 88.2022pt x 122.22137pt.
 
-<figures//triple-jena.png, id=831, 361.35pt x 240.9pt>
+<figures//triple-jena.png, id=836, 361.35pt x 240.9pt>
 File: figures//triple-jena.png Graphic file (type png)
 
 <use figures//triple-jena.png>
@@ -2908,7 +2898,7 @@ Package acronym Info: Label `acro:HTTP' newly defined as it shall be overridden
 
 although it is yet undefined on input line 251.
 
-<figures//sweb-stack.png, id=876, 401.5pt x 401.5pt>
+<figures//sweb-stack.png, id=881, 401.5pt x 401.5pt>
 File: figures//sweb-stack.png Graphic file (type png)
 
 <use figures//sweb-stack.png>
@@ -2943,7 +2933,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 284.
  [12 <./figures//sweb-stack.png>]
-<figures//sw-archpastor.png, id=900, 434.37282pt x 363.60844pt>
+<figures//sw-archpastor.png, id=905, 434.37282pt x 363.60844pt>
 File: figures//sw-archpastor.png Graphic file (type png)
 
 <use figures//sw-archpastor.png>
@@ -3019,7 +3009,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 374.
  [14]
-<figures//ontology-classification.png, id=918, 319.94531pt x 269.50688pt>
+<figures//ontology-classification.png, id=923, 319.94531pt x 269.50688pt>
 File: figures//ontology-classification.png Graphic file (type png)
 
 <use figures//ontology-classification.png>
@@ -3078,7 +3068,7 @@ Package acronym Info: Label `acro:FOAF' newly defined as it shall be overridden
 although it is yet undefined on input line 443.
 Package acronym Info: Label `acro:AAA' newly defined as it shall be overridden
 although it is yet undefined on input line 453.
- <figures//foaf.png, id=947, 392.79573pt x 153.91855pt>
+ <figures//foaf.png, id=952, 392.79573pt x 153.91855pt>
 File: figures//foaf.png Graphic file (type png)
 
 <use figures//foaf.png>
@@ -3163,7 +3153,7 @@ Package babel Info: Redefining spanish shorthand "?
 Package acronym Info: Label `acro:TDB' newly defined as it shall be overridden
 although it is yet undefined on input line 531.
 
-<figures//jenarqu.png, id=996, 470.4777pt x 454.5783pt>
+<figures//jenarqu.png, id=1001, 470.4777pt x 454.5783pt>
 File: figures//jenarqu.png Graphic file (type png)
 
 <use figures//jenarqu.png>
@@ -3201,7 +3191,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 595.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 595.
-[18] <figures//reasoner-overview.png, id=1011, 409.53pt x 229.60782pt>
+[18] <figures//reasoner-overview.png, id=1016, 409.53pt x 229.60782pt>
 File: figures//reasoner-overview.png Graphic file (type png)
 
 <use figures//reasoner-overview.png>
@@ -3315,7 +3305,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 661.
 
-<figures//lod.png, id=1050, 709.65125pt x 527.9725pt>
+<figures//lod.png, id=1055, 709.65125pt x 527.9725pt>
 File: figures//lod.png Graphic file (type png)
  <use figures//lod.png>
 Package pdftex.def Info: figures//lod.png used on input line 687.
@@ -3324,7 +3314,7 @@ Package pdftex.def Info: figures//lod.png used on input line 687.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures//rdfmol.png, id=1064, 331.2375pt x 257.46187pt>
+<figures//rdfmol.png, id=1069, 331.2375pt x 257.46187pt>
 File: figures//rdfmol.png Graphic file (type png)
 
 <use figures//rdfmol.png>
@@ -3427,7 +3417,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 751.
 
-<figures//busgijon.jpg, id=1105, 207.77625pt x 311.1625pt>
+<figures//busgijon.jpg, id=1110, 207.77625pt x 311.1625pt>
 File: figures//busgijon.jpg Graphic file (type jpg)
 
 <use figures//busgijon.jpg>
@@ -3437,7 +3427,7 @@ Package pdftex.def Info: figures//busgijon.jpg used on input line 778.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures//busguru.png, id=1106, 398.48875pt x 383.4325pt>
+<figures//busguru.png, id=1111, 398.48875pt x 383.4325pt>
 File: figures//busguru.png Graphic file (type png)
 
 <use figures//busguru.png>
@@ -3742,7 +3732,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1085.
 
-[28] <figures//5Vs.png, id=1222, 390.70969pt x 331.2375pt>
+[28] <figures//5Vs.png, id=1227, 390.70969pt x 331.2375pt>
 File: figures//5Vs.png Graphic file (type png)
 
 <use figures//5Vs.png>
@@ -3777,7 +3767,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1127.
  [29 <./figures//5Vs.png>]
-<figures//mapred.png, id=1230, 847.165pt x 578.16pt>
+<figures//mapred.png, id=1235, 847.165pt x 578.16pt>
 File: figures//mapred.png Graphic file (type png)
  <use figures//mapred.png>
 Package pdftex.def Info: figures//mapred.png used on input line 1136.
@@ -4590,7 +4580,7 @@ LaTeX Info: Redefining \% on input line 25.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 419EFBE5DE2EDF60D9405EA80AEB12F9;3040.
+(rerunfilecheck)             Checksum: D8EC2C34295A2935B30AD895CDF75943;3189.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -4601,10 +4591,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 13560 strings out of 494891
- 186356 string characters out of 6179039
- 363985 words of memory out of 5000000
- 16198 multiletter control sequences out of 15000+600000
+ 13561 strings out of 494891
+ 186357 string characters out of 6179039
+ 364019 words of memory out of 5000000
+ 16199 multiletter control sequences out of 15000+600000
  157758 words of font info for 114 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  48i,13n,42p,905b,1477s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -4622,10 +4612,10 @@ onts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10
 /type1/public/lm/lmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (82 pages, 1036072 bytes).
+Output written on main.pdf (82 pages, 1035630 bytes).
 PDF statistics:
- 1497 PDF objects out of 1728 (max. 8388607)
- 1361 compressed objects within 14 object streams
+ 1502 PDF objects out of 1728 (max. 8388607)
+ 1366 compressed objects within 14 object streams
  312 named destinations out of 1000 (max. 500000)
- 462 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 478 words of extra memory for PDF output out of 10000 (max. 10000000)
 

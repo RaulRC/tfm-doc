@@ -1,7 +1,7 @@
 \chapter{Introducción}
 \label{chap:Introduccion}
 
-\section{Descripción del problema}
+\section{Contexto del proyecto}
 
 
 \drop{E}{n} \cite{bernerslee2001semantic} se define la Web Semántica como
@@ -88,8 +88,14 @@ mecanismos que permitan llevar a cabo evaluaciones de calidad de los datos
 usados en aplicaciones de tecnología semántica en general y Web Semántica en
 particular.
 
+Con la irrupción de las tecnologías Big Data y dadas las necesidades que existen
+de procesamiento distribuido sobre grandes volúmenes de información, encontramos
+que el problema de la evaluación de la calidad de los datos semánticos se
+extiende a este ámbito, no pudiendo encontrar ningún framework que permita
+trabajar la calidad de los datos semánticos de manera distribuida. 
+
 Considerando la no disponibilidad de operaciones de evaluación de calidad de datos en los
-frameworks de desarrollo de tecnologías semánticas, el objetivo del \acf{PFC}
+frameworks de desarrollo de tecnologías semánticas, el objetivo del \acf{TFM}
 consiste en el desarrollo de una
 extensión para uno de estos frameworks. La finalidad de
 dicha extensión será la de diseñar, implementar y poner a disposición de la
@@ -98,19 +104,25 @@ los frameworks de desarrollo de aplicaciones de tecnología semántica más
 importantes, considerando el contexto en el que los
 datos deben son usados. 
 
+
+\section{Evolución respecto del PFC}
+
 Tras llevar a cabo un estudio acerca del estado actual de los frameworks de
-desarrollo de Web Semántica y Linked Data, se ha escogido uno de ellos basado en
-Java, \textbf{Apache Jena}, y se ha extendido con la finalidad de ofrecer estos
-mecanismos para la evaluación de la calidad de datos semánticos. Jena se está
-convirtiendo en un referente en la comunidad debido al amplio abanico
-de tecnologías que implementa, que permite desde el manejo de datos semánticos
-hasta su almacenamiento y publicación. 
+desarrollo de Web Semántica y Linked Data, durante el desarrollo del \acf{PFC}
+se escogió uno de ellos basado en
+Java, \textbf{Apache Jena}, y se extendió con la finalidad de ofrecer estos
+mecanismos para la evaluación de la calidad de datos semánticos.
 
-El modo en que
-se ha diseñado dicha extensión facilitaría en un futuro el trabajo de reciclado
-y expansión del presente trabajo.
+Análogamente al \acf{PFC}, en este \acf{TFM} se ha extendido un framework de
+procesamiento RDF distribuido con el fin de incorporar primitivas de evaluación
+de calidad de los datos, permitiendo así establecer una comparativa en términos
+de tiempo entre los desarrollos acontecidos en el \acf{PFC} y los del \acf{TFM}.
 
+\section{Logro de competencias planteadas}
 
+\texttt{TODO}
+
+Pues ha ido flaman.
 
 \section{Estructura del documento}
 
@@ -124,7 +136,7 @@ continuación:
 
 
 \item[Capítulo \ref{chap:objetivos}: \nameref{chap:objetivos}] En este capítulo
-  se describe el principal objetivo del \acs{PFC} así como un conjunto de
+  se describe el principal objetivo del \acs{TFM} así como un conjunto de
   objetivos parciales que es necesario alcanzar para cubrir el objetivo
   final. 
 
@@ -135,49 +147,20 @@ continuación:
   asociadas a ésta. 
 
 \item[Capítulo \ref{chap:metodologia}: \nameref{chap:metodologia}] Se expondrá
-  detalladamente cómo se ha utilizado la metodología de desarrollo elegida para la realización del \acs{PFC}, que
-  será \acf{PUD}. Se incluirá la planificación de las iteraciones y finalmente
-  un resumen de todo el ecosistema tecnológico utilizado para el desarrollo.
+  detalladamente cómo se ha utilizado la metodología de desarrollo elegida para la realización del \acs{TFM}.
 
 \item[Capítulo \ref{chap:resultados}: \nameref{chap:resultados}] En este
-  capítulo se expondrán los resultados obtenidas durante las diferentes
-  iteraciones del \acs{PUD} que se han llevado a cabo durante el desarrollo del
-  \acs{PFC}. 
+  capítulo se expondrán los resultados obtenidos durante las diferentes
+  iteraciones que se han llevado a cabo durante el desarrollo del
+  \acs{TFM}. 
 
 \item[Capítulo \ref{chap:conclusiones}: \nameref{chap:conclusiones}] En este
   capítulo se expondrán las conclusiones que se han obtenido tras la realización
-  de este \acs{PFC} además de una serie de propuestas de trabajo futuro. 
-
-\item[Anexo \ref{chap:manualusuario}: \nameref{chap:manualusuario}] Este anexo
-  se corresponde con el manual de usuario de la aplicación de prueba de
-  concepto, LiDQA Tool. 
-
-\item[Anexo \ref{chap:instalacion}: \nameref{chap:instalacion}] Este anexo
-  se corresponde con el manual de instalación de la aplicación de prueba de
-  concepto, LiDQA Tool. 
+  de este \acs{TFM} además de una serie de propuestas de trabajo futuro. 
 
 \item[Anexo \ref{chap:ontologia}: \nameref{chap:ontologia}] Se
-  corresponde con el listado de código del vocabulario creado para formalizar
+  corresponde con el listado de código de las ontologías desarrolladas para formalizar
   los resultados de evaluaciones de calidad de datos enlazados. 
-
-\item[Anexo \ref{chap:variouscodes}: \nameref{chap:variouscodes}] El último de
-  los anexos muestra algunos fragmentos de código que pueden resultar de
-  interés. 
-
-\item[Contenido del \acs{DVD} adjunto] En el \acs{DVD} adjunto a este documento
-  se incluyen los siguientes artefactos generados durante la elaboración del
-  \acs{PFC}: 
-  \begin{itemize}
-  \item Documentación del \acs{PFC} en formato \acs{PDF}.
-  \item Código de \textbf{JenaDQ} incluido como proyecto para Eclipse. 
-  \item Código de \textbf{LiDQA Tool} incluido como proyecto para Eclipse. 
-  \item Archivo \texttt{.war} preparado para despliegue de la herramienta
-    LiDQA Tool: \texttt{SemanticAnalytics.war}. 
-  \item Vocabulario generado para la descripción de
-    evaluaciones de calidad de datos en el fichero\texttt{DQA.owl} 
-  \item Vídeo de demostración de uso de LiDQA Tool. 
-  \item Documentación generada para la \acs{API} de JenaDQ en formato \acs{HTML}. 
-  \end{itemize}
 
 \end{definitionlist}
 
