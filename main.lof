@@ -7,20 +7,20 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Esquema de tripla}}{10}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Grafo basado en triplas. Extra\IeC {\'\i }do de \cite {JENA}}}{11}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Tecnolog\IeC {\'\i }as de Web Sem\IeC {\'a}ntica}}{12}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Arquitectura de la Web Sem\IeC {\'a}ntica. Extra\IeC {\'\i }do de \cite {PASTOR}}}{13}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Clasificaci\IeC {\'o}n de Ontolog\IeC {\'\i }as. Extra\IeC {\'\i }do de \cite {guarino_formal_1998}}}{15}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de \acs {FOAF}. Extra\IeC {\'\i }do de \cite {JENA}}}{17}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagrama de la arquitectura de Jena. Extra\IeC {\'\i }da de \cite {JENA}}}{19}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Razonamiento en Jena. Extra\IeC {\'\i }da de \cite {JENA}}}{20}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema \acs {LD} DBpedia}}{22}{figure.3.9}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Niveles de granularidad en la Web Sem\IeC {\'a}ntica. Extra\IeC {\'\i }do de \cite {ding_tracking_2005}}}{22}{figure.3.10}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Bus Gij\IeC {\'o}n App}}{24}{figure.3.11}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Bus Gur\IeC {\'u} App}}{24}{figure.3.12}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces 5vs del Big Data}}{30}{figure.3.13}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces MapReduce: ejecuci\IeC {\'o}n ~\cite {map_reduce}}}{31}{figure.3.14}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Esquema de tripla}}{12}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Grafo basado en triplas. Extra\IeC {\'\i }do de \cite {JENA}}}{13}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Tecnolog\IeC {\'\i }as de Web Sem\IeC {\'a}ntica}}{14}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Arquitectura de la Web Sem\IeC {\'a}ntica. Extra\IeC {\'\i }do de \cite {PASTOR}}}{15}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Clasificaci\IeC {\'o}n de Ontolog\IeC {\'\i }as. Extra\IeC {\'\i }do de \cite {guarino_formal_1998}}}{17}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de \acs {FOAF}. Extra\IeC {\'\i }do de \cite {JENA}}}{19}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagrama de la arquitectura de Jena. Extra\IeC {\'\i }da de \cite {JENA}}}{21}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Razonamiento en Jena. Extra\IeC {\'\i }da de \cite {JENA}}}{22}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Esquema \acs {LD} DBpedia}}{24}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Niveles de granularidad en la Web Sem\IeC {\'a}ntica. Extra\IeC {\'\i }do de \cite {ding_tracking_2005}}}{24}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Bus Gij\IeC {\'o}n App}}{26}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Bus Gur\IeC {\'u} App}}{26}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces 5vs del Big Data}}{32}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces MapReduce: ejecuci\IeC {\'o}n ~\cite {map_reduce}}}{33}{figure.3.14}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

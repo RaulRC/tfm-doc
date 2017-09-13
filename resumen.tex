@@ -1,29 +1,88 @@
 \chapter{Resumen}
 
-El presente documento es un ejemplo de memoria del Trabajo Fin de Máster según
-el formato y criterios de la Escuela Superior de Informática de Ciudad Real. La
-intención es que este texto sirva además como una serie de consejos sobre
-tipografía, \LaTeX, redacción y estructura de la memoria que podrían resultar de
-ayuda. Por este motivo, se aconseja al lector consultar también el código fuente
-de este documento.
 
-Este documento utiliza la clase \LaTeX{} \esitfm{}, disponible como paquete
-Debian/Ubuntu, consulta:
+La Web Semántica es un tipo de web cuyo contenido puede ser procesado tanto por
+máquinas de forma automática como por personas. Esto es posible debido a una serie de avances significativos en
+la representación del conocimiento durante los últimos años. Esta
+representación del conocimiento se basa en el concepto de \textit{triplas} (sujeto,
+predicado, objeto) que establecen relaciones entre los distintos datos. Estas
+relaciones a su vez se representan utilizando lenguajes y especificaciones
+desarrollados para tal fin, como son \acf{RDF} y \acf{OWL}. 
 
- \url{https://bitbucket.org/arco_group/esi-tfg}.
+Paralelamente surge el paradigma de Linked Data, que se puede definir como el
+uso del modelo web para publicar datos estructurados de manera que puedan ser
+fácilmente consumidos y enlazados con otros. Aprovechando la capacidad
+semántica obtenida mediante la representación en triplas y la capacidad de poder
+interconectar los datos de esta manera, se pueden tener volúmenes significativos de
+datos interrelacionados sobre los cuales aplicar razonamiento automático,
+consultas o cualquier otra operación como parte del procesamiento automático
+anteriormente citado. 
 
-Si encuentra cualquier error o tiene alguna sugerencia, por favor, utilice
-el \emph{issue tracker} del proyecto \esitfm{} en:
+Por otra parte, tener en cuenta la calidad de los datos resulta algo
+imprescindible en el desarrollo con éxito de cualquier tarea. Se puede encontrar
+una gran cantidad de \textit{frameworks} (Jena, Sesame, \ldots) con los que elaborar
+aplicaciones semánticas, pero actualmente ninguno de ellos
+incorpora primitivas para dar soporte a las operaciones de gestión de calidad de
+datos que están siendo utilizados. Dada la importancia de la calidad de datos y
+la carencia de dichas utilidades en los frameworks anteriormente citados, es
+patente la necesidad de elaborar mecanismos que permitan llevar a cabo evaluaciones de
+calidad de los datos usados en aplicaciones de tecnología semántica en general y
+Web Semántica en particular.
 
-\url{https://bitbucket.org/arco_group/esi-tfg/issues}
+Así pues el objetivo del Proyecto Fin de Carrera consistió en la elaboración de una extensión de un framework de desarrollo
+de aplicaciones de Web Semántica y Linked Data: Apache Jena. La finalidad de
+dicha extensión fue, dado un conjunto de Linked Data, dar soporte a primitivas
+de medición de calidad de datos teniendo en cuenta el contexto en el que dichos
+datos deben ser considerados.
 
-El resumen debería estar formado por dos o tres párrafos resaltando lo más
-destacable del documento. No es una introducción al problema, es decir, debería
-incluir los logros más importantes del proyecto. Suele ser más sencillo
-escribirlo cuando la memoria está prácticamente terminada. Debería caber en esta
-página (es decir, esta cara).
+El objetivo principal de una posible iteración sobre este proyecto fue extender
+estas funcionalidades en el contexto Big Data, debido a la falta de eficiencia
+encontrada cuando las métricas calculadas ganaban complejidad e involucraban un
+número considerable de triplas.
+
+De esta manera, el objetivo principal de este Trabajo Fin de Máster es el
+desarrollo de un stack para un framework de procesamiento de datos en entornos
+distribuidos, Apache Spark, de manera que se pueda suplir la necesidad de
+evaluación de calidad de datos enlazados en entornos Big Data. 
 
 
 \chapter{Abstract}
 
-English version of the previous page.
+
+The Semantic Web is a type of Web which content can be processed
+automatically. This is possible due to a number of significant advances in
+knowledge representation in recent years. Knowledge in the Semantic Web is
+represented by triples (subject, predicate, object) that establish relations
+between different data using languages and specifications developed for this
+purpose, such as Resource Definition Language (\acs{RDF}) and Ontology Web Language
+(\acs{OWL}).
+
+Meanwhile, Linked Data paradigm appears, which can be defined as the use of the
+Web model to publish structured data so it can be easiliy consumed and linked to
+other data. Considering the semantic capacity obtained by triples representation
+and the ability to interconnect data thus, users could have significant volumes
+of interrelated data where apply automated reasoning, inquiries or any other
+operation.
+
+Moreover, it should be considered data quality as a need in the successful
+perform of any task. People can find a lot of frameworks (Jena, Sesame, . . . )
+to develop semantic application, but currently none of them incorporates basic
+operations for assessing quality of data in use. Many authors consider that this
+part has not yet been taken int account or has been received little
+attention. Therefore, there is a need to develop mechanisms to carry out quality
+assessments of the data used in semantic applications.
+
+Thus, the objective of the original project involved the development of an
+extension for a Semantic Web and Linked Data framework: Apache Jena. The purpose
+of this extension was, having a set of Liked Data, to support a set of data
+quality measures taking into account the context in which these data should be
+considered.
+
+The main target of a possible next iteration over the project was to extend this
+functionalities on a Big Data context, due to lack of efficiency found when the
+metrics calculation get complex and involves an increasing number of triples.
+
+Thus, the goal of this project is the development of a stack for a
+distributed processing framework, Apache Spark, in order to cover the need of
+Data Quality Assessment of Linked Data in a Big Data environment. 
+

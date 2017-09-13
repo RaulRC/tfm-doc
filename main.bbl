@@ -127,7 +127,8 @@ Nicola Guarino.
 \newblock {IOS} press, 1998.
 
 \bibitem[HAD]{HADOOP-ecosystem}
-
+Hadoop ecosystem.
+\newblock url: \url{http://hadoop.apache.org}.
 
 \bibitem[HBLM02]{HJBL}
 James Hendler, Tim Berners-Le, y Eric Miller.

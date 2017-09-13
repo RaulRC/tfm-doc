@@ -85,8 +85,8 @@ datos que se están usando.
 Puesto que ningún framework de desarrollo de Web Semántica facilita este tipo de
 operaciones de medición, existe una necesidad de elaborar
 mecanismos que permitan llevar a cabo evaluaciones de calidad de los datos
-usados en aplicaciones de tecnología semántica en general y Web Semántica en
-particular.
+usados en aplicaciones de tecnologías semánticas.
+
 
 Con la irrupción de las tecnologías Big Data y dadas las necesidades que existen
 de procesamiento distribuido sobre grandes volúmenes de información, encontramos
@@ -96,13 +96,12 @@ trabajar la calidad de los datos semánticos de manera distribuida.
 
 Considerando la no disponibilidad de operaciones de evaluación de calidad de datos en los
 frameworks de desarrollo de tecnologías semánticas, el objetivo del \acf{TFM}
-consiste en el desarrollo de una
-extensión para uno de estos frameworks. La finalidad de
-dicha extensión será la de diseñar, implementar y poner a disposición de la
+consiste en el desarrollo de una capa tecnológica (stack) para uno de estos frameworks. La finalidad de
+dicho stack será la de diseñar, implementar y poner a disposición de la
 comunidad un conjunto de primitivas de evaluación de calidad de datos para uno de
 los frameworks de desarrollo de aplicaciones de tecnología semántica más
-importantes, considerando el contexto en el que los
-datos deben son usados. 
+importantes, Apache Jena, considerando el contexto en el que los
+datos deben son usados mediante el uso de reglas que lo modelen y sean procesables.
 
 
 \section{Evolución respecto del PFC}
@@ -113,10 +112,81 @@ se escogió uno de ellos basado en
 Java, \textbf{Apache Jena}, y se extendió con la finalidad de ofrecer estos
 mecanismos para la evaluación de la calidad de datos semánticos.
 
-Análogamente al \acf{PFC}, en este \acf{TFM} se ha extendido un framework de
-procesamiento RDF distribuido con el fin de incorporar primitivas de evaluación
-de calidad de los datos, permitiendo así establecer una comparativa en términos
-de tiempo entre los desarrollos acontecidos en el \acf{PFC} y los del \acf{TFM}.
+Paralelamente, durante los últimos años han tenido lugar una serie de cambios muy
+significativos
+en la industria de las tecnologías de la información, tales como el nacimiento
+del Internet
+de las Cosas, Computación en la Nube y la aparición de las Redes Sociales.
+
+
+El desarrollo y explotación de estas tecnologías ha propiciado que la cantidad
+de los datos
+que se generan por unidad de tiempo se haya incrementado a una velocidad sin
+precedentes,
+trayendo consigo la necesidad de cómputo de tales volúmenes de información
+heterogénea,
+en tiempos razonables y de manera escalable \cite{map_reduce}.
+
+Esta necesidad ha propiciado la aparición de paradigmas, tecnologías y numerosos
+frameworks con los que abordar esta problemática desde diferentes puntos de
+vista (procesamiento por lotes, en tiempo real, extracción, transformación y
+carga de datos, seguridad,\ldots), agrupándose en ecosistemas tal y como pueda
+ser el caso del \textbf{ecosistema Hadoop} \cite{HADOOP-ecosystem}.
+
+\textbf{Apache Spark} \cite{SPARK} es un framework de procesamiento distribuido,
+perteneciente al ecosistema Hadoop, que en los últimos años se ha convertido en
+el estándar \textit{de facto} a la hora de abordar problemas de procesamiento de
+grandes volúmenes de información en tiempos razonables, obteniendo unos
+resultados de rendimiento varios órdenes de magnitud superior frente a modelos y
+tecnologías anteriores, debido al procesamiento en memoria.
+
+Mientras que el proyecto de Jena ha ido evolucionando para permitir el
+procesamiento de datos semánticos de manera cetralizada y habiendo estudiado el
+estado actual de los frameworks de procesamiento distribuido, se concluye que
+ninguno de ellos ofrece primitivas para el procesamiento de datos semánticos en
+distribuido y por lo tanto, tampoco mecanismos para llevar a cabo cálculos de
+métricas de calidad sobre datos semánticos en entornos distribuidos.
+
+Debido a la necesidad de incluir primitivas de evaluación de calidad de los
+datos a la hora de desarrollar cualquier tarea o toma de decisión y puesto que
+el ritmo de crecimiento de los datos dificulta su análisis en tiempos
+razonables, se establece como objetivo principal de este Trabajo Fin de Máster
+ofrecer un stack tecnológico basado en un framework de procesamiento distribuido
+para que permita llevar a cabo análisis de calidad de datos semánticos en
+entornos Big Data.
+
+Para el presente Trabajo fin de Máster, será \textbf{Apache Spark} el framework
+sobre el cual se construirá dicho stack para dar soporte a primitivas de
+evaluación de calidad de los datos de una manera distribuida, escalable y
+tolerante a fallos.
+
+Como incremento respecto al PFC, cabe destacar los siguientes aspectos:
+
+\begin{enumerate}
+  \item Elaboración de un stack tecnológico basado en un framework de desarrollo
+    distribuido, \textbf{Apache Spark}, para permitir el procesado de datos RDF:
+    \textbf{SparkRDF}. Este stack estará basado en el framework \textbf{Apache
+      Jena} para el procesamiento de datos en formatos semánticos y en
+    \textbf{Apache Spark} para ofrecer primitivas de procesamiento en
+    distribuido.
+  \item Extensión de dicho stack para permitir evaluación de calidad de datos
+    semánticos de manera distribuida, \textbf{SparkDQ}.
+  \item Elección o desarrollo de una ontología que describa evaluaciones de
+    calidad de los datos.
+  \item Desarrollo de primitivas de razonamiento sobre evaluaciones de
+    calidad.
+  \item Incremento del rendimiento a la hora de calcular métricas sobre
+    grafos de datos enlazados.
+  \item Estudio y comparativa entre resultados de \textbf{JenaDQ} y
+    \textbf{SparkDQ} con el fin de establecer unos criterios de mejora
+    en términos de tiempo y eficiencia a la hora de llevar a cabo
+    estos cálculos de métricas de calidad.
+  \item Elaboración de una prueba de concepto de extracción de
+    grandes volúmenes de datos, evaluación y presentación de las
+    métricas.
+\end{enumerate}
+
+
 
 \section{Logro de competencias planteadas}
 

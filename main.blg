@@ -3,15 +3,12 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: es-alpha.bst
 Database file #1: main.bib
-I was expecting a `,' or a `}'---line 389 of file main.bib
- :  
- :  title = {Hadoop ecosystem},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in W3CTools
 Warning--to sort, need author or key in JENA
 Warning--to sort, need author or key in W3CSW
 Warning--to sort, need author or key in ISHI
+Warning--to sort, need author or key in HADOOP-ecosystem
+Warning--to sort, need author or key in SPARK
 Warning--to sort, need author or key in W3CSWES
 Warning--to sort, need author or key in XML
 Warning--to sort, need author or key in RDF
@@ -23,8 +20,6 @@ Warning--to sort, need author or key in CUBIC
 Warning--to sort, need author or key in APPS
 Warning--to sort, need author or key in BARR:que-es-big-data
 Warning--to sort, need author or key in ITU
-Warning--to sort, need author or key in HADOOP-ecosystem
-Warning--to sort, need author or key in SPARK
 Warning--to sort, need author or key in JENE:jena-elephas
 Warning--to sort, need author or key in SANSA-stack
 Warning--empty booktitle in conf/webist/CaballeroMACC
@@ -33,16 +28,16 @@ Warning--empty institution in citeulike:5717734
 Warning--empty year in citeulike:5717734
 You've used 46 entries,
             2580 wiz_defined-function locations,
-            839 strings with 12126 characters,
-and the built_in function-call counts, 15646 in all, are:
-= -- 1528
+            841 strings with 12166 characters,
+and the built_in function-call counts, 15670 in all, are:
+= -- 1535
 > -- 624
 < -- 13
 + -- 215
 - -- 207
-* -- 1082
-:= -- 2316
-add.period$ -- 141
+* -- 1084
+:= -- 2322
+add.period$ -- 142
 call.type$ -- 46
 change.case$ -- 212
 chr.to.int$ -- 43
@@ -50,17 +45,17 @@ cite$ -- 88
 duplicate$ -- 659
 empty$ -- 1409
 format.name$ -- 236
-if$ -- 3372
+if$ -- 3379
 int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 26
-newline$ -- 232
+newline$ -- 233
 num.names$ -- 85
-pop$ -- 389
+pop$ -- 388
 preamble$ -- 1
 purify$ -- 303
 quote$ -- 0
-skip$ -- 589
+skip$ -- 587
 stack$ -- 0
 substring$ -- 639
 swap$ -- 86
@@ -71,5 +66,5 @@ type$ -- 352
 warning$ -- 23
 while$ -- 103
 width$ -- 48
-write$ -- 557
-(There was 1 error message)
+write$ -- 560
+(There were 23 warnings)
