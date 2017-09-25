@@ -4,69 +4,88 @@
 \contentsline {chapter}{Listado de acr\IeC {\'o}nimos}{\es@scroman {ix}}{chapter*.3}
 \contentsline {chapter}{Agradecimientos}{\es@scroman {xi}}{chapter*.4}
 \contentsline {chapter}{\'{I}ndice general}{\es@scroman {xv}}{chapter*.5}
-\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {xvii}}{chapter*.9}
-\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {xix}}{chapter*.10}
-\contentsline {chapter}{\IeC {\'I}ndice de listados}{\es@scroman {xxi}}{chapter*.11}
-\contentsline {chapter}{Listado de acr\IeC {\'o}nimos}{\es@scroman {xxiii}}{chapter*.12}
+\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {xix}}{chapter*.10}
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {xxi}}{chapter*.11}
+\contentsline {chapter}{\IeC {\'I}ndice de listados}{\es@scroman {xxiii}}{chapter*.12}
+\contentsline {chapter}{Listado de acr\IeC {\'o}nimos}{\es@scroman {xxv}}{chapter*.13}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Contexto del proyecto}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Evoluci\IeC {\'o}n respecto del PFC}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}Logro de competencias planteadas}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Estructura del documento}{3}{section.1.4}
-\contentsline {chapter}{\numberline {2}Objetivos}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}Objetivos principales}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Objetivos parciales}{5}{section.2.2}
-\contentsline {chapter}{\numberline {3}Estado del Arte}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Web Sem\IeC {\'a}ntica}{7}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Concepto}{7}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Terminolog\IeC {\'\i }a de Web Sem\IeC {\'a}ntica}{8}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Est\IeC {\'a}ndares}{9}{subsection.3.1.3}
-\contentsline {subsubsection}{\acf {XML}}{9}{subsection.3.1.3}
-\contentsline {subsubsection}{\acf {RDF}}{10}{subsection.3.1.3}
-\contentsline {subsubsection}{\acf {OWL}}{10}{figure.3.2}
-\contentsline {subsubsection}{\acf {SPARQL}}{11}{Item.10}
-\contentsline {subsection}{\numberline {3.1.4}Arquitectura}{11}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Ontolog\IeC {\'\i }as}{13}{subsection.3.1.5}
-\contentsline {subsubsection}{Definiciones de ontolog\IeC {\'\i }as}{14}{subsection.3.1.5}
-\contentsline {subsubsection}{Componentes de una ontolog\IeC {\'\i }a}{14}{subsection.3.1.5}
-\contentsline {subsubsection}{Clasificaci\IeC {\'o}n de las ontolog\IeC {\'\i }as}{14}{subsection.3.1.5}
-\contentsline {subsubsection}{Metodolog\IeC {\'\i }a para desarrollo de una ontolog\IeC {\'\i }a en entornos de Web Sem\IeC {\'a}ntica}{15}{figure.3.5}
-\contentsline {subsection}{\numberline {3.1.6}Vocabularios}{15}{subsection.3.1.6}
-\contentsline {subsubsection}{Definici\IeC {\'o}n}{16}{subsection.3.1.6}
-\contentsline {subsubsection}{Ejemplos de vocabulario}{16}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {3.1.7}Frameworks para el desarrollo de aplicaci\IeC {\'o}nes de Web Sem\IeC {\'a}ntica}{17}{subsection.3.1.7}
-\contentsline {subsubsection}{Apache Jena}{17}{subsection.3.1.7}
-\contentsline {subsubsection}{Sesame}{19}{figure.3.8}
-\contentsline {subsubsection}{CubicWeb}{20}{figure.3.8}
-\contentsline {subsubsection}{Comparativa}{20}{figure.3.8}
-\contentsline {section}{\numberline {3.2}\acf {LD}}{21}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Definici\IeC {\'o}n de \acs {LD}}{21}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}\acf {OD} y \acf {LOD}}{21}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}\acs {LOD} en la actualidad}{23}{subsection.3.2.3}
-\contentsline {subsubsection}{Bus Guru}{23}{subsection.3.2.3}
-\contentsline {subsubsection}{Bus Gij\IeC {\'o}n}{23}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Calidad de Datos}{23}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Dimensiones de Calidad de Datos}{25}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Completeness}{25}{subsection.3.3.2}
-\contentsline {subsubsection}{Definici\IeC {\'o}n}{26}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Accesibility}{26}{subsection.3.3.3}
-\contentsline {subsubsection}{Definici\IeC {\'o}n}{26}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Calidad de Datos en \acs {LD}}{26}{section.3.4}
-\contentsline {subsubsection}{M\IeC {\'e}tricas para Completeness}{26}{section.3.4}
-\contentsline {subsubsection}{M\IeC {\'e}tricas para Accessibility}{27}{lstnumber.3.3.11}
-\contentsline {section}{\numberline {3.5}Big Data}{29}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Concepto}{29}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Desaf\IeC {\'\i }os}{30}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Frameworks}{31}{subsection.3.5.3}
-\contentsline {subsubsection}{Ecosistema Apache Hadoop}{32}{subsection.3.5.3}
-\contentsline {subsubsection}{Soluciones Amazon Web Services}{33}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Datos Sem\IeC {\'a}nticos en entornos Big Data}{33}{subsection.3.5.4}
-\contentsline {chapter}{\numberline {4}M\IeC {\'e}todo de Trabajo}{35}{chapter.4}
-\contentsline {chapter}{\numberline {5}Resultados}{37}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusiones}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Conclusiones}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}Propuestas de trabajos futuros}{39}{section.6.2}
-\contentsline {section}{\numberline {6.3}Publicaciones}{39}{section.6.3}
-\contentsline {section}{\numberline {6.4}Opini\IeC {\'o}n personal}{39}{section.6.4}
-\contentsline {chapter}{\numberline {A}Ejemplo de anexo}{43}{appendix.Alph1}
-\contentsline {chapter}{Referencias}{45}{appendix*.36}
+\contentsline {section}{\numberline {1.3}Logro de competencias planteadas}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Estructura del documento}{4}{section.1.4}
+\contentsline {chapter}{\numberline {2}Objetivos}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Objetivos principales}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Objetivos parciales}{7}{section.2.2}
+\contentsline {chapter}{\numberline {3}Estado del Arte}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Web Sem\IeC {\'a}ntica}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Concepto}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Terminolog\IeC {\'\i }a de Web Sem\IeC {\'a}ntica}{10}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Est\IeC {\'a}ndares}{11}{subsection.3.1.3}
+\contentsline {subsubsection}{\acf {XML}}{11}{subsection.3.1.3}
+\contentsline {subsubsection}{\acf {RDF}}{12}{subsection.3.1.3}
+\contentsline {subsubsection}{\acf {OWL}}{12}{figure.3.2}
+\contentsline {subsubsection}{\acf {SPARQL}}{13}{Item.17}
+\contentsline {subsection}{\numberline {3.1.4}Arquitectura}{13}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Ontolog\IeC {\'\i }as}{15}{subsection.3.1.5}
+\contentsline {subsubsection}{Definiciones de ontolog\IeC {\'\i }as}{16}{subsection.3.1.5}
+\contentsline {subsubsection}{Componentes de una ontolog\IeC {\'\i }a}{16}{subsection.3.1.5}
+\contentsline {subsubsection}{Clasificaci\IeC {\'o}n de las ontolog\IeC {\'\i }as}{16}{subsection.3.1.5}
+\contentsline {subsubsection}{Metodolog\IeC {\'\i }a para desarrollo de una ontolog\IeC {\'\i }a en entornos de Web Sem\IeC {\'a}ntica}{17}{figure.3.5}
+\contentsline {subsection}{\numberline {3.1.6}Vocabularios}{17}{subsection.3.1.6}
+\contentsline {subsubsection}{Definici\IeC {\'o}n}{18}{subsection.3.1.6}
+\contentsline {subsubsection}{Ejemplos de vocabulario}{18}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Frameworks para el desarrollo de aplicaci\IeC {\'o}nes de Web Sem\IeC {\'a}ntica}{19}{subsection.3.1.7}
+\contentsline {subsubsection}{Apache Jena}{19}{subsection.3.1.7}
+\contentsline {subsubsection}{Sesame}{21}{figure.3.8}
+\contentsline {subsubsection}{CubicWeb}{22}{figure.3.8}
+\contentsline {subsubsection}{Comparativa}{22}{figure.3.8}
+\contentsline {section}{\numberline {3.2}\acf {LD}}{23}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Definici\IeC {\'o}n de \acs {LD}}{23}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}\acf {OD} y \acf {LOD}}{23}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}\acs {LOD} en la actualidad}{25}{subsection.3.2.3}
+\contentsline {subsubsection}{Bus Guru}{25}{subsection.3.2.3}
+\contentsline {subsubsection}{Bus Gij\IeC {\'o}n}{25}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Calidad de Datos}{25}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Dimensiones de Calidad de Datos}{27}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Completeness}{27}{subsection.3.3.2}
+\contentsline {subsubsection}{Definici\IeC {\'o}n}{28}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Accesibility}{28}{subsection.3.3.3}
+\contentsline {subsubsection}{Definici\IeC {\'o}n}{28}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Calidad de Datos en \acs {LD}}{28}{section.3.4}
+\contentsline {subsubsection}{M\IeC {\'e}tricas para Completeness}{28}{section.3.4}
+\contentsline {subsubsection}{M\IeC {\'e}tricas para Accessibility}{29}{lstnumber.3.3.11}
+\contentsline {section}{\numberline {3.5}Big Data}{31}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Concepto}{31}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Desaf\IeC {\'\i }os}{32}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Frameworks}{33}{subsection.3.5.3}
+\contentsline {subsubsection}{Ecosistema Apache Hadoop}{34}{subsection.3.5.3}
+\contentsline {subsubsection}{Soluciones Amazon Web Services}{35}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Datos Sem\IeC {\'a}nticos en entornos Big Data}{35}{subsection.3.5.4}
+\contentsline {chapter}{\numberline {4}M\IeC {\'e}todo de Trabajo}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}\acf {PUD}}{37}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Caracter\IeC {\'\i }sticas del Proceso Unificado de Desarrollo}{37}{subsection.4.1.1}
+\contentsline {subsubsection}{Dirigido por casos de uso}{37}{subsection.4.1.1}
+\contentsline {subsubsection}{Centrado en la arquitectura}{38}{subsection.4.1.1}
+\contentsline {subsubsection}{Iterativo e incremental}{39}{Item.50}
+\contentsline {subsection}{\numberline {4.1.2}Ciclo de vida del Proceso Unificado de Desarrollo}{40}{subsection.4.1.2}
+\contentsline {subsubsection}{Modelo del \acs {PUD}}{40}{subsection.4.1.2}
+\contentsline {subsubsection}{Fases de un ciclo del Proceso Unificado de Desarrollo}{41}{figure.4.3}
+\contentsline {section}{\numberline {4.2}Planificaci\IeC {\'o}n del Proyecto}{43}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Requisitos funcionales para Spark Semantic Stack}{43}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Requisitos funcionales para la PoC}{43}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Iteraciones del \acs {PUD}}{43}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Marco tecnol\IeC {\'o}gico de trabajo}{43}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Frameworks de desarrollo}{43}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Software de desarrollo}{43}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Edici\IeC {\'o}n}{43}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Servidores}{43}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Lenguajes de programaci\IeC {\'o}n}{43}{subsection.4.3.5}
+\contentsline {subsection}{\numberline {4.3.6}Equipos de desarrollo}{43}{subsection.4.3.6}
+\contentsline {chapter}{\numberline {5}Resultados}{45}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusiones}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusiones}{47}{section.6.1}
+\contentsline {section}{\numberline {6.2}Propuestas de trabajos futuros}{47}{section.6.2}
+\contentsline {section}{\numberline {6.3}Publicaciones}{47}{section.6.3}
+\contentsline {section}{\numberline {6.4}Opini\IeC {\'o}n personal}{47}{section.6.4}
+\contentsline {chapter}{\numberline {A}Ejemplo de anexo}{51}{appendix.Alph1}
+\contentsline {chapter}{Referencias}{53}{appendix*.39}
