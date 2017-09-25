@@ -3,22 +3,21 @@
 
 \section{Objetivos principales}
 
-Los objetivos de este trabajo fin de máster (\acf{TFM}) son:
+El objetivo de este \acf{TFM} es:
 
 \begin{itemize}
-\item Desarrollar una extensión para el framework XX con el fin de dar soporte a primitivas de evaluación de
-  calidad de datos en un entorno Big Data. Dicha extensión se generará como una \acs{API} cuya finalidad será encapsular todas
-las primitivas desarrolladas y facilitar al usuario la utilización de dicha
-extensión.
+\item Desarrollar un stack para el framework \textbf{Apache Spark} con el fin de dar soporte a primitivas de evaluación de
+  calidad de datos semánticos en un entorno Big Data. Dicha stack se apoyará
+  sobre el framework \textbf{Apache Jena} para procesar datos semánticos y
+  finalmente se ofrecerá una \acs{API} cuya finalidad será encapsular todas
+las primitivas desarrolladas.
 
 \begin{itemize}
-\item Establecer un modelo de
-  desarrollo distribuido para uno de estos frameworks con el fin de dar soporte
-  a primitivas de evaluación de calidad de datos en entorno Big Data.
+\item Se establecerá un modelo de
+  desarrollo distribuido para Spark con el fin de dar soporte
+  a primitivas de evaluación de calidad de datos semánticos en entornos Big Data.
 \end{itemize}
 
-\item Propuesta de arquitectura Big Data orientada al manejo y evaluación de
-  datos semánticos.
 \end{itemize}
 
 \section{Objetivos parciales}
@@ -37,7 +36,7 @@ calidad  de datos usando la tecnología más adecuadas.
 \label{sec:reglas}
 
 %2
-\item[O2. Desarrollo de un vocabulario para los resultados
+\item[O2. Investigación o desarrollo de un vocabulario para los resultados
   de evaluaciones de calidad de datos]
 El fin de dicho vocabulario será el de permitir publicar los
 resultados de las evaluaciones que se lleven a cabo de manera formal y basándose
@@ -47,8 +46,8 @@ serán detallados en la Sección \ref{sbs:ontologia}.
 %3
 \item[O3. Diseño e implementación de las primitivas de evaluación de calidad de datos]
 
-Diseñar e implementar primitivas para la evaluación de calidad de los datos como una
-extensión del framework elegido, considerando el contexto de uso mediante el uso
+Diseñar e implementar primitivas para la evaluación de calidad de los datos como
+una parte del stack desarrollado, considerando el contexto de uso mediante el uso
 de reglas semánticas.
 
 Estas primitivas se desarrollarán tomando diferentes perspectivas de la calidad
@@ -56,7 +55,7 @@ de los datos, que se pueden consultar en la Sección \ref{sec:dqREF}.
 
 
 %4
-\item[O4. Elección de un razonador de reglas para datos semánticos]
+\item[O4. Elección o desarrollo de un razonador de reglas para datos semánticos]
 
 Se realizará un estudio sobre los razonadores de reglas de inferencia para
 datos semánticos. Las reglas definidas deberán ser
@@ -66,8 +65,8 @@ medición.
 
 %5
 \item[O5. Desarrollo de una aplicación de prueba de concepto]
-Elaborar un pipeline que haga uso de la extensión
-previamente desarrollada. Para ello se deberá implementar la arquitectura de
+Elaborar un pipeline que haga uso del stack 
+previamente desarrollado. Para ello se deberá implementar la arquitectura de
 la aplicación teniendo en cuenta las restricciones de la tecnología a utilizar.
 
 \end{definitionlist}
