@@ -415,7 +415,15 @@ aplicación de Prueba de Concepto.
 
 \subsection{Iteraciones del \acs{PUD}}
 
-\subsubsection{Iteración 1: Estudio del ámbito}
+La planificación del \acs{TFM} se desarrollará mediante iteraciones que
+pertenecerán a diversas fases del Proceso Unificado de Desarrollo. En las
+iteraciones más tempranas tendrá lugar la concepción del proyecto en lo que se
+refiere a estudio, enlace con el \acs{PFC} y diseño de la solución. En las
+iteraciones centrales el desarrollo y puesta a punto de los artefactos software
+generados para finalmente, en la fase de transición del \acs{PUD}, la
+elaboración de la prueba de conecpto y la entrega del presente trabajo. 
+
+\subsubsection{Iteración 1: Planificación, casos de uso y requisitos}
 \subsubsection{Iteración 2: Actualización de JenaDQ}
 \subsubsection{Iteración 3: Diseño de arquitectura de SparkDQ}
 \subsubsection{Iteración 4: Desarrollo de SparkRDF}
@@ -429,13 +437,13 @@ aplicación de Prueba de Concepto.
 \label{sec:marcotrabajo}
 
 En esta sección se describen las herramientas y tecnologías que se han elegido
-para dar soporte al desarrollo de este \acs{PFC}. Dichas herramientas y tecnologías
+para dar soporte al desarrollo de este \acs{TFM}. Dichas herramientas y tecnologías
 son utilizadas tanto para el modelado del sistema y desarrollo de diagramas como
 para la implementación del código y la documentación necesaria. 
 
 \subsection{Frameworks de desarrollo de aplicaciones de Web (Semántica)}
 
-Los distintos frameworks utilizados durante la elaboración de este \acs{PFC} se
+Los distintos frameworks utilizados durante la elaboración de este \acs{TFM} se
 exponen a continuación. 
 
 \begin{definitionlist} 
@@ -449,41 +457,30 @@ datos enlazados.
 En el Capítulo \ref{chap:estadoarte} se han explicado algunas de las
 características más importantes de este framework. 
 
-Jena se erige como la pieza clave dentro de este \acs{PFC} debido a que la
-extensión elaborada, JenaDQ, basa su funcionamiento en el amplio abanico de
-herramientas que implementa Jena. 
+\item[Apache Spark]
 
-Para una consulta más detallada, véase la Sección \ref{sec:eajena}. 
+  Spark (\url{http://spark.apache.org}) se ha convertido en el estándar
+  \textit{de facto} a la hora del procesamiento distribuido de alta velocidad.
 
-\item[Apache Struts 2]
-
-Para desarrollar la aplicación Web se ha utilizado este framework. Struts 2
-(\url{http://struts.apache.org/2.x/index.html}) permite el desarrollo de
-aplicaciones de Web dinámicas utilizando tecnología Java. 
+  En el Capítulo \ref{chap:estadoarte} se han explicado las características más
+  interesantes de dicho framework así como la importancia que tiene en el actual
+  ecosistema Big Data. 
 
 \end{definitionlist}
 
 \subsection{Software de Desarrollo}
 
-Como software de soporte al desarrollo del \acs{PFC} se han utilizado las
+Como software de soporte al desarrollo del \acs{TFM} se han utilizado las
 siguientes herramientas. 
 
 \begin{definitionlist} 
-\item[Eclipse Juno]
+\item[IntelliJ]
 
-Eclipse (\url{https://www.eclipse.org}) es un \acf{IDE} compuesto por un conjuto
-de herramientas de código abierto para la programación. Eclipse es además
-multiplataforma e incluye gran cantidad de plugins para hacer de la labor de
-programación algo más fácil, principalmente con Java. 
+IntelliJ (\url{https://www.jetbrains.com/idea/}) es un \acf{IDE} que ha ganado
+en popularidad durante los últimos años debido a su extensibilidad y facilidad
+de uso. Puede enriquecerse con \textit{plugins} que dan soporte a tecnologías
+actuales y facilitan la experiencia de desarrollo. 
 
-La versión utilizada para la realización de este \acs{PFC} ha sido
-\textit{Eclipse Juno}. 
-
-
-\item[Selenium]
-
-Selenium (\url{http://www.seleniumhq.org/}) es un entorno de pruebas software
-para aplicaciones basadas en Web. 
 
 \item[Visual Paradigm]
 
@@ -493,15 +490,6 @@ herramientas de edición de diagramas \acs{UML} de todo tipo y generación de
 código automática a partir de diagramas y viceversa. 
 
 Visual Paradigm se ha utilizado para la realización de todos los diagramas. 
-
-\item[Balsamiq Mockups]
-
-Balsamiq Mockups (\url{http://www.balsamic.com}) es una herramienta para la
-realización de borradores y bocetos de interfaces de usuario para múltiples
-plataformas y dispositivos. 
-
-Mockups se ha utilizado para realizar los prototipos de interfaces de usuario de
-la aplicación Web. 
 
 \item[Git]
 
@@ -539,12 +527,6 @@ Toda la documentación se ha generado con esta tecnología.
 \item[BibTeX]
 BibTeX es un sistema gestor de referencias bibliográficas que se integra con
 \LaTeX.
-
-\item[Zotero]
-
-Zotero (\url{https://www.zotero.org}) es un programa de código abierto que
-permite a los usuarios la recolección y gestión de referencias. Facilita la
-búsqueda de documentos y la exportación a diferentes formatos (como BibTeX). 
 
 \item[Emacs]
 
@@ -592,10 +574,30 @@ integra sobre distintos servidores pero principalmente sobre TDB.
 
 \end{definitionlist}
 
+\subsection{Cloud computing}
+
+Se han utilizado diversas soluciones \textit{cloud} para llevar a cabo el
+desarrollo de la prueba de concepto. En este caso, el proveedor elegido ha sido
+Amazon Web Services, utilizando los siguientes servicios:
+
+\begin{itemize}
+\item[Amazon S3]
+
+  \textit{Simple Storage Service} o S3 es un servicio de almacenamiento
+  distribuido y escalable basado en \textit{buckets} como directorios.
+  
+\item[Amazon Elastic Search]
+
+  Solución de Amazon para un servicio autogestionado del stack ElasticSearch y
+  Kibana. ElasticSearch es un indexador de documentos basado en índices,
+  mientras que Kibana, montado sobre éste, permite visualizar los documentos
+  indexados a través de agregaciones sencillas. 
+\end{itemize}
+
 \subsection{Lenguajes de Programación}
 
 A continuación se indican aquellos lenguajes de programación que han tenido más
-peso en el desarrollo del \acs{PFC}. 
+peso en el desarrollo del \acs{TFM}. 
 
 \begin{definitionlist} 
 
@@ -605,29 +607,18 @@ Java (\url{https://www.java.com/}) es el lenguaje de programación para el
 desarrollo de la parte central del proyecto. Se ha escogido Java debido a su
 gran extensión y soporte por parte de la comunidad. 
 
-Para este \acs{PFC} se ha trabajado con la versión 1.7. 
+Para este \acs{TFM} se ha trabajado con la versión 1.8.
 
+\item[Scala]
 
-\item[JavaScript]
+  Scala(\url{https://www.scala-lang.org/}) es un lenguaje de programación
+  funcional, que está convirtiéndose en una auténtica revolución en el mundo del
+  Big Data debido a que corre sobre la máquina virtual de Java, permite
+  reutilizar todas las librerías disponibles para éste y su orientación
+  funcional lo hace idóneo para la resolución de problemas y elaboración de
+  algoritmos en estos ámbitos. Es el lenguaje con el
+  que está desarrollado Spark. 
 
-JavaScript es un lenguaje interpretado, imperativo, débilmente tipado, dinámico
-y orientado a objetos. Se utiliza principalmente en el lado del cliente en
-aplicaciones Web. 
-
-\item[\acf{HTML}]
-
-\acs{HTML} es un lenguaje interpretado para la elaboración de páginas Web. En
-este proyecto se ha utilizado algunas anotaciones pertenecientes a la última
-versión, \acs{HTML} 5, con el fin de dotar de más dinamismo a la aplicación
-Web. 
-
-\item[\acf{JSP}]
-
-\acs{JSP} es el lenguaje de programación Web integrado con Java para realizar
-páginas Web dinámicas. 
-
-En el proyecto se ha utilizado junto con \acs{HTML} para la realización de la
-aplicación Web. 
 
 \item[Datalog Jena]
 
@@ -650,8 +641,8 @@ consulta y actualización sobre conjuntos de datos semánticos.
 Para la realización del \acs{TFM} se han utilizado las siguientes máquinas: 
 
 \begin{itemize}
-\item PC con \textit{Microsoft Windows 7 Professional} procesador Intel Centrino
-  doble núcleo de 2.1 GHz y 4 GB de RAM. 
-\item PC con \textit{Debian 7 Wheezy} con procesador Intel Atom doble núcleo de
-  1.2GHz y 2 GB de RAM. 
+\item PC con \textit{GNU/Linux Ubuntu 16.04} procesador Intel i7
+  de ocho núcleos de 2.6 GHz y 16 GB de RAM.
+\item PC con \textit{GNU/Linux Ubuntu 16.04} procesador Intel i5
+  de cuatro núcleos de 2.6 GHz y 16 GB de RAM.   
 \end{itemize}
