@@ -496,12 +496,29 @@ soporte al desarrollo de estos dos artefactos.
 
 \subsubsection{Iteración 4: Desarrollo de SparkRDF}
 
+Una vez diseñada la arquitectura, comienza el desarrollo con su primera
+dependencia: obtención de datos semánticos y representación en estructuras de
+datos distribuídas propias del framework de desarrollo.
+
+Para ello se abordan las etapas tradicionales de desarrollo: Análisis, Diseño,
+Implementación y Pruebas. Se iterará hasta que se estime un estado óptimo del
+artefacto. 
 
 [INSERTA TABLA AQUÍ]
 
 \subsubsection{Iteración 5: Desarrollo de SparkDQ: Evaluación
   \textit{Interlinking}}
 
+Teniendo el punto de entrada de los datos, lo siguiente es comenzar con la
+elaboración del artefacto de evaluación de calidad de datos mediante
+métricas.
+
+La primera iteración sobre este artefacto tendrá por objetivo la elaboración de
+el conjunto de funciones necesarias para implementar la métrica
+\textit{Interlinking}.
+
+Se abordará mediante las etapas tradicionales: Análisis, Diseño,
+Implementación y Pruebas, iterando hasta que el resultado sea óptimo. 
 
 [INSERTA TABLA AQUÍ]
 
@@ -509,16 +526,44 @@ soporte al desarrollo de estos dos artefactos.
 \subsubsection{Iteración 6: Desarrollo de SparkDQ: Evaluación
   \textit{SchemaCompleteness}}
 
+
+La segunda iteración sobre este artefacto tendrá por objetivo la elaboración de
+el conjunto de funciones necesarias para implementar la métrica
+\textit{SchemaCompleteness}.
+
+Se abordará mediante las etapas tradicionales: Análisis, Diseño,
+Implementación y Pruebas, iterando hasta que el resultado sea óptimo. 
+
 [INSERTA TABLA AQUÍ]
 
 \subsubsection{Iteración 7: Desarrollo de la PoC}
 
+Finalmente tras haber finalizado el artefacto de evaluación de la calidad, se
+aplicará sobre una prueba de concepto. Esta prueba a su vez se dividirá en una
+serie de fases de Análisis, Diseño, Implementación y Pruebas, no relativas
+únicamente al artefacto software a desarrollar, sino a la arquitectura global
+que se ofrecerá finalmente. 
 
 [INSERTA TABLA AQUÍ]
 
 
 \subsubsection{Iteración 8: Entrega de \acs{TFM}}
 
+Una vez realizada la prueba de concepto, se finaliza el trabajo pendiente
+redactando y detallando la documentación:
+
+\begin{enumerate}
+\item Memoria del \acs{TFM}
+\item Documentación sobre los distintos artefactos generados:
+  \begin{itemize}
+  \item SparkRDF
+  \item SparkDQ
+  \item spark-sem-dq-assessment
+  \item Microservicio de ingesta
+  \item Microservicio de transformación tweets a triplas semánticas
+  \item Ontologías desarrolladas
+  \end{itemize}
+\end{enumerate}
 
 [INSERTA TABLA AQUÍ]
 
