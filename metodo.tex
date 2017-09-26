@@ -410,20 +410,234 @@ aplicación de Prueba de Concepto.
 \item \textbf{PoC debe permitir el consumo de los resultados de las evaluaciones
   llevadas a cabo}\\Los resultados de las evaluaciones deben ser accesibles y
   fácilmente consumibles por parte de los usuarios. 
-  
 \end{enumerate}
-
 
 
 \subsection{Iteraciones del \acs{PUD}}
 
+
+
 \section{Marco tecnológico de trabajo}
 
-\subsection{Frameworks de desarrollo}
-\subsection{Software de desarrollo}
+\label{sec:marcotrabajo}
+
+En esta sección se describen las herramientas y tecnologías que se han elegido
+para dar soporte al desarrollo de este \acs{PFC}. Dichas herramientas y tecnologías
+son utilizadas tanto para el modelado del sistema y desarrollo de diagramas como
+para la implementación del código y la documentación necesaria. 
+
+\subsection{Frameworks de desarrollo de aplicaciones de Web (Semántica)}
+
+Los distintos frameworks utilizados durante la elaboración de este \acs{PFC} se
+exponen a continuación. 
+
+\begin{definitionlist} 
+
+\item[Apache Jena]
+
+Jena (\url{http://jena.apache.org}) es un framework de código abierto, basado en
+Java para la construcción de aplicaciones basadas en tecnología Semántica y
+datos enlazados. 
+
+En el Capítulo \ref{chap:estadoarte} se han explicado algunas de las
+características más importantes de este framework. 
+
+Jena se erige como la pieza clave dentro de este \acs{PFC} debido a que la
+extensión elaborada, JenaDQ, basa su funcionamiento en el amplio abanico de
+herramientas que implementa Jena. 
+
+Para una consulta más detallada, véase la Sección \ref{sec:eajena}. 
+
+\item[Apache Struts 2]
+
+Para desarrollar la aplicación Web se ha utilizado este framework. Struts 2
+(\url{http://struts.apache.org/2.x/index.html}) permite el desarrollo de
+aplicaciones de Web dinámicas utilizando tecnología Java. 
+
+\end{definitionlist}
+
+\subsection{Software de Desarrollo}
+
+Como software de soporte al desarrollo del \acs{PFC} se han utilizado las
+siguientes herramientas. 
+
+\begin{definitionlist} 
+\item[Eclipse Juno]
+
+Eclipse (\url{https://www.eclipse.org}) es un \acf{IDE} compuesto por un conjuto
+de herramientas de código abierto para la programación. Eclipse es además
+multiplataforma e incluye gran cantidad de plugins para hacer de la labor de
+programación algo más fácil, principalmente con Java. 
+
+La versión utilizada para la realización de este \acs{PFC} ha sido
+\textit{Eclipse Juno}. 
+
+
+\item[Selenium]
+
+Selenium (\url{http://www.seleniumhq.org/}) es un entorno de pruebas software
+para aplicaciones basadas en Web. 
+
+\item[Visual Paradigm]
+
+Visual Paradigm (\url{http://www.visual-paradigm.com}) es una herramienta
+\acf{CASE} que permite facilitar todo el proceso de desarrollo, incluyendo
+herramientas de edición de diagramas \acs{UML} de todo tipo y generación de
+código automática a partir de diagramas y viceversa. 
+
+Visual Paradigm se ha utilizado para la realización de todos los diagramas. 
+
+\item[Balsamiq Mockups]
+
+Balsamiq Mockups (\url{http://www.balsamic.com}) es una herramienta para la
+realización de borradores y bocetos de interfaces de usuario para múltiples
+plataformas y dispositivos. 
+
+Mockups se ha utilizado para realizar los prototipos de interfaces de usuario de
+la aplicación Web. 
+
+\item[Git]
+
+Git (\url{http://git-scm.com/}) ha sido el software de control de versiones
+utilizado para el desarrollo. 
+
+\item[jUnit]
+
+jUnit (\url{http://junit.sourceforge.net}) es un framework que permite realizar
+ejecución de pruebas unitarias de manera controlada para evaluar el correcto
+funcionamiento de determinado código. 
+
+\item[Protégé]
+
+Protégé (\url{http://protege.stanford.edu}) es un editor de ontologías de código
+abierto. Se ha utilizado en este proyecto para la creación del vocabulario de
+evaluación de calidad de datos. 
+
+\end{definitionlist}
+
+
 \subsection{Edición}
+
+Para las diferentes labores de edición, tanto de texto como de imagen, se han
+utilizado las siguientes herramientas. 
+
+\begin{definitionlist} 
+\item[\LaTeX]
+
+\LaTeX es un sistema de composición de textos orientado principalmente a la
+creación de documentos científicos y técnicos. 
+
+Toda la documentación se ha generado con esta tecnología. 
+
+\item[BibTeX]
+BibTeX es un sistema gestor de referencias bibliográficas que se integra con
+\LaTeX.
+
+\item[Zotero]
+
+Zotero (\url{https://www.zotero.org}) es un programa de código abierto que
+permite a los usuarios la recolección y gestión de referencias. Facilita la
+búsqueda de documentos y la exportación a diferentes formatos (como BibTeX). 
+
+\item[Emacs]
+
+Emacs (\url{www.gnu.org/software/emacs/}) es un editor de texto multifuncional
+que incluye una gran cantidad de librerías y extensiones para facilitar
+cualquier tipo de edición que se lleve a cabo sobre él. 
+
+En este proyecto, se ha utilizado Emacs integrado con \LaTeX para la
+elaboración de toda la documentación. También para la edición de otros archivos
+menores como reglas o scripts. 
+
+\item[Dia]
+
+Dia (\url{https://wiki.gnome.org/Apps/Dia}) es un programa editor de diagramas
+de diferentes tipos (\acs{UML}, flujo de datos, \ldots). 
+
+\item[Gimp]
+
+Gimp (\url{www.gimp.org}) es un editor de imagen de código abierto. 
+
+\end{definitionlist}
+
 \subsection{Servidores}
-\subsection{Lenguajes de programación}
+
+Se han utilizado dos tipos de servidores: los de la aplicación Web y los de
+datos. Se enumeran a continuación. 
+
+\begin{definitionlist} 
+\item[Apache Tomcat]
+
+Apache Tomcat (\url{http://tomcat.apache.org}) es un servidor Web de código
+abierto para aplicaciones Java. 
+
+\item[Jena TDB]
+
+Dentro del proyecto Jena, TDB es sistema de almacenamiento altamente escalable y
+de alta velocidad empleado para las triplas. 
+
+
+\item[Jena Fuseki]
+
+Dentro del proyecto Jena, Fuseki es el servidor de triplas sobre el que se
+pueden realizar consultas como endpoint a través del protocolo \acs{HTTP}. Se
+integra sobre distintos servidores pero principalmente sobre TDB. 
+
+\end{definitionlist}
+
+\subsection{Lenguajes de Programación}
+
+A continuación se indican aquellos lenguajes de programación que han tenido más
+peso en el desarrollo del \acs{PFC}. 
+
+\begin{definitionlist} 
+
+\item[Java]
+
+Java (\url{https://www.java.com/}) es el lenguaje de programación para el
+desarrollo de la parte central del proyecto. Se ha escogido Java debido a su
+gran extensión y soporte por parte de la comunidad. 
+
+Para este \acs{PFC} se ha trabajado con la versión 1.7. 
+
+
+\item[JavaScript]
+
+JavaScript es un lenguaje interpretado, imperativo, débilmente tipado, dinámico
+y orientado a objetos. Se utiliza principalmente en el lado del cliente en
+aplicaciones Web. 
+
+\item[\acf{HTML}]
+
+\acs{HTML} es un lenguaje interpretado para la elaboración de páginas Web. En
+este proyecto se ha utilizado algunas anotaciones pertenecientes a la última
+versión, \acs{HTML} 5, con el fin de dotar de más dinamismo a la aplicación
+Web. 
+
+\item[\acf{JSP}]
+
+\acs{JSP} es el lenguaje de programación Web integrado con Java para realizar
+páginas Web dinámicas. 
+
+En el proyecto se ha utilizado junto con \acs{HTML} para la realización de la
+aplicación Web. 
+
+\item[Datalog Jena]
+
+Para la parte relacionada con la inferencia, Jena posee su propio lenguaje de
+definición de reglas: Datalog Jena. Es el lenguaje utilizado para definir las
+reglas de contexto que luego se han utilizado para llevar a cabo los
+razonamientos (véase Sección \ref{sec:eajena}). 
+
+
+
+\item[\acs{SPARQL}]
+
+\acs{SPARQL} es el lenguaje declarativo para llevar a cabo operaciones de
+consulta y actualización sobre conjuntos de datos semánticos. 
+
+\end{definitionlist}
+
 \subsection{Equipos de desarrollo}
 
 Para la realización del \acs{TFM} se han utilizado las siguientes máquinas: 
