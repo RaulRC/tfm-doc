@@ -353,7 +353,55 @@ calidad de datos, persiguiendo los siguientes objetivos:
 \end{enumerate}
 
 \subsection{Requisitos funcionales para SparkDQ}
+
+Seguidamente se exponen los requisitos funcionales que se han identificado en la
+primera fase del \acs{PUD}. Estos requisitos corresponden al desarrollo del
+stack \textbf{SparkDQ}.
+
+\begin{enumerate}
+\item \textbf{SparkDQ debe permitir la carga de triplas semánticas en un entorno
+  distribuido} \\La premisa inicial es que el volumen de datos es
+  suficientemente grande como para que se requiera un almacenamiento y
+  procesamiento en distribuido de los mismos. Por lo tanto, SparkDQ debe ser
+  capaz de leer las triplas almacenadas en entornos distribuidos y cargarlas en
+  un modelo igualmente distribuido para su posterior procesamiento.
+  
+\item \textbf{SparkDQ debe permitir al usuario modelar la evaluación de
+  calidad}\\Se entiende como evaluación de calidad el cálculo de unas métricas y
+  su posterior interpretación, así pues SparkDQ debe exponer mecanismos de
+  evaluación de calidad de datos para ser llevados a cabo sobre un juego de
+  datos distribuido. 
+\item \textbf{SparkDQ debe permitir llevar a cabo evaluaciones de calidad de
+  datos enlazados para la métrica \textit{SchemaCompleteness}}\\Se evaluará esta
+  métrica considerando un esquema deseable para los datos obteniendo como
+  resultado un grado de alineamiento de los datos con dicho esquema. 
+
+\item \textbf{SparkDQ debe permitir llevar a cabo evaluaciones de calidad de
+  datos enlazados para la métrica \textit{InterlinkingCompleteness}}\\Se
+  evaluará esta métrica considerando un nivel de profundidad, siendo esto una
+  agregación del nivel de interconectividad estratificado. 
+\end{enumerate}
+
 \subsection{Requisitos funcionales para la PoC}
+
+Finalmente se exponen los requisitos funcionales identificados para la
+aplicación de Prueba de Concepto.
+
+\begin{enumerate}
+\item \textbf{PoC debe permitir la adquisición de datos semánticos}
+\item \textbf{PoC debe permitir el almacenamiento de datos semánticos en un
+  entorno distribuido}
+\item \textbf{PoC debe permitir cargar datos semánticos desde un entorno
+  distribuido y procesarlos}
+\item \textbf{PoC debe poder almacenar el resultado de las evaluaciones de
+  calidad de datos en un entorno distribuido}
+\item \textbf{PoC debe permitir el consumo de los resultados de las evaluaciones
+  llevadas a cabo}
+  
+\end{enumerate}
+
+
+
 \subsection{Iteraciones del \acs{PUD}}
 
 \section{Marco tecnológico de trabajo}
