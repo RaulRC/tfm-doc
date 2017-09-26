@@ -423,14 +423,104 @@ iteraciones centrales el desarrollo y puesta a punto de los artefactos software
 generados para finalmente, en la fase de transición del \acs{PUD}, la
 elaboración de la prueba de conecpto y la entrega del presente trabajo. 
 
+
+[INSERTA TABLA AQUÍ]
+
 \subsubsection{Iteración 1: Planificación, casos de uso y requisitos}
+
+Los objetivos de esta iteración son:
+
+\begin{enumerate}
+
+  \item Contextualizar el trabajo llevado a cabo en el \acs{PFC} con respecto a
+  las tecnologías actuales y los avances en el campo.
+\item Establecer una serie de casos de uso iniciales.
+\item Fijar una serie de requisitos en base al conjunto de casos de uso
+  especificado.
+\item Establecer una arquitectura de la solución preliminar.
+
+\end{enumerate}
+
+Planteando este \acs{TFM} como una evolución del pasado \acs{PFC}, resulta
+imprescindible conocer en qué punto se halla todo el trabajo realizado tras
+varios años de evolución tecnológica. Es por lo tanto una de las iteraciones
+cruciales para definir el rumbo del desarrollo así como de actualización del
+estado de la cuestión.
+
+Inicialmente se retoman las tecnologías utilizadas, Jena y JenaDQ, comprobando
+su evolución en los últimos años. Seguidamente se establece un marco contextual
+en el que se estudia el estado de la cuestión y se detectan carencias en el
+ámbito actual: ausencia de frameworks que permitan el procesamiento distribuido
+de triplas semánticas y el análisis de calidad de datos de las mismas en
+entornos Big Data. 
+
+Esto ayuda a especificar una serie de necesidades y unos casos de uso para
+cubrirlas. En base a los casos de uso se generan los requisitos dirigidos
+siempre hacia una arquitectura.
+
+
+[INSERTA TABLA AQUÍ]
+
 \subsubsection{Iteración 2: Actualización de JenaDQ}
+
+Una vez establecidos los requisitos, se dispone a actualizar el estado de JenaDQ
+para dotarle de mayor nivel de madurez y alinearlo al trabajo que va a ser
+desarrollado, de manera que pueda compararse en ejecución con los desarrollos
+que van a tener lugar. 
+
+[INSERTA TABLA AQUÍ]
+
 \subsubsection{Iteración 3: Diseño de arquitectura de SparkDQ}
+
+Tras analizar la problemática comienza el diseño de las soluciones. En este
+caso, el objetivo final es elaborar un stack que permita el procesamiento
+distribuido de triplas semánticas y la evaluación de la calidad de datos de las
+mismas de manera escalable. Para ello se requerirán de dos artefactos:
+
+\begin{enumerate}
+\item \textbf{SparkRDF}: como interfaz entre un conjunto suficientemente grande de
+  triplas semánticas y una representación escalable que permita la
+  transformación de éstas hacia modelos de procesamiento distribuido, en este
+  caso y como se verá en el capítulo de resultados, mediante un grafo dirigido.
+\item \textbf{SparkDQ}: Una vez se tenga la representación distribuida de las triplas, se
+  procederá a la creación de primitivas que permitan la evaluación de la calidad
+  de los datos para las métricas \textit{SchemaCompleteness} e \textit{Interlinking}.
+\end{enumerate}
+
+
+El objetivo de esta iteración será diseñar los componentes necesarios para dar
+soporte al desarrollo de estos dos artefactos.
+
+[INSERTA TABLA AQUÍ]
+
+
 \subsubsection{Iteración 4: Desarrollo de SparkRDF}
-\subsubsection{Iteración 5: Desarrollo de SparkDQ: Evaluación \textit{Interlinking}}
-\subsubsection{Iteración 6: Desarrollo de SparkDQ: Evaluación \textit{SchemaCompleteness}}
+
+
+[INSERTA TABLA AQUÍ]
+
+\subsubsection{Iteración 5: Desarrollo de SparkDQ: Evaluación
+  \textit{Interlinking}}
+
+
+[INSERTA TABLA AQUÍ]
+
+
+\subsubsection{Iteración 6: Desarrollo de SparkDQ: Evaluación
+  \textit{SchemaCompleteness}}
+
+[INSERTA TABLA AQUÍ]
+
 \subsubsection{Iteración 7: Desarrollo de la PoC}
+
+
+[INSERTA TABLA AQUÍ]
+
+
 \subsubsection{Iteración 8: Entrega de \acs{TFM}}
+
+
+[INSERTA TABLA AQUÍ]
 
 \section{Marco tecnológico de trabajo}
 
