@@ -1,3 +1,8 @@
 *~
 *#*
 *.hg*
+*.blg
+*.out
+*.lof
+*.log
+*.toc

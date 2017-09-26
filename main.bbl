@@ -193,6 +193,16 @@ Leo~L. Pipino, Yang~W. Lee, y Richard~Y. Wang.
 {RDF} - Semantic Web Standards.
 \newblock url: \url{http://www.w3.org/RDF/}.
 
+\bibitem[RJB]{rumbaugh_jacobson_pud}
+James Rumbaugh, Ivar Jacobson, y Grady Booch.
+\newblock {\em {EL} {PROCESO} {UNIFICADO} {DE} {DESARROLLO} {DE} {SOFTWARE}}.
+\newblock Addison Wesley.
+
+\bibitem[RJB04]{rumbaugh_unified_2004}
+James Rumbaugh, Ivar Jacobson, y Grady Booch.
+\newblock {\em The Unified Modeling Language Reference Manual,}.
+\newblock Addison Wesley Pub Co Inc, Boston, edición Second, Julio 2004.
+
 \bibitem[SAN]{SANSA-stack}
 SANSA-Stack.
 \newblock url: \url{http://sansa-stack.net/}.
