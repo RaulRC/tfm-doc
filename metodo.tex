@@ -388,15 +388,28 @@ Finalmente se exponen los requisitos funcionales identificados para la
 aplicación de Prueba de Concepto.
 
 \begin{enumerate}
-\item \textbf{PoC debe permitir la adquisición de datos semánticos}
+\item \textbf{PoC debe permitir la adquisición de datos semánticos}\\Como parte
+  del \textit{end to end} el primer paso de la prueba de concepto será
+  seleccionar una fuente de datos y llevar a cabo un proceso de ingesta dentro
+  de la arquitectura propuesta. 
+  
 \item \textbf{PoC debe permitir el almacenamiento de datos semánticos en un
-  entorno distribuido}
+  entorno distribuido}\\Los datos deben ingestarse en un entorno distribuido
+  para su posterior consumo, considerando que su volumen y variedad pueden
+  cambiar a lo largo del tiempo. 
 \item \textbf{PoC debe permitir cargar datos semánticos desde un entorno
-  distribuido y procesarlos}
+  distribuido y procesarlos}\\Los datos almacenados deben ser fácilmente
+  accesibles y consumidos, entendiendo el consumo de estos datos como la
+  adquisición, procesamiento y obtención de resultados en base a éstos. 
+\item \textbf{PoC debe mantener unos niveles de seguridad adecuados}\\Los datos
+  ingestados y almacenados deben estar protegidos de accesos no deseados. 
 \item \textbf{PoC debe poder almacenar el resultado de las evaluaciones de
-  calidad de datos en un entorno distribuido}
+  calidad de datos en un entorno distribuido}\\Los resultados de las
+  evaluaciones deben ser convenientemente almacenados bajo las mismas
+  directrices de disponibilidad y seguridad que los datos inicialmente ingestados.
 \item \textbf{PoC debe permitir el consumo de los resultados de las evaluaciones
-  llevadas a cabo}
+  llevadas a cabo}\\Los resultados de las evaluaciones deben ser accesibles y
+  fácilmente consumibles por parte de los usuarios. 
   
 \end{enumerate}
 
