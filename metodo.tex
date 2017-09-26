@@ -316,7 +316,30 @@ todos los productos resultantes de cada una de las iteraciones.
 
 El sistema software a desarrollar se describe a continuación. 
 
-\subsection{Requisitos funcionales para Spark Semantic Stack}
+\subsection{SparkDQ: Un stack de Spark para la evaluación de la calidad de datos
+  de triplas semánticas} 
+
+Este capa software tendrá por objetivo resolver el problema del tratamiento de
+datos semánticos en entornos Big Data. Se integrará e interactuará con el
+framework Apache Spark para ofrecer un conjunto de primitivas de lectura de
+datos semánticos y evaluación de la calidad de los mismos.
+
+Este artefacto software tendrá las siguientes responsabilidades:
+
+\begin{itemize}
+\item Permitir la lectura de triplas semánticas y almacenarlas en una estructura
+  de datos conveniente de forma distribuida.
+\item Evaluación de los niveles de calidad de datos de un conjunto \acs{LOD}
+  para la dimensión de calidad \textit{Completeness} desde la perspectiva de dos
+  de sus métricas, descritas en su sección correspondiente del capítulo 3 (\cite{métricasdq}):
+  \begin{itemize}
+  \item \textit{Interlinking Completeness}
+  \item \textit{Schema Completeness}
+  \end{itemize}
+\end{itemize}
+\subsection{Prueba de Concepto para SparkDQ}
+
+\subsection{Requisitos funcionales para SparkDQ}
 \subsection{Requisitos funcionales para la PoC}
 \subsection{Iteraciones del \acs{PUD}}
 
