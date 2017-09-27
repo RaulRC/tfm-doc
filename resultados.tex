@@ -17,6 +17,107 @@ fin de facilitar la lectura.
 
 \subsection{Iteración 1: Planificación, casos de uso y requisitos}
 
+La primera iteración tiene como objetivo establecer una planficación, detallar
+requisitos y establecer una serie de casos de uso.
+
+Se han obtenido como resultados los siguientes artefactos:
+
+\begin{itemize}
+\item Una revisión del estado del arte que puede consultarse en el Capítulo
+  \ref{chap:estadoarte}, reflejando la situación actual en los principales
+  campos relacionados con el \acs{TFM}
+  \begin{itemize}
+  \item Web Semántica
+  \item Procesamiento en distribuido
+  \item Calidad de Datos
+  \item Calidad de Linked Data
+  \end{itemize}
+
+\item Una especificación de requisitos, funcionales y no funcionales, tanto para
+  SparkDQ como para la prueba de concepto a realizar a partir de ésta.
+\item Modelo general de Casos de Uso de SparkDQ y PoC
+\item Planificación detallada dividida en fases e iteraciones del \acs{PUD}
+\end{itemize}
+
+\subsubsection{Requisitos}
+
+Los requisitos funcionales de cualquier sistema software son aquellos que definen el comportamiento del
+sistema y establecen un punto de partida para elaborar un modelo de casos de
+uso, mientras que los no funcionales son aquellos orientados a aspectos del
+sistema que notienen relación con el comportamiento, por ejemplo, el diseño, la
+implementación on la usabilidad. 
+
+Seguidamente se exponen los requisitos funcionales que se han identificado en la
+primera fase del \acs{PUD}. Estos requisitos corresponden al desarrollo del
+stack \textbf{SparkDQ}.
+
+\begin{enumerate}
+\item \textbf{RF 1. SparkDQ debe permitir la carga de triplas semánticas en un entorno
+  distribuido} \\La premisa inicial es que el volumen de datos es
+  suficientemente grande como para que se requiera un almacenamiento y
+  procesamiento en distribuido de los mismos. Por lo tanto, SparkDQ debe ser
+  capaz de leer las triplas almacenadas en entornos distribuidos y cargarlas en
+  un modelo igualmente distribuido para su posterior procesamiento.
+  
+\item \textbf{RF 2. SparkDQ debe permitir al usuario modelar la evaluación de
+  calidad}\\Se entiende como evaluación de calidad el cálculo de unas métricas y
+  su posterior interpretación, así pues SparkDQ debe exponer mecanismos de
+  evaluación de calidad de datos para ser llevados a cabo sobre un juego de
+  datos distribuido. 
+\item \textbf{RF 3. SparkDQ debe permitir llevar a cabo evaluaciones de calidad de
+  datos enlazados para la métrica \textit{SchemaCompleteness}}\\Se evaluará esta
+  métrica considerando un esquema deseable para los datos obteniendo como
+  resultado un grado de alineamiento de los datos con dicho esquema. 
+
+\item \textbf{RF 4. SparkDQ debe permitir llevar a cabo evaluaciones de calidad de
+  datos enlazados para la métrica \textit{InterlinkingCompleteness}}\\Se
+  evaluará esta métrica considerando un nivel de profundidad, siendo esto una
+  agregación del nivel de interconectividad estratificado. 
+\end{enumerate}
+
+Una vez definidos los funcionales, se indican los no funcionales para SparkDQ.
+
+\begin{itemize}
+\item \textbf{RNF 1. Utilización de un framework para desarrollo de tecnologías
+  semánticas: Apache Jena}\\Se retomará el uso de Apache Jena como framework de
+  desarrollo de tecnologías semánticas para utilizar en el contexto del \acs{TFM}
+\item \textbf{RNF 2. Utilización de un framework de procesamiento en
+  distribuido: Apache Spark}\\Para el procesamiento distribuido se utilizará
+  Apache Spark, que queda explicado en la sección \ref{sec:eco-hadoop}
+\item \textbf{RNF 3. Generación de la documentación de la \acs{API}}\\Finalmente
+  se generará la documentación de la API que permita a los desarrolladores
+  extender y utilizar el módulo creado. 
+\end{itemize}
+
+Finalmente se exponen los requisitos funcionales y no funcionales identificados para la
+aplicación de Prueba de Concepto.
+
+\begin{enumerate}
+\item \textbf{PoC debe permitir la adquisición de datos semánticos}\\Como parte
+  del \textit{end to end} el primer paso de la prueba de concepto será
+  seleccionar una fuente de datos y llevar a cabo un proceso de ingesta dentro
+  de la arquitectura propuesta. 
+  
+\item \textbf{PoC debe permitir el almacenamiento de datos semánticos en un
+  entorno distribuido}\\Los datos deben ingestarse en un entorno distribuido
+  para su posterior consumo, considerando que su volumen y variedad pueden
+  cambiar a lo largo del tiempo. 
+\item \textbf{PoC debe permitir cargar datos semánticos desde un entorno
+  distribuido y procesarlos}\\Los datos almacenados deben ser fácilmente
+  accesibles y consumidos, entendiendo el consumo de estos datos como la
+  adquisición, procesamiento y obtención de resultados en base a éstos. 
+\item \textbf{PoC debe mantener unos niveles de seguridad adecuados}\\Los datos
+  ingestados y almacenados deben estar protegidos de accesos no deseados. 
+\item \textbf{PoC debe poder almacenar el resultado de las evaluaciones de
+  calidad de datos en un entorno distribuido}\\Los resultados de las
+  evaluaciones deben ser convenientemente almacenados bajo las mismas
+  directrices de disponibilidad y seguridad que los datos inicialmente ingestados.
+\item \textbf{PoC debe permitir el consumo de los resultados de las evaluaciones
+  llevadas a cabo}\\Los resultados de las evaluaciones deben ser accesibles y
+  fácilmente consumibles por parte de los usuarios. 
+\end{enumerate}
+
+
 \input{tables/iter1.tex}
 
 \section{Fase de Elaboración}
