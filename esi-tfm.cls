@@ -633,6 +633,7 @@
 }
 
 \addto\captionsspanish{\renewcommand{\appendixname}{Anexo}}
+\usepackage{caption}
 
 \newcommand{\appendixtitle} {
   \cleardoublepage
