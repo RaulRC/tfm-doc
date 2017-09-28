@@ -257,7 +257,8 @@ def loadTriplets(sparkSession: SparkSession, path: String): RDD[Triple] = {
 Una vez cargadas las triplas y puesto que la información semántica es
 inherentemente un grafo, se utiliza la extensión GraphX de Spark para generar un
 grafo dirigido de triplas semánticas, en el que los nodos son sujetos y objetos y los
-arcos son las relaciones entre los nodos.
+arcos son las relaciones entre los nodos. El listado \ref{graphcomposer} ilustra
+esta funcionalidad. 
 
 \lstset{escapechar=@,language=scala}
 \begin{lstlisting}[caption={Conversión de RDD de Triplas a Grafo de nodos},captionpos=b, label=graphcomposer]
@@ -278,6 +279,31 @@ private def getSemanticGraph(tripleRDD: RDD[Triple]): org.apache.spark.graphx.Gr
 }
 \end{lstlisting}
 
+El tratamiento de los datos RDF y por ende las responsabilidades de este
+artefacto no terminan solamente con la lectura y transformación a una estructura
+de grafo distribuida, sino que cualquier operación de tratamiento y consulta de
+estos datos debe delegar en esta capa de abstracción. Así pues, además de las
+nombradas, existe una serie de funciones dedicadas a llevar a cabo operaciones
+auxiliares sobre un conjunto de triplas, tales como listar sujetos, predicados,
+objetos o funciones de consulta como las de buscar nodos que cumplan cierta
+propiedad. 
+
+Como se verá en la siguiente sección, existe una función clave para el
+desarrollo de este proyecto y el cálculo de las métricas, que queda delegada a
+SparkRDF:
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Conversión de RDD de Triplas a Grafo de
+      nodos},captionpos=b, label=headerexpand]
+
+def expandNodesNLevel(nodes: VertexRDD[Node],
+                        graph: org.apache.spark.graphx.Graph[Node, Node],
+                        levels: Int = 1): Dataset[Row]   
+\end{lstlisting}
+
+Su funcionalidad es la de, dada una colección de nodos, expandir en N capas esos
+nodos. En la siguiente sección se explicará en detalle la necesidad de esta
+funcionalidad. 
 
 \subsection{Iteración 5: Desarrollo de SparkDQ para la métrica \textit{Interlinking}}
 
