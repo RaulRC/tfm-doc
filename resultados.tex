@@ -4,7 +4,7 @@
 \drop{E}{n} este capítulo se presentan los resultados obtenidos tras llevar a
 cabo el plan de trabajo presentado en el capítulo anterior. El proceso ha
 desembocado en la obtención de varios artefactos, principalmente SparkDQ y su
-prueba de concepto, tal y como se pretendía desarrollar. 
+prueba de concepto, tal y como se pretendía desarrollar.
 
 \section{Fase de Inicio}
 
@@ -121,7 +121,6 @@ aplicación de Prueba de Concepto.
 
 Siendo los requisitos no funcionales los siguientes:
 
-
 \begin{itemize}
 \item \textbf{RNF 1. Arquitectura en Cloud}\\Se debe realizar una prueba de
   concepto utilizando tecnologías Cloud recientes y de uso extendido. 
@@ -134,11 +133,42 @@ Siendo los requisitos no funcionales los siguientes:
 
 \subsubsection{Modelo general de Casos de Uso}
 
+[INSERTE DIAGRAMA AQUÍ]
+
 \section{Fase de Elaboración}
+
+En la fase de Elaboración, se han sentado las bases para el desarrollo
+propiamente dicho de los artefactos software que se han indicado en la fase
+inicial. Concretamente se ha trabajado en dos vertientes:
+
+\begin{itemize}
+\item Actualización de JenaDQ como artefacto software
+\item Diseño del stack SparkDQ
+\end{itemize}
 
 \subsection{Iteración 2: Actualización de JenaDQ}
 
 \input{tables/iter2.tex}
+
+En esta iteración el objetivo principal es actualizar JenaDQ y alinearlo con las
+tecnologías que van a ser usadas en este proyecto.
+
+Concretamente, se ha generado
+un proyecto Maven (véase Sección\ref{maven}) con el que gestionar más fácilmente
+las dependencias y el ciclo de vida de las aplicación.
+
+Posteriormente se ha hecho una revisión del código y se han actualizado aquellos
+puntos de JenaDQ que se han creído oportunos:
+
+\begin{enumerate}
+\item Se han añadido más pruebas unitarias.
+\item Refactorizado de código.
+\item Test de integración.
+\end{enumerate}
+
+Como resultado se ha obtenido una nueva versión de JenaDQ, que ha mantenido las
+métricas pero cuyo nivel de calidad como artefacto software y mantenibilidad se
+ha visto incrementado.
 
 \subsection{Iteración 3: Diseño de la arquitectura de SparkDQ}
 
