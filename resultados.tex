@@ -174,11 +174,63 @@ ha visto incrementado.
 
 \input{tables/iter3.tex}
 
+La iteración ha tenido como objetivo:
+
+\begin{itemize}
+\item Establecer un diseño de la arquitectura de SparkDQ
+\item Establecer un diseño de la arquitectura de la prueba de concepto
+\end{itemize}
+
+En primer lugar se ha concluido que SparkDQ contará con dos elementos:
+\begin{itemize}
+\item \textbf{SparkRDF}: un artefacto encargado únicamente de la captura de datos
+  semánticos y su transformación a una estructura de datos distribuida. En este
+  caso, dicha estructura será la de un grafo dirigido. Este grafo se construirá
+  sobre la librería Spark GraphX, orientada específicamente a trabajar con este
+  tipo de estructuras.
+  \item \textbf{SparkDQ}: artefacto encargado de llevar a cabo evaluaciones de
+    calidad de datos sobre datos semánticos. Tendrá una dependencia con
+    SparkRDF, delegando en éste la adquisición de datos y tomando en sus
+    funciones como puntos de entrada los datos extraídos por SparkRDF. Se
+    plantean a su vez dos métricas para evaluar: \textit{Interlinking} y
+    \textit{SchemaCompleteness}, descritas en la sección \ref{schemacompleteness}. 
+\end{itemize}
+
+Para la prueba de concepto, se ha establecido:
+
+\begin{enumerate}
+\item Generación de un artefacto que lleve a cabo cálculos de calidad de datos
+  semánticos sobre un conjunto suficientemente grande. Dicho artefacto se
+  llamará spark-sem-dq-assessment y tendrá una dependencia de SparkDQ. Podrá
+  configurarse para llevar a cabo una evaluación de la calidad de los datos
+  sobre cualquiera de las métricas que ofrezca SparkDQ.
+\item Elaboración de un diseño de arquitectura en cloud: involucrará los
+  siguientes elementos:
+  \begin{enumerate}
+  \item Arquitectura de microservicios: para llevar a cabo la captura y
+    procesamiento de datos. 
+  \item Almacenamiento en cloud - Amazon S3: como repositorio de datos iniciales
+    y directorio final de resultados de cálculos.
+  \item Visualización - Amazon ElasticSearc and Kibana stack: para la
+    visualización de los resultados de las evaluaciones.  
+  \end{enumerate}
+\end{enumerate}
+
+Se ha obtenido como resultado el diagrama de clases de SparkRDF, diagrama de clases
+de SparkDQ, diagrama de clases del job de la prueba de concepto 
+spark-sem-dq-assessment y diagrama \textit{end to end} de la prueba de
+concepto.
+
+[INSERTAR DIAGRAMAS AQUÍ]
+
+
 \section{Fase de Construcción}
 
 \subsection{Iteración 4: Desarrollo de SparkRDF}
 
 \input{tables/iter4.tex}
+
+[INSERTAR CHUNK DE CÓDIGO AQUÍ]
 
 \subsection{Iteración 5: Desarrollo de SparkDQ para la métrica \textit{Interlinking}}
 
