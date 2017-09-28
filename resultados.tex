@@ -228,13 +228,31 @@ concepto.
 
 Una vez asentados los diseños de los artefactos a desarrollar, en la fase de
 construcción tendrá lugar el desarrollo del núcleo de la aplicación, esto es,
-los artefactos clave de desarrollo: SparkRDF y SparkDQ.
+los artefactos clave de desarrollo: SparkRDF y SparkDQ, en las iteraciones 4 y 5
+respectivamente. 
 
 \subsection{Iteración 4: Desarrollo de SparkRDF}
 
 \input{tables/iter4.tex}
 
-[INSERTAR CHUNK DE CÓDIGO AQUÍ]
+SparkRDF utiliza un sub-módulo de Apache Jena (riot) para la lectura de
+documentos en formato ttl, es decir, en forma de triplas, en las que cada línea
+del fichero tiene tres campos separados por espacio, siendo dichos campos sujeto,
+predicado y objeto, respectivamente.
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Fragmento del lector de triplas},captionpos=b]
+def loadTriplets(sparkSession: SparkSession, path: String): RDD[Triple] = {
+  val tripletsRDD = sparkSession.sparkContext.textFile(path)
+  .filter(line => !line.trim().isEmpty & !line.startsWith(``#''))
+  .map(line =>
+          RDFDataMgr.createIteratorTriples(new
+          ByteArrayInputStream(line.getBytes), Lang.NTRIPLES, null).next())
+          tripletsRDD
+}  
+\end{lstlisting}
+
+
 
 \subsection{Iteración 5: Desarrollo de SparkDQ para la métrica \textit{Interlinking}}
 
