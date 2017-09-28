@@ -254,6 +254,29 @@ def loadTriplets(sparkSession: SparkSession, path: String): RDD[Triple] = {
 }  
 \end{lstlisting}
 
+Una vez cargadas las triplas y puesto que la información semántica es
+inherentemente un grafo, se utiliza la extensión GraphX de Spark para generar un
+grafo dirigido de triplas semánticas, en el que los nodos son sujetos y objetos y los
+arcos son las relaciones entre los nodos.
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Conversión de RDD de Triplas a Grafo de nodos},captionpos=b, label=graphcomposer]
+private def getSemanticGraph(tripleRDD: RDD[Triple]): org.apache.spark.graphx.Graph[Node, Node] = {
+//Generate hashCodes for graphx representation
+    val extTripleRDD = tripleRDD.map(triple => (triple,
+        triple.getSubject().hashCode().toLong,
+        triple.getObject().hashCode().toLong))
+    val subjects: RDD[(VertexId, Node)] = tripleRDD.map(triple =>
+        (triple.getSubject().hashCode().toLong, triple.getSubject()))
+    val predicates: RDD[Edge[Node]] = extTripleRDD.map(line =>
+        Edge(line._2, line._3, line._1.getPredicate()))
+    val objects: RDD[(VertexId, Node)] = tripleRDD.map(triple =>
+        (triple.getObject().hashCode().toLong, triple.getObject()))
+    val graph = org.apache.spark.graphx.Graph(subjects.union(objects).distinct(),
+         predicates.distinct())
+    graph
+}
+\end{lstlisting}
 
 
 \subsection{Iteración 5: Desarrollo de SparkDQ para la métrica \textit{Interlinking}}
