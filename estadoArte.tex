@@ -1257,7 +1257,13 @@ actuales:
 \item \textbf{Spark}: ~\cite{SPARK} es un framework para el procesado de grandes volúmenes de
   información. La ventaja principal respecto de Hadoop MapReduce es que el
   procesamiento se realiza en memoria en lugar de en disco, con lo cual la
-  velocidad se incrementa en varios órdenes de magnitud. Ofrece una serie de
+  velocidad se incrementa en varios órdenes de magnitud. Se basa en el concepto
+  de \acf{RDD} como estructura de datos distribuida básica, asentando sobre ésta
+  otras abstracciones como son los Dataframes, que en versiones recientes del
+  framework se han convertido en la recomendación de uso. Análogos a los
+  Dataframes de lenguajes como R, son estructuras de datos similares a tablas de
+  bases de datos relacionales y ofrecen primitivas de consulta similares. Spark
+  además tiene como complemento una serie de
   herramientas de alto nivel:
   \begin{itemize}
   \item \textbf{SparkSQL}: módulo para el procesamiento distribuido de datos

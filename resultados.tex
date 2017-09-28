@@ -238,10 +238,12 @@ respectivamente.
 SparkRDF utiliza un sub-módulo de Apache Jena (riot) para la lectura de
 documentos en formato ttl, es decir, en forma de triplas, en las que cada línea
 del fichero tiene tres campos separados por espacio, siendo dichos campos sujeto,
-predicado y objeto, respectivamente.
+predicado y objeto, respectivamente. El listado \ref{rdflector} muestra un
+fragmento de código encargado de la lectura de triplas y almacenamiento en un
+RDD. 
 
 \lstset{escapechar=@,language=scala}
-\begin{lstlisting}[caption={Fragmento del lector de triplas},captionpos=b]
+\begin{lstlisting}[caption={Fragmento del lector de triplas},captionpos=b, label=rdflector]
 def loadTriplets(sparkSession: SparkSession, path: String): RDD[Triple] = {
   val tripletsRDD = sparkSession.sparkContext.textFile(path)
   .filter(line => !line.trim().isEmpty & !line.startsWith(``#''))
