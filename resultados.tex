@@ -236,7 +236,7 @@ respectivamente.
 \input{tables/iter4.tex}
 
 SparkRDF utiliza un sub-módulo de Apache Jena (riot) para la lectura de
-documentos en formato ttl, es decir, en forma de triplas, en las que cada línea
+documentos en formato \texttt{TTL} o \texttt{NT}, es decir, en forma de triplas, en las que cada línea
 del fichero tiene tres campos separados por espacio, siendo dichos campos sujeto,
 predicado y objeto, respectivamente. El listado \ref{rdflector} muestra un
 fragmento de código encargado de la lectura de triplas y almacenamiento en un
@@ -308,6 +308,25 @@ funcionalidad.
 \subsection{Iteración 5: Desarrollo de SparkDQ para la métrica \textit{Interlinking}}
 
 \input{tables/iter5.tex}
+
+Se define la métrica \textit{Interlinking} como el índice en el que las
+instancias en el conjunto de datos están interconectadas, entendiendo
+interconexión como el \textit{grado} para un determinado nodo del grafo. No
+obstante, se particulariza en el ámbito de los datos enlazados, como el índice de
+conexiones que tiene dicho nodo hacia nodos que no sean hoja, es decir, sigan
+siendo nodos desreferenciables y así tengan un grado mayor a cero. Así,
+para un nodo, se pueden establecer métricas de
+interconexión por niveles:
+
+\begin{itemize}
+\item Nivel 0: los vecinos directos del nodo: V1 
+\item Nivel 1: Para cada nodo perteneciente a V1, el conjunto unión de todos sus
+  vecinos: V2
+\item etc. 
+\end{itemize}
+
+Estableciendo una métrica estratificada por niveles. Así, para el nivel 0, se
+tendría el número de nodos que son URIs respecto del total de vecinos directos. 
 
 [INSERTAR CHUNK Y TEORÍA SOBRE INTERLINKING]
 
