@@ -328,7 +328,58 @@ interconexión por niveles:
 Estableciendo una métrica estratificada por niveles. Así, para el nivel 0, se
 tendría el número de nodos que son URIs respecto del total de vecinos directos. 
 
-[INSERTAR CHUNK Y TEORÍA SOBRE INTERLINKING]
+Para abordar esta métrica se distinguen dos fases: 
+
+\begin{enumerate}
+\item Para todos los nodos, es decir, sujetos semánticos candidatos a calcular
+  la métrica, expandir por niveles para conocer los nodos con los que está
+  relacionado tal y como se ha explicado en el punto anterior. 
+\item Formar una tabla con las siguientes entradas: 
+  \begin{itemize}
+  \item Id del nodo sujeto (\texttt{Nodo})
+  \item Profundidad N (\texttt{Int})
+  \item Nodo vecino en profundidad N (\texttt{Nodo})
+  \item Nodo vecino en profundidad N es URI (\texttt{Boolean})
+  \end{itemize}
+\item Sobre esta estructura, agrupar por Id del nodo/profundidad contando el
+  número de nodos que son URI y dividiendo entre el total por el nivel. De esta
+  manera se obtiene un número entre 0 y 1 correspondiente a la métrica para ese
+  sujeto. 
+\end{enumerate}
+
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Expansión de un conjunto de nodos por niveles},captionpos=b, label=graphexpand]
+  def getMeasurementSubgraph(subjects: VertexRDD[Node], graph: Graph[Node,
+    Node], depth: Int ): Dataset[Row] = {
+    val expanded = expandNodesNLevel(subjects, graph, depth)
+    import processSparkSession.implicits._
+    val subs = subjects
+      .filter(ll => ll._2.isURI())
+      .map(l => (l._1, l._2.getURI())).toDF(Seq(``vertexId'', ``vertexURI''):
+    _*)
+    val filteredNodes = graph.vertices.map(l => (l._1,
+    l._2.isURI())).toDF(Seq(``nodeId'', ``isURI''): _*)
+    val nodesTF = expanded.join(filteredNodes, $''level'' ===
+    $''nodeId'').drop($''nodeId'').drop($''level'').orderBy($''source'',
+    $''depth'')
+    val partResultTrue = nodesTF.groupBy($''source'',
+    $''depth'').agg(count(when($''isURI'' === true, true)) as
+    ``countT'').orderBy($''source'', $''depth'')
+    val partResultFalse = nodesTF.groupBy($''source'',
+    $''depth'').agg(count(when($''isURI'' === false, true)) as
+    ``countF'').orderBy($''source'', $''depth'')
+      .toDF(Seq(``sourceF'', ``depthF'', ``countF''): _*)
+    val result = partResultTrue.join(partResultFalse, $''source'' ===
+    $''sourceF'' and $''depth'' ===
+    $''depthF'').drop($''sourceF'').drop($''depthF'').orderBy($''source'',
+    $''depth'')
+      .withColumn(``measurement'', getRatio($''countT'',
+    $''countF'')).join(subs, $''source'' === $''vertexId'').drop($''vertexId'')
+    result
+  }
+\end{lstlisting}
+
 
 \subsection{Iteración 6: Desarrollo de SparkDQ para la métrica \textit{SchemaCompleteness}}
 
