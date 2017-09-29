@@ -325,7 +325,7 @@ interconexión por niveles:
 \item etc. 
 \end{itemize}
 
-Estableciendo una métrica estratificada por niveles. Así, para el nivel 0, se
+De esta manera se obtiene una métrica estratificada por niveles. Así, para cada nivel, se
 tendría el número de nodos que son URIs respecto del total de vecinos directos. 
 
 Para abordar esta métrica se distinguen dos fases: 
@@ -333,8 +333,10 @@ Para abordar esta métrica se distinguen dos fases:
 \begin{enumerate}
 \item Para todos los nodos, es decir, sujetos semánticos candidatos a calcular
   la métrica, expandir por niveles para conocer los nodos con los que está
-  relacionado tal y como se ha explicado en el punto anterior. 
-\item Formar una tabla con las siguientes entradas: 
+  relacionado tal y como se ha explicado en el punto anterior. Se ilustra el
+  algoritmo en el listado \ref{graphexpandN}. 
+
+\item Formar una tabla con las siguientes entradas (ver tabla XX): 
   \begin{itemize}
   \item Id del nodo sujeto (\texttt{Nodo})
   \item Profundidad N (\texttt{Int})
@@ -344,12 +346,44 @@ Para abordar esta métrica se distinguen dos fases:
 \item Sobre esta estructura, agrupar por Id del nodo/profundidad contando el
   número de nodos que son URI y dividiendo entre el total por el nivel. De esta
   manera se obtiene un número entre 0 y 1 correspondiente a la métrica para ese
-  sujeto. 
+  sujeto. Véase listado \ref{graphmetric}.
 \end{enumerate}
 
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Expansión de nodos en N niveles para un conjunto de
+      sujetos},captionpos=b, label=graphexpandN]
+
+  def expandNodesNLevel(nodes: VertexRDD[Node],
+                        graph: org.apache.spark.graphx.Graph[Node, Node],
+                        levels: Int = 1): Dataset[Row] = {
+    import processSparkSession.implicits._
+
+    val edges = graph.edges.map(l => (l.srcId, l.dstId)).toDF(Seq(``srcId'',
+    ``dstId''): _*).cache()
+    var edgesR = graph.edges.map(l => (l.srcId, l.dstId,
+    0)).toDF(Seq(``source'', ``level'', ``depth''): _*).cache()
+    val nodesR = nodes.map(l => l._1).toDF(Seq(``nodeId''): _*)
+
+    var results = edgesR.distinct()
+
+    for (level <- 1 until levels) {
+      val res = edges.join(edgesR.drop(``depth''), $''dstId'' === $''source'',
+      ``leftouter'').orderBy($''srcId'')
+      edgesR = res.select($''srcId'' as ``source'', $''level'' as
+      ``level'').withColumn(``depth'', lit(level))
+      results = results.union(edgesR.distinct())
+    }
+    results = results.join(nodesR, $''source'' ===
+    $''nodeId'').drop($''nodeId'').na.drop().distinct().orderBy($''depth'',
+    $''source'')
+    results
+  }
+}
+
+\end{lstlisting}
 
 \lstset{escapechar=@,language=scala}
-\begin{lstlisting}[caption={Expansión de un conjunto de nodos por niveles},captionpos=b, label=graphexpand]
+\begin{lstlisting}[caption={Cálculo de la métrica en colección expandida de nodos},captionpos=b, label=graphmetric]
   def getMeasurementSubgraph(subjects: VertexRDD[Node], graph: Graph[Node,
     Node], depth: Int ): Dataset[Row] = {
     val expanded = expandNodesNLevel(subjects, graph, depth)
@@ -380,6 +414,9 @@ Para abordar esta métrica se distinguen dos fases:
   }
 \end{lstlisting}
 
+\subsubsection{Ejemplo}
+
+[EJEMPLO GRÁFICO AQUÍ]
 
 \subsection{Iteración 6: Desarrollo de SparkDQ para la métrica \textit{SchemaCompleteness}}
 

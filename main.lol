@@ -4,4 +4,5 @@
 \contentsline {lstlisting}{\numberline {5.1}Fragmento del lector de triplas}{60}{lstlisting.5.1}
 \contentsline {lstlisting}{\numberline {5.2}Conversi\IeC {\'o}n de RDD de Triplas a Grafo de nodos}{61}{lstlisting.5.2}
 \contentsline {lstlisting}{\numberline {5.3}Conversi\IeC {\'o}n de RDD de Triplas a Grafo de nodos}{61}{lstlisting.5.3}
-\contentsline {lstlisting}{\numberline {5.4}Expansi\IeC {\'o}n de un conjunto de nodos por niveles}{63}{lstlisting.5.4}
+\contentsline {lstlisting}{\numberline {5.4}Expansi\IeC {\'o}n de nodos en N niveles para un conjunto de sujetos}{63}{lstlisting.5.4}
+\contentsline {lstlisting}{\numberline {5.5}C\IeC {\'a}lculo de la m\IeC {\'e}trica en colecci\IeC {\'o}n expandida de nodos}{63}{lstlisting.5.5}
