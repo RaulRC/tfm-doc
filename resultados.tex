@@ -542,10 +542,45 @@ funcionalidad desarrollada.
 
 \section{Fase de Transición}
 
+En esta fase del \acs{PUD} se abordarán dos iteraciones. Por un lado, el
+desarrollo de la prueba de concepto, que hará uso de los artefactos generados
+hasta el momento. Finalmente, la última de las iteraciones consistirá en la
+elaboración de todos los documentos necesarios para la entrega del presente
+trabajo, incluyendo manuales, anexos de código y el documento \acs{TFM}. 
+
 \subsection{Iteración 7: Desarrollo de la PoC}
 
 \input{tables/iter7.tex}
 
+El objetivo de esta PoC es ilustrar la capacidad de SparkDQ a través de un
+escenario de uso real. 
+
+En este escenario se tomará como fuente de datos un
+conjunto de tweets extraídos en tiempo real de su API. Se transformarán dichos
+tweets en datos semánticos y sobre éstos se llevarán a cabo análisis de calidad
+de los datos para las métricas implementadas. 
+
+Finalmente se generarán resultados y éstos estarán expuestos en una plataforma
+cloud listos para su visualización y consumo. 
+
+[INSERTA IMAGEN AQUI]
+
+El desarrollo de la prueba de concepto ha involucrado varias fases: 
+
+\begin{itemize}
+\item Desarrollo del artefacto Spark encargado de realizar los cálculos de las
+  métricas, aprovechando el stack SparkDQ previamente desarrollado. Este
+  artefacto se ha llamado spark-sem-dq-assessment. 
+\item Implementación de microservicio encargado de coordinar el flujo de datos
+  entre los distintos sistemas. 
+\item Desarrollo de una ontología para la representación de tweets. 
+\item Implementación de microservicio encargado de transformar tweets recibidos.
+  a través de una api REST en archivos semánticos en formato \texttt{NT}. 
+\item Servicios cloud: almacenamiento en la nube Amazon S3. 
+\item Servicios cloud: consumo de resultados a través de Amazon ElasticSearch y
+  Kibana. 
+
+\end{itemize}
 \subsection{Iteración 8: Entrega de TFM}
 
 \input{tables/iter8.tex}
