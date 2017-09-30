@@ -596,7 +596,6 @@ de los datos para las métricas implementadas.
 Finalmente se generarán resultados y éstos estarán expuestos en una plataforma
 cloud listos para su visualización y consumo. 
 
-[INSERTA IMAGEN AQUI ARQUITECTURA]
 
 El desarrollo de la prueba de concepto ha involucrado varias fases: 
 
@@ -754,11 +753,11 @@ Se ha utilizado un contenedor de Docker junto con NiFi (véase Sección
   de la aplicación y NiFi comienza a consumir información. Desde ese momento, se
   genera un FlowFile por cada tweet consumido. Sobre estos tweets se aplica una
   serie de transformaciones (TODO) y finalmente se envían a ms.semtweet para que
-  sea transformado de \acs{JSON} a \acs{NT}. (REFERENCIA IMAGEN)
+  sea transformado de \acs{JSON} a \acs{NT} (véase figura \ref{fig:nifi-tweet}).
 \item Enrutado de sem-tweets a almacenamiento distribuido: La segunda topología
   levanta un endpoint al que ms.semtweet enviará los resultados de su
   procesamiento y NiFi los enrutará hacia el sistema de almacenamiento elegido
-  (directorio local, \acs{HDFS} o S3).(REFERENCIA IMAGEN) 
+  (directorio local, \acs{HDFS} o S3) (véase figura \ref{fig:nifi-ms}). 
 \item Lectura desde almacenamiento y envío a sistema de visualización de
   resultados: NiFi permanecerá a la escucha en la ruta en la que los archivos de
   resultado de spark-sem-dq-assesment fuesen depositados, recuperándolos en el
@@ -770,11 +769,36 @@ Se ha utilizado un contenedor de Docker junto con NiFi (véase Sección
   que se han creado para estos servicios y el nombre de carpetas de S3 donde son
   almacenados los resultados de spark-sem-dq-assessment se comentarán en la
   siguiente sección. Se puede encontrar un
-  ejemplo ilustrativo en la imagen (REFERENCIA IMAGEN). 
+  ejemplo ilustrativo en la imagen  \ref{fig:nifi-s3}. 
 \end{enumerate}
 
 En el anexo \ref{chap:dockernifi} se puede encontrar el DockerFile necesario
 para instalar este servicio. 
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{nifi-tweet.png} 
+    \caption{MS-Dockernifi: captura de tweets}
+    \label{fig:nifi-tweet}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{nifi-ms.png} 
+    \caption{MS-Dockernifi: recepción de ms.semtweet y envío a almacenamiento distribuido}
+    \label{fig:nifi-ms}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{nifi-s3.png} 
+    \caption{MS-Dockernifi: captura de S3 y envío a ElasticSearch}
+    \label{fig:nifi-s3}
+  \end{center}
+\end{figure}
+
 
 \subsubsection{Ontología para representación de tweets: Ontotweet}
 
