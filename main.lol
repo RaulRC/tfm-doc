@@ -14,3 +14,5 @@
 \contentsline {lstlisting}{\numberline {A.1}Ontolog\IeC {\'\i }a de tweets: Ontotwitter}{77}{lstlisting.Alph1.1}
 \contentsline {lstlisting}{\numberline {B.1}Vocabulario utilizado para los resultados finales}{83}{lstlisting.Alph2.1}
 \contentsline {lstlisting}{\numberline {C.1}Microservicio DockerNiFi: DockerFIle}{89}{lstlisting.Alph3.1}
+\contentsline {lstlisting}{\numberline {D.1}ms.semtweet: transformando tweet en triplas}{91}{lstlisting.Alph4.1}
+\contentsline {lstlisting}{\numberline {E.1}ms.semtweet: DockerFile}{95}{lstlisting.Alph5.1}
