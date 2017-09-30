@@ -35,7 +35,7 @@ Se han obtenido como resultados los siguientes artefactos:
 
 \item Una especificación de requisitos, funcionales y no funcionales, tanto para
   SparkDQ como para la prueba de concepto a realizar a partir de ésta.
-\item Modelo general de Casos de Uso de SparkDQ y PoC
+\item Modelo general de Casos de Uso de SparkDQ y \acs{PoC}
 \item Planificación detallada dividida en fases e iteraciones del \acs{PUD}
 \end{itemize}
 
@@ -95,26 +95,26 @@ Finalmente se exponen los requisitos funcionales y no funcionales identificados 
 aplicación de Prueba de Concepto.
 
 \begin{enumerate}
-\item \textbf{PoC debe permitir la adquisición de datos semánticos}\\Como parte
+\item \textbf{\acs{PoC} debe permitir la adquisición de datos semánticos}\\Como parte
   del \textit{end to end} el primer paso de la prueba de concepto será
   seleccionar una fuente de datos y llevar a cabo un proceso de ingesta dentro
   de la arquitectura propuesta. 
   
-\item \textbf{PoC debe permitir el almacenamiento de datos semánticos en un
+\item \textbf{\acs{PoC} debe permitir el almacenamiento de datos semánticos en un
   entorno distribuido}\\Los datos deben ingestarse en un entorno distribuido
   para su posterior consumo, considerando que su volumen y variedad pueden
   cambiar a lo largo del tiempo. 
-\item \textbf{PoC debe permitir cargar datos semánticos desde un entorno
+\item \textbf{\acs{PoC} debe permitir cargar datos semánticos desde un entorno
   distribuido y procesarlos}\\Los datos almacenados deben ser fácilmente
   accesibles y consumidos, entendiendo el consumo de estos datos como la
   adquisición, procesamiento y obtención de resultados en base a éstos. 
-\item \textbf{PoC debe mantener unos niveles de seguridad adecuados}\\Los datos
+\item \textbf{\acs{PoC} debe mantener unos niveles de seguridad adecuados}\\Los datos
   ingestados y almacenados deben estar protegidos de accesos no deseados. 
-\item \textbf{PoC debe poder almacenar el resultado de las evaluaciones de
+\item \textbf{\acs{PoC} debe poder almacenar el resultado de las evaluaciones de
   calidad de datos en un entorno distribuido}\\Los resultados de las
   evaluaciones deben ser convenientemente almacenados bajo las mismas
   directrices de disponibilidad y seguridad que los datos inicialmente ingestados.
-\item \textbf{PoC debe permitir el consumo de los resultados de las evaluaciones
+\item \textbf{\acs{PoC} debe permitir el consumo de los resultados de las evaluaciones
   llevadas a cabo}\\Los resultados de las evaluaciones deben ser accesibles y
   fácilmente consumibles por parte de los usuarios. 
 \end{enumerate}
@@ -551,11 +551,11 @@ hasta el momento. Finalmente, la última de las iteraciones consistirá en la
 elaboración de todos los documentos necesarios para la entrega del presente
 trabajo, incluyendo manuales, anexos de código y el documento \acs{TFM}. 
 
-\subsection{Iteración 7: Desarrollo de la PoC}
+\subsection{Iteración 7: Desarrollo de la \acs{PoC}}
 
 \input{tables/iter7.tex}
 
-El objetivo de esta PoC es ilustrar la capacidad de SparkDQ a través de un
+El objetivo de esta \acs{PoC} es ilustrar la capacidad de SparkDQ a través de un
 escenario de uso real. 
 
 En este escenario se tomará como fuente de datos un
@@ -689,10 +689,10 @@ las siguientes entidades:
 \begin{itemize}
 \item Tweet
 \item User
+\item Coordinates
 \item Entity
   \begin{itemize}
   \item Hashtag
-  \item Coordinates
   \end{itemize}
 \end{itemize}
 
@@ -701,6 +701,41 @@ El resultado se puede consultar en el anexo (REFERENCIA ANEXO Ontología)
 (IMAGEN PROTEGE)
 
 \subsubsection{Microservicio de transformación de tweets: ms.semtweet}
+
+La finalidad de este microservicio es dado un \acs{JSON} con información de un
+tweet, obtener como resultado un conjunto de triplas conforme a la ontología
+desarrollada en el punto anterior.
+
+Para ello se expone una \acs{API} \acs{REST} que recibirá el tweet y enviará una
+vez transformado a triplas, el resultado a un endpoint que se configurará como
+parámetro en el microservicio. 
+
+El código que transforma de \acs{JSON} a \acs{NT} se puede encontrar en
+(REFERENCIA AL ANEXO). 
+
+En el listado \ref{msclasses} se puede encontrar una relación entre clases en
+Scala para la transformación. 
+
+En el (REFERENCIA AL ANEXO) Se puede consultar el DockerFile para lanzar el
+microservicio. 
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Entidades de transformación en Scala},captionpos=b, label=msclasses]
+package org.uclm.alarcos.rrc.ms.models
+case class User(id: Int, id_str: String, name: String, verified: Boolean,
+                followers_count: Long, friends_count: Long,
+                favourites_count: Long, created_at: String,                
+                lang: String, time_zone: Option[String])
+case class Coordinate(coordinates: Array[Double], `type`: String)
+case class Hashtag(indices: Array[Int], text: String)
+case class Entity(hashtags: Array[Hashtag])
+case class Tweet (created_at: String, id: Int, id_str: String, text: String,
+                  source: String, truncated: Boolean,
+                  retweet_count: Long, favorite_count: Long, lang: String,
+                  timestamp_ms: String, user: User, coordinates:
+                  Option[Coordinate], entities: Entity)
+\end{lstlisting}
+
 
 \subsubsection{Servicios cloud}
 
@@ -722,3 +757,9 @@ La última de las iteraciones ha dado como resultado los siguientes elementos:
   \item Anexo de \acs{QA}
   \end{itemize}
 \end{itemize}
+
+La totalidad de la memoria ha sido realizada en \LaTeX, mientras que la
+documentación de las diferentes \acs{API}s se ha generado con ScalaDoc, análogo
+a JavaDoc. 
+
+Todos los archivos de ontologías han sido incluidos en la documentación. 
