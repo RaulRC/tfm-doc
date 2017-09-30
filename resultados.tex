@@ -369,7 +369,7 @@ Para abordar esta métrica se distinguen dos fases:
   relacionado tal y como se ha explicado en el punto anterior. Se ilustra el
   algoritmo en el listado \ref{graphexpandN}. 
 
-\item Formar una tabla con las siguientes entradas (ver tabla XX): 
+\item Formar una tabla con las siguientes entradas: 
   \begin{itemize}
   \item Id del nodo sujeto (\texttt{Nodo})
   \item Profundidad N (\texttt{Int})
@@ -620,15 +620,74 @@ El desarrollo de la prueba de concepto ha involucrado varias fases:
 Spark-sem-dq-assessment es un job de Spark que incluye dependencias con SparkDQ
 y está orientado a generar métricas de calidad. 
 
-[EJEMPLO SUBMIT]
+\lstset{escapechar=@,language=bash}
+\begin{lstlisting}[caption={Tipos de ejecución del job},captionpos=b,
+    label=jobexecutions]
+./spark-submit Interlinking local
+./spark-submit SchemaCompleteness local
+\end{lstlisting}
+
+Tal y como puede verse en el listado \ref{jobexecutions},
+spark-sem-dq-assessment admite varios modos de ejecución, pudiendo indicarle al
+mismo artefacto para qué métrica debe realizar los cálculos. 
 
 La entrada y salida de datos de spark-sem-dq-assessment puede configurarse
-  de distintas formas: 
+  de distintas formas en el archivo de configuración \texttt{application.conf}
+  del código (véase listado \ref{application.conf}). Igualmente, todos los
+  parámetros de ejecución tales como propiedades para evaluar
+  \textit{SchemaCompleteness} o nivel de profundidad que hay que alcanzar con
+  \textit{Interlinking}, rutas de acceso y carga de datos o tipos de ejecución
+  según el entorno, son parametrizables en este archivo. Concretamente, se puede
+  parametrizar el job para trabajar con los siguientes tipos de almacenamiento: 
+ 
   \begin{itemize}
   \item Directorios locales a una máquina
   \item Directorios distribuidos en \acs{HDFS}
   \item Directorios distribuidos cloud en Amazon S3
   \end{itemize}
+
+
+\lstset{escapechar=@,language=bash}
+\begin{lstlisting}[caption={Archivo de configuración del job},captionpos=b,
+    label=application.conf]
+``environments'': [``local'', ``dev'', ``pre'']
+``completeness'': {
+  ``interlinking'': {
+    ``depth'' : ``3''
+  }
+  ``schema'':{
+    #''properties'' :
+      ``http://xmlns.com/foaf/0.1/name,http://dbpedia.org/ontology/birthDate,http://xmlns.com/foaf/0.1/givenName''
+    #''properties'' :
+      ``http://xmlns.com/foaf/0.1/primaryTopic,http://purl.org/dc/elements/1.1/language''
+    ``properties'' :
+      ``http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasHashtag,http://www.semanticweb.org/rrc/ontologies/2017/7/semtweet#hasUser''
+  }
+}
+``local'': {
+  ``masterMode'': ``local[*]'',
+  ``hdfs'':{
+    #''inputPath'': ``/home/rrc/Projects/TFM/data/tiny/'',
+    ``inputPath'': ``s3a://poc-tfm-nifi/nt/*'',
+    ``outputPath'': ``s3a://spark-sem-dq-assessment/''
+  }
+}
+``dev'': {
+  ``masterMode'': ``yarn'',
+  ``hdfs'':{
+    ``inputPath'': ``hdfs:///tmp/input'',
+    ``outputPath'': ``hdfs:///tmp/output''
+  }
+}
+``pre'': {
+  ``masterMode'': ``yarn'',
+  ``hdfs'':{
+    ``inputPath'': ``/tmp/hdfs/input'',
+    ``outputPath'': ``/tmp/hdfs/output''
+  }
+}
+\end{lstlisting}
+
 
 La salida para cada ejecución será:
 
