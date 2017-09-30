@@ -447,27 +447,29 @@ deseables.
 El cálculo de esta métrica requiere de una serie de pasos que se van a ilustrar
 en los siguientes listados. 
 
-En primer lugar, se define una función que calcula el valor de la métrica en sí
+\begin{itemize}
+\item En primer lugar, se define una función que calcula el valor de la métrica en sí
 mismo, esto es, el ratio entre el total de relaciones para un nodo que están
 incluídas en la lista de propiedades. Esta función se muestra en el listado
-\ref{graphmetricRatio}.
-
-Seguidamente, se generaliza el cálculo de la métrica para todo el grafo,
-ilustrado en el listado \ref{graphmetricRatio}. Para
+\ref{graphmetricRatio}. Cabe destacar la secuencia de control de la métrica para
+valores mayores que 1. Pueden darse en el caso de que un nodo esté conectado con
+otros a través de la misma propiedad más de una vez, por ello es importante
+considerar que para la métrica tiene efecto la aparición una única vez de la
+propiedad. 
+\item Seguidamente, se generaliza el cálculo de la métrica para todo el grafo,
+ilustrado en el listado \ref{graphmetricSCglobal}. Para
 cada propiedad deseable, se obtiene un conjunto de arcos que representan dicha
 propiedad. La unión de estos conjuntos es el conjunto de arcos de todo el
 grafo, que cumple con todas las propiedades deseables. 
-
-El conjunto total de arcos es combinado con el conjunto de arcos que cumplen las
+\item El conjunto total de arcos es combinado con el conjunto de arcos que cumplen las
 propiedades. Agregando los resultados y contando el total de arcos y de
 propiedades. 
-
-Aplicando la función inicial para cada nodo del grafo, se obtiene la métrica
+\item Aplicando la función inicial para cada nodo del grafo, se obtiene la métrica
 global para todos los nodos. 
-
-En el paso final, se filtran los nodos del grafo para los nodos candidatos que
+\item En el paso final, se filtran los nodos del grafo para los nodos candidatos que
 quieran evaluarse, como se muestra en el listado \ref{graphmetricSC}.
 
+\end{itemize}
 
 \lstset{escapechar=@,language=scala}
 \begin{lstlisting}[caption={Cálculo del ratio},captionpos=b, label=graphmetricRatio]
