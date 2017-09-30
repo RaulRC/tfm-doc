@@ -414,12 +414,17 @@ Para abordar esta métrica se distinguen dos fases:
   }
 \end{lstlisting}
 
+Finalmente se acaba la iteración con las pruebas correspondientes a la
+funcionalidad desarrollada. 
+
 \subsubsection{Ejemplo}
 
 [EJEMPLO GRÁFICO AQUÍ]
 
 \subsection{Iteración 6: Desarrollo de SparkDQ para la métrica
   \textit{SchemaCompleteness}}
+
+\input{tables/iter6.tex}
 
 Se define la métrica \textit{SchemaCompleteness} como el grado en el que las
 clases y propiedades de una ontología están representadas. 
@@ -432,7 +437,36 @@ con otras entidades.
 En este particular no tiene sentido especificar un grado de esta métrica
 estratificado por niveles del grafo puesto que cada nodo vecino del inicial ya
 será una entidad en sí mismo, y la métrica aplicada para ese nodo en ese nivel
-corresponde únicamente a ese sujeto. 
+corresponde únicamente a ese sujeto. Se puede enunciar formalmente así: 
+
+Sea G un grafo formado por un conjunto de nodos N y un conjunto de arcos A. Sea PD un conjunto de propiedades deseables. El valor de la
+métrica vendrá dado por el número de propiedades de PD que se
+encuentran reflejados en A, dividido entre el número total de propiedades
+deseables. 
+
+El cálculo de esta métrica requiere de una serie de pasos que se van a ilustrar
+en los siguientes listados. 
+
+En primer lugar, se define una función que calcula el valor de la métrica en sí
+mismo, esto es, el ratio entre el total de relaciones para un nodo que están
+incluídas en la lista de propiedades. Esta función se muestra en el listado
+\ref{graphmetricRatio}.
+
+Seguidamente, se generaliza el cálculo de la métrica para todo el grafo,
+ilustrado en el listado \ref{graphmetricRatio}. Para
+cada propiedad deseable, se obtiene un conjunto de arcos que representan dicha
+propiedad. La unión de estos conjuntos es el conjunto de arcos de todo el
+grafo, que cumple con todas las propiedades deseables. 
+
+El conjunto total de arcos es combinado con el conjunto de arcos que cumplen las
+propiedades. Agregando los resultados y contando el total de arcos y de
+propiedades. 
+
+Aplicando la función inicial para cada nodo del grafo, se obtiene la métrica
+global para todos los nodos. 
+
+En el paso final, se filtran los nodos del grafo para los nodos candidatos que
+quieran evaluarse, como se muestra en el listado \ref{graphmetricSC}.
 
 
 \lstset{escapechar=@,language=scala}
@@ -445,6 +479,9 @@ corresponde únicamente a ese sujeto.
   })
 \end{lstlisting}
 
+
+//TODO IN CODE: filtro en propIdsRDD para hacer distinct de propiedades. 
+
 \lstset{escapechar=@,language=scala}
 \begin{lstlisting}[caption={Cálculo de la métrica en el grafo},captionpos=b, label=graphmetricSCglobal]
 
@@ -455,7 +492,9 @@ corresponde únicamente a ese sujeto.
 
     val propIdsRDD = properties.map(p => edgeRDD.filter(l =>
     l.attr.hasURI(p))).reduce(_ union _)
+    //TODO toDF().distinct by srcId, attr.URI(bla)
       .map(l => l.srcId).cache()
+
 
     val nonPropsDF = edgeRDD.map(l => l.srcId).toDF(Seq(``source''): _*)
     nonPropsDF.join(propIdsRDD
@@ -493,13 +532,11 @@ corresponde únicamente a ese sujeto.
 
 \end{lstlisting}
 
+Finalmente se acaba la iteración con las pruebas correspondientes a la
+funcionalidad desarrollada. 
 
 \subsubsection{Ejemplo}
 [EJEMPLO GRÁFICO AQUÍ]
-
-\input{tables/iter6.tex}
-
-[INSERTAR CHUNG Y TEORÍA SOBRE SC]
 
 \section{Fase de Transición}
 
