@@ -45,7 +45,7 @@ Se han obtenido como resultados los siguientes artefactos:
 
 Los requisitos funcionales de cualquier sistema software son aquellos que definen el comportamiento del
 sistema y establecen un punto de partida para elaborar un modelo de casos de
-uso, mientras que los no funcionales son aquellos orientados a aspectos del
+uso (ver figura \ref{fig:cdu-general}), mientras que los no funcionales son aquellos orientados a aspectos del
 sistema que notienen relación con el comportamiento, por ejemplo, el diseño, la
 implementación on la usabilidad. 
 
@@ -133,7 +133,24 @@ Siendo los requisitos no funcionales los siguientes:
 
 \subsubsection{Modelo general de Casos de Uso}
 
-[INSERTE DIAGRAMA AQUÍ]
+Uno de los primeros pasos consiste en la elaboración del modelo de Casos de Uso
+para el proyecto. 
+
+Se han identificado dos sistemas, SparkRDF y SparkDQ, con dependencia de éste
+último sobre el primero, conteniendo ambos los casos que se ilustran y se
+detallarán en las iteraciones pertinentes (secciones \ref{iteracion4} y \ref{iteracion5}). 
+
+El modelo general se puede consultar en la figura \ref{fig:cdu-general}.
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{cdu-general.png} 
+    \caption{Diagrama general de Casos de Uso}
+    \label{fig:cdu-general}
+  \end{center}
+\end{figure}
+
+
 
 \section{Fase de Elaboración}
 
@@ -171,7 +188,7 @@ métricas pero cuyo nivel de calidad como artefacto software y mantenibilidad se
 ha visto incrementado.
 
 \subsection{Iteración 3: Diseño de la arquitectura de SparkDQ}
-
+\label{iteracion3}
 \input{tables/iter3.tex}
 
 La iteración ha tenido como objetivo:
@@ -216,10 +233,19 @@ Para la prueba de concepto, se ha establecido:
   \end{enumerate}
 \end{enumerate}
 
-Se ha obtenido como resultado el diagrama de clases de SparkRDF, diagrama de clases
+Se ha obtenido como resultado el diagrama de clases de SparkRDF (figura \ref{fig:classes}), diagrama de clases
 de SparkDQ, diagrama de clases del job de la prueba de concepto 
 spark-sem-dq-assessment y diagrama \textit{end to end} de la prueba de
 concepto.
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.8\textwidth]{classes.png} 
+    \caption{Diagrama de clases SparkDQ}
+    \label{fig:classes}
+  \end{center}
+\end{figure}
+
 
 [INSERTAR DIAGRAMAS AQUÍ]
 
@@ -235,7 +261,7 @@ fase final como parte de un paso de \acf{QA}, y serán indicativas sobre la
 repetición del ciclo en caso de que los resultados no sean los esperados. 
 
 \subsection{Iteración 4: Desarrollo de SparkRDF}
-
+\label{iteracion4}
 \input{tables/iter4.tex}
 
 SparkRDF utiliza un sub-módulo de Apache Jena (riot) para la lectura de
@@ -309,7 +335,7 @@ nodos. En la siguiente sección se explicará en detalle la necesidad de esta
 funcionalidad. 
 
 \subsection{Iteración 5: Desarrollo de SparkDQ para la métrica \textit{Interlinking}}
-
+\label{iteracion5}
 \input{tables/iter5.tex}
 
 Se define la métrica \textit{Interlinking} como el índice en el que las
