@@ -452,8 +452,53 @@ funcionalidad desarrollada.
 
 \subsubsection{Ejemplo}
 
-[EJEMPLO GRÁFICO AQUÍ]
+El siguiente ejemplo ilustra el cálculo de la métrica Interlinking para el
+grafo que se muestra a continuación. Los datos con los que se ha tomado este
+ejemplo pueden consultarse en el apéndice \ref{ex:interlinking}.
 
+\begin{listing}[
+  language = scala,
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=5,
+  numbersep=5pt,
+  frame=single,
+  caption  = {SparkDQ: Interlinking. Ilustración.},
+  label    = code:sparkdq.inter.ilus]
+
+
+//Graph
+//    A -> B -> D -> F -> G
+//         | \  |
+//         v  \,v
+//         C -> E
+//
+// countT: number of URI nodes
+// countF: number of literal nodes
+//
+//      +---------+-----+------+------+-------------------+
+//      |   source|depth|countT|countF|        measurement|
+//      +---------+-----+------+------+-------------------+
+//      |A        |    0|     1|     3|               0.25|
+//      |A        |    1|     3|     3|                0.5|
+//      |A        |    2|     2|     9|0.18181818181818182|
+//      |A        |    3|     1|     6|0.14285714285714285|
+//      |B        |    0|     3|     3|                0.5|
+//      |B        |    1|     2|     9|0.18181818181818182|
+//      |B        |    2|     1|     6|0.14285714285714285|
+//      |B        |    3|     0|     3|                0.0|
+//      |C        |    0|     1|     3|               0.25|
+//      |C        |    1|     0|     3|                0.0|
+//      |D        |    0|     2|     3|                0.4|
+//      |D        |    1|     1|     6|0.14285714285714285|
+//      |D        |    2|     0|     3|                0.0|
+//      |E        |    0|     0|     3|                0.0|
+//      |F        |    0|     1|     3|               0.25|
+//      |F        |    1|     0|     3|                0.0|
+//      |G        |    0|     0|     3|                0.0|
+//      +---------+-----+------+------+-------------------+
+
+\end{listing}
 \subsection{Iteración 6: Desarrollo de SparkDQ para la métrica
   \textit{SchemaCompleteness}}
 
@@ -571,7 +616,10 @@ Finalmente se acaba la iteración con las pruebas correspondientes a la
 funcionalidad desarrollada. 
 
 \subsubsection{Ejemplo}
-[EJEMPLO GRÁFICO AQUÍ]
+
+Puede consultarse un ejemplo extraído directamente de las pruebas en el
+apéndice \ref{chap:sparkrdf.test.sc}. Los datos para este caso de pruebas se encuentran a su vez en
+el apéndice \ref{ex:sc}.
 
 \section{Fase de Transición}
 
