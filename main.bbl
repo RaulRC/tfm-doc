@@ -166,6 +166,10 @@ Apache Jena Elephas.
 Apache Jena - Home, 2014.
 \newblock url: \url{http://jena.apache.org/}.
 
+\bibitem[NIF]{NIFI}
+Apache NiFi.
+\newblock url: \url{http://nifi.apache.org}.
+
 \bibitem[NMo01]{noy_ontology_2001}
 Natalya~F. Noy, Deborah~L. McGuinness, y {others}.
 \newblock {\em Ontology development 101: A guide to creating your first

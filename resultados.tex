@@ -586,9 +586,122 @@ El desarrollo de la prueba de concepto ha involucrado varias fases:
 \end{itemize}
 
 \subsubsection{Cálculos de las métricas: spark-sem-dq-assessment}
+
+Spark-sem-dq-assessment es un job de Spark que incluye dependencias con SparkDQ
+y está orientado a generar métricas de calidad. 
+
+[EJEMPLO SUBMIT]
+
+La entrada y salida de datos de spark-sem-dq-assessment puede configurarse
+  de distintas formas: 
+  \begin{itemize}
+  \item Directorios locales a una máquina
+  \item Directorios distribuidos en HDFS
+  \item Directorios distribuidos cloud en Amazon S3
+  \end{itemize}
+
+La salida para cada ejecución será:
+
+\begin{itemize}
+\item Un resultado para la métrica con la que se programe la ejecución
+\item Un resultado de estadísticas relativas a la ejecución del propio job de
+  Spark, incluyendo (ver listado \ref{statisticsJob}): 
+  \begin{itemize}
+  \item Nombre de la métrica evaluada.
+  \item Fecha de cálculo.
+  \item Tiempo de generación del grafo.
+  \item Tiempo de proceso de métrica.
+  \item Tiempo total de procesamiento.
+  \item Número total de nodos.
+  \item Número total de arcos.
+  \item Tiempo medio por nodo.
+  \item Tiempo medio por arco.
+  \item Tiempo medio de procesamiento por nodo.
+  \item Tiempo medio de procesamiento por arco.
+  \end{itemize}
+\item Se guardarán los resultados de la evaluación y las métricas estadísticas
+  en formato \texttt{\acs{JSON}}. 
+
+\end{itemize}
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Campos de salida para las métricas estadísticas
+      sobre la evaluación de calidad},captionpos=b, label=statisticsJob]
+    val statisticsDF = sparkSession.sparkContext.parallelize(Seq((
+      calculationDate,
+      ``InterlinkingAssessment'',
+      loadGraphTime,
+      processTime,
+      totalTime,
+      nNodes,
+      nEdges,
+      avgReadTimePerNode,
+      avgReadTimePerEdge,
+      avgProcessTimePerNode,
+      avgProcessTimePerEdge))).toDF(Seq(
+      ``calculationDate'',
+      ``metric'',
+      ``loadGraphTime'',
+      ``processTime'',
+      ``totalTime'',
+      ``nNodes'',
+      ``nEdges'',
+      ``avgReadTimePerNode'',
+      ``avgReadTimePerEdge'',
+      ``avgProcessTimePerNode'',
+      ``avgProcessTimePerEdge''
+    ): _*)
+\end{lstlisting}
+
 \subsubsection{Microservicio de coordinación: DockerNiFi}
+
+Se ha utilizado un contenedor de Docker junto con NiFi (véase Sección
+\ref{sec:eco-hadoop}) para coordinar tres flujos de datos: 
+
+\begin{enumerate}
+\item Adquisición de tweets: NiFi ofrece un procesador específico que consulta
+  la \acs{API} de Twitter, pudiéndose configurar por conceptos, cuentas o coordenadas
+  para tweets geolocalizados. Tan solo es necesario introducir las credenciales
+  de la aplicación y NiFi comienza a consumir información. Desde ese momento, se
+  genera un FlowFile por cada tweet consumido. Sobre estos tweets se aplica una
+  serie de transformaciones (TODO) y finalmente se envían ms.semtweet para que
+  sea transformado de \acs{JSON} a \acs{NT}. (REFERENCIA IMAGEN)
+\item Enrutado de sem-tweets a almacenamiento distribuido: La segunda topología
+  levanta un endpoint al que ms.semtweet enviará los resultados de su
+  procesamiento y NiFi los enrutará hacia el sistema de almacenamiento elegido
+  (directorio local, HDFS o S3).(REFERENCIA IMAGEN) 
+\item Lectura desde almacenamiento y envío a sistema de visualización de
+  resultados: NiFi permanecerá a la escucha en la ruta en la que los archivos de
+  resultado de spark-sem-dq-assesment fuesen depositados, recuperándolos en el
+  momento en que se produzcan cambios y enviándolos al sistema de visualización:
+  Amazon 
+  ElasticSearch y Kibana. (REFERENCIA IMAGEN)
+\end{enumerate}
+
+(REFERENCIA ANEXO Dockerfile)
+
 \subsubsection{Ontología para representación de tweets: Ontotweet}
+
+Se ha desarrollado una ontología para representar la información que contiene un
+tweet en el momento que es consumido desde la \acs{API}. Esta ontología modela
+las siguientes entidades: 
+
+\begin{itemize}
+\item Tweet
+\item User
+\item Entity
+  \begin{itemize}
+  \item Hashtag
+  \item Coordinates
+  \end{itemize}
+\end{itemize}
+
+El resultado se puede consultar en el anexo (REFERENCIA ANEXO Ontología)
+
+(IMAGEN PROTEGE)
+
 \subsubsection{Microservicio de transformación de tweets: ms.semtweet}
+
 \subsubsection{Servicios cloud}
 
 
