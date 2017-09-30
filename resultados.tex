@@ -429,6 +429,69 @@ tanto, dado un conjunto de propiedades o relaciones entre sujetos y objetos, la
 métrica se computa como el ratio de relaciones que un determinado sujeto tiene
 con otras entidades. 
 
+En este particular no tiene sentido especificar un grado de esta métrica
+estratificado por niveles del grafo puesto que cada nodo vecino del inicial ya
+será una entidad en sí mismo, y la métrica aplicada para ese nodo en ese nivel
+corresponde únicamente a ese sujeto. 
+
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Cálculo del ratio},captionpos=b, label=graphmetricRatio]
+  def getRatio = udf((totalTrues: Int, total: Int) => {
+    var res = totalTrues.toDouble/total.toDouble
+    if (res > 1.0)
+      res = 1.0
+    res
+  })
+\end{lstlisting}
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Cálculo de la métrica en el grafo},captionpos=b, label=graphmetricSCglobal]
+
+  def getMeasurementGlobal(graph: Graph[Node, Node], properties: Seq[String]):
+  Dataset[Row] = {
+    import processSparkSession.implicits._
+    val edgeRDD = graph.edges.filter(l => true)
+
+    val propIdsRDD = properties.map(p => edgeRDD.filter(l =>
+    l.attr.hasURI(p))).reduce(_ union _)
+      .map(l => l.srcId).cache()
+
+    val nonPropsDF = edgeRDD.map(l => l.srcId).toDF(Seq(``source''): _*)
+    nonPropsDF.join(propIdsRDD
+      .toDF(Seq(``sourceProp''): _*)
+      .groupBy($''sourceProp'').agg(count($''sourceProp'') as ``propCount'')
+      .withColumn(``totalProperties'', lit(properties.length))
+      .withColumn(``meas'', getRatio($''propCount'', $''totalProperties''))
+      .drop($''propCount'')
+      .drop($''totalProperties'')
+      .drop($''srcId''), $''source'' === $''sourceProp'', ``leftouter'')
+      .drop($''sourceProp'')
+        .withColumn(``measurement'', when(
+          col(``meas'').isNull, 0.0
+        ).otherwise(col(``meas'')))
+      .drop($''meas'')
+      .distinct()
+  }
+
+\end{lstlisting}
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Cálculo de la métrica en colección de nodos},captionpos=b, label=graphmetricSC]
+
+  def getMeasurementSubgraph(subjects: VertexRDD[Node], graph: Graph[Node,
+    Node], properties: Seq[String]): Dataset[Row] = {
+    import processSparkSession.implicits._
+    val subjectsDF = subjects
+      .filter(ll=> ll._2 != null)
+      .filter(l => l._2.isURI())
+      .map(l => (l._1, l._2.toString()))
+      .toDF(Seq(``srcId'', ``uri''): _*)
+    getMeasurementGlobal(graph, properties).join(subjectsDF, $''source'' ===
+    $''srcId'')
+      .drop($''srcId'')
+  }
+
+\end{lstlisting}
 
 
 \subsubsection{Ejemplo}
