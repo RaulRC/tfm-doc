@@ -799,9 +799,8 @@ Se ha utilizado un contenedor de Docker junto con NiFi (véase Sección
   la \acs{API} de Twitter, pudiéndose configurar por conceptos, cuentas o coordenadas
   para tweets geolocalizados. Tan solo es necesario introducir las credenciales
   de la aplicación y NiFi comienza a consumir información. Desde ese momento, se
-  genera un FlowFile por cada tweet consumido. Sobre estos tweets se aplica una
-  serie de transformaciones (TODO) y finalmente se envían a ms.semtweet para que
-  sea transformado de \acs{JSON} a \acs{NT} (véase figura \ref{fig:nifi-tweet}).
+  genera un FlowFile por cada tweet consumido. Finalmente se envían a ms.semtweet para que
+  sea transformados de \acs{JSON} a \acs{NT} (véase figura \ref{fig:nifi-tweet}).
 \item Enrutado de sem-tweets a almacenamiento distribuido: La segunda topología
   levanta un endpoint al que ms.semtweet enviará los resultados de su
   procesamiento y NiFi los enrutará hacia el sistema de almacenamiento elegido
@@ -934,8 +933,6 @@ Services:
   resultados de evaluaciones y visualización. Se han creado los siguientes
   índices:
 
-
-
   \begin{itemize}
 
   \item \texttt{twittertfm}: indexará todos los tweets en bruto tal y como se
@@ -949,8 +946,28 @@ Services:
     de las dos evaluaciones anteriores. 
   \end{itemize}
 
+\item Se puede consultar un ejemplo de la visualización en Kibana para la
+  ingesta de tweets en bruto y resultados agregados de evaluaciones en las figuras
+  \ref{fig:es-twitter} y \ref{fig:es-assessment} respectivamente. 
 
 \end{itemize}
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{tweetes.png} 
+    \caption{Visualización: índice con tweets en bruto}
+    \label{fig:es-twitter}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.9\textwidth]{assessment.png} 
+    \caption{Visualización: índice con resultados de la evaluación}
+    \label{fig:es-assessment}
+  \end{center}
+\end{figure}
+
 
 
 \subsection{Iteración 8: Entrega de TFM}
