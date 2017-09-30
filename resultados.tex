@@ -229,7 +229,10 @@ concepto.
 Una vez asentados los diseños de los artefactos a desarrollar, en la fase de
 construcción tendrá lugar el desarrollo del núcleo de la aplicación, esto es,
 los artefactos clave de desarrollo: SparkRDF y SparkDQ, en las iteraciones 4 y 5
-respectivamente. 
+respectivamente. Se considera el ciclo completo de desarrollo en estos puntos:
+Análisis, Diseño, Implementación y Pruebas. Dichas pruebas tendrán lugar en la
+fase final como parte de un paso de \acf{QA}, y serán indicativas sobre la
+repetición del ciclo en caso de que los resultados no sean los esperados. 
 
 \subsection{Iteración 4: Desarrollo de SparkRDF}
 
@@ -563,7 +566,7 @@ de los datos para las métricas implementadas.
 Finalmente se generarán resultados y éstos estarán expuestos en una plataforma
 cloud listos para su visualización y consumo. 
 
-[INSERTA IMAGEN AQUI]
+[INSERTA IMAGEN AQUI ARQUITECTURA]
 
 El desarrollo de la prueba de concepto ha involucrado varias fases: 
 
@@ -581,6 +584,28 @@ El desarrollo de la prueba de concepto ha involucrado varias fases:
   Kibana. 
 
 \end{itemize}
+
+\subsubsection{Cálculos de las métricas: spark-sem-dq-assessment}
+\subsubsection{Microservicio de coordinación: DockerNiFi}
+\subsubsection{Ontología para representación de tweets: Ontotweet}
+\subsubsection{Microservicio de transformación de tweets: ms.semtweet}
+\subsubsection{Servicios cloud}
+
+
+
 \subsection{Iteración 8: Entrega de TFM}
 
 \input{tables/iter8.tex}
+
+La última de las iteraciones ha dado como resultado los siguientes elementos: 
+
+\begin{itemize}
+\item Memoria del \acs{TFM}
+\item ScalaDoc de SparkRDF y SparkDQ
+\item Anexos
+  \begin{itemize}
+  \item Ontología de tweets
+  \item Ontología DQ
+  \item Anexo de \acs{QA}
+  \end{itemize}
+\end{itemize}
