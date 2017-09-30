@@ -193,6 +193,12 @@ Leo~L. Pipino, Yang~W. Lee, y Richard~Y. Wang.
 \newblock {\em Communications of the {ACM}}, 45(4):211–218, 2002.
 \newblock url: \url{http://dl.acm.org/citation.cfm?id=506010}.
 
+\bibitem[RCCMnR]{PFC}
+Ra\'ul Reguillo~Carmona y Ismael Caballero Mu\~noz Reja.
+\newblock {P}royecto {F}in de {C}arrera: {J}ena{D}{Q}: {A} {J}ena {E}xtension
+  to {S}upport {D}ata {Q}uality {C}ontext-{A}ware {A}ssessment of {L}inked
+  {D}ata.
+
 \bibitem[RDF]{RDF}
 {RDF} - Semantic Web Standards.
 \newblock url: \url{http://www.w3.org/RDF/}.

@@ -577,8 +577,8 @@ El desarrollo de la prueba de concepto ha involucrado varias fases:
 \item Implementación de microservicio encargado de coordinar el flujo de datos
   entre los distintos sistemas. 
 \item Desarrollo de una ontología para la representación de tweets. 
-\item Implementación de microservicio encargado de transformar tweets recibidos.
-  a través de una api REST en archivos semánticos en formato \texttt{NT}. 
+\item Implementación de microservicio encargado de transformar tweets recibidos
+ a través de una api REST en archivos semánticos en formato \texttt{NT}. 
 \item Servicios cloud: almacenamiento en la nube Amazon S3. 
 \item Servicios cloud: consumo de resultados a través de Amazon ElasticSearch y
   Kibana. 
@@ -596,7 +596,7 @@ La entrada y salida de datos de spark-sem-dq-assessment puede configurarse
   de distintas formas: 
   \begin{itemize}
   \item Directorios locales a una máquina
-  \item Directorios distribuidos en HDFS
+  \item Directorios distribuidos en \acs{HDFS}
   \item Directorios distribuidos cloud en Amazon S3
   \end{itemize}
 
@@ -669,13 +669,19 @@ Se ha utilizado un contenedor de Docker junto con NiFi (véase Sección
 \item Enrutado de sem-tweets a almacenamiento distribuido: La segunda topología
   levanta un endpoint al que ms.semtweet enviará los resultados de su
   procesamiento y NiFi los enrutará hacia el sistema de almacenamiento elegido
-  (directorio local, HDFS o S3).(REFERENCIA IMAGEN) 
+  (directorio local, \acs{HDFS} o S3).(REFERENCIA IMAGEN) 
 \item Lectura desde almacenamiento y envío a sistema de visualización de
   resultados: NiFi permanecerá a la escucha en la ruta en la que los archivos de
   resultado de spark-sem-dq-assesment fuesen depositados, recuperándolos en el
   momento en que se produzcan cambios y enviándolos al sistema de visualización:
   Amazon 
-  ElasticSearch y Kibana. (REFERENCIA IMAGEN)
+  ElasticSearch y Kibana. NiFi obtendrá desde el path de lectura de los archivos
+  el índice de ElasticSearch al que debe mandar cada dato, de manera automática
+  y transparente.  Los índices
+  que se han creado para estos servicios y el nombre de carpetas de S3 donde son
+  almacenados los resultados de spark-sem-dq-assessment se comentarán en la
+  siguiente sección. Se puede encontrar un
+  ejemplo ilustrativo en la imagen (REFERENCIA IMAGEN). 
 \end{enumerate}
 
 (REFERENCIA ANEXO Dockerfile)
@@ -738,7 +744,47 @@ case class Tweet (created_at: String, id: Int, id_str: String, text: String,
 
 
 \subsubsection{Servicios cloud}
+\label{res:cloud}
+Se han contratado para la \acs{PoC} los siguientes servicios de Amazon Web
+Services: 
 
+\begin{itemize}
+\item Amazon S3: como almacenamiento escalable y distribuído. Existirán tres
+  directorios principales: 
+  \begin{itemize}
+  \item \texttt{poc-tfm-nifi}: como directorio para el almacenamiento de tweets
+    semánticos, es decir, tras haber sido procesados por ms.semtweet.
+  \item \texttt{spark-sem-dq-assessment}: destino de los archivos de salida del
+    job de Spark de la \acs{PoC}, organizado como sigue:
+    \begin{itemize}
+    \item SchemaAssessment: resultados para las evaluaciones de
+      \textit{SchemaCompleteness}. 
+    \item InterlinkingAssessment: resultados para las evaluaciones de \textit{Interlinking}.
+    \item DQAssessmentStatistics: resultados estadísticos para cualquiera de las
+      dos evaluaciones anteriores. 
+    \end{itemize}
+  \end{itemize}
+\item ElasticSearch y Kibana: como capa de baja latencia para el consumo de
+  resultados de evaluaciones y visualización. Se han creado los siguientes
+  índices:
+
+
+
+  \begin{itemize}
+
+  \item \texttt{twittertfm}: indexará todos los tweets en bruto tal y como se
+    obtienen de la \acs{API} de Twitter, sin procesar. 
+
+  \item \texttt{interlinkingassessment}: resultados para las evaluaciones de
+    \textit{Interlinking}. 
+  \item \texttt{schemaasssessment}: resultados para las evaluaciones de
+    \textit{SchemaCompleteness}.
+  \item \texttt{dqassessmentstatistics}: resultados estadísticos para cualquiera
+    de las dos evaluaciones anteriores. 
+  \end{itemize}
+
+
+\end{itemize}
 
 
 \subsection{Iteración 8: Entrega de TFM}
