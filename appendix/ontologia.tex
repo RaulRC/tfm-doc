@@ -1,0 +1,236 @@
+\chapter{Vocabulario \textit{Data Quality Assessment}}
+\label{chap:ontologia}
+
+\begin{listing}[
+  language = XML,
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=5,
+  numbersep=5pt,
+  frame=single,
+  caption  = {Vocabulario utilizado para los resultados finales},
+  label    = code:onto-vocabulary]
+<?xml version="1.0"?>
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.dqassessment.org/ontologies/2014/9/DQA.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.dqassessment.org/ontologies/2014/9/DQA.owl#">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">an ontology or vocabulary that describes various data quality context-aware assessment through various data quality dimensions. 
+
+pfc - raul reguillo carmona
+a jena extension to support data quality context-aware assessment of linked data</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="AccessibilityAssessment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="CompletenessAssessment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="AccessibilityMeasure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="AccessibilityResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="AssessmentDate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="CompletenessMeasure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="CompletenessResult"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="ContextualMeasure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="Identifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="InLevel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="InURI"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="AccessibilityResult"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="AssessmentDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="CompletenessResult"/>
+    </Declaration>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="AccessibilityMeasure"/>
+        <ObjectProperty IRI="AccessibilityResult"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="AccessibilityResult"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="CompletenessMeasure"/>
+        <ObjectProperty IRI="CompletenessResult"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="CompletenessResult"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="ContextualMeasure"/>
+        <ObjectProperty IRI="AccessibilityResult"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="ContextualMeasure"/>
+        <ObjectProperty IRI="CompletenessResult"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="InLevel"/>
+        <ObjectProperty IRI="CompletenessResult"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="InURI"/>
+        <ObjectProperty IRI="AccessibilityResult"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="InURI"/>
+        <ObjectProperty IRI="CompletenessResult"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="AccessibilityMeasure"/>
+        <Class IRI="AccessibilityAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="AccessibilityResult"/>
+        <Class IRI="AccessibilityAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="AssessmentDate"/>
+        <Class IRI="AccessibilityAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="AssessmentDate"/>
+        <Class IRI="CompletenessAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="CompletenessMeasure"/>
+        <Class IRI="CompletenessAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="CompletenessResult"/>
+        <Class IRI="CompletenessAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="ContextualMeasure"/>
+        <Class IRI="AccessibilityAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="ContextualMeasure"/>
+        <Class IRI="CompletenessAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="Identifier"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="InLevel"/>
+        <Class IRI="CompletenessAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="InURI"/>
+        <Class IRI="AccessibilityAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="InURI"/>
+        <Class IRI="CompletenessAssessment"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="AccessibilityMeasure"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="AccessibilityResult"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="AccessibilityResult"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="AccessibilityResult"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="AssessmentDate"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="AssessmentDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="CompletenessMeasure"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="CompletenessResult"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="CompletenessResult"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="CompletenessResult"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="ContextualMeasure"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="CompletenessResult"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="Identifier"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="InLevel"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="CompletenessResult"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="InURI"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="CompletenessResult"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataMinCardinality>
+    </ObjectPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
+
+
+\end{listing}
