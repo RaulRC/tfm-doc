@@ -21,7 +21,93 @@ tabla \ref{tab-objs}.
 
 \input{tables/tabObjetivos.tex}
 
+\begin{definitionlist}
+\item[O1. Representación del contexto de evaluación de calidad de datos]
+
+Mediante el uso de reglas sencillas basadas en valores sobre las métricas,
+se ha conseguido dar forma al contexto, permitiendo al
+usuario indicar qué parámetros y niveles de calidad considera necesarios 
+y con qué valores para el desarrollo de su tarea. Se
+puede consultar al respecto en las sección \ref{iter6-reasoner}.
+
+
+\item[O2. Desarrollo de un vocabulario para los resultados de evaluaciones de
+  calidad de datos]
+
+El vocabulario desarrollado, que puede consultarse en el Anexo
+\ref{chap:ontologia}, es suficientemente flexible y representativo como para
+ofrecer resultados de evaluaciones sencillas como de planes de evaluación. Esta
+ontología fue desarrollada en el transcurso del \acs{PFC} y se ha reutilizado
+para este particular. 
+
+Tal y como se ha comentado en la sección \ref{onto-results}, se ha desacoplado
+cualquier vocabulario u ontología, pudiendo ser el usuario final quien elija qué
+ontología utilizar para representar sus resultados de calidad, haciendo del
+stack SparkDQ una pieza más usable y versátil. 
+
+\item[O3. Diseño e implementación de las primitivas de evaluación de calidad de
+  datos]
+
+Los algoritmos desarrollados demuestran ser eficaces y completos. Los resultados
+se ajustan a las decisiones sobre la medición tomadas en este proyecto. Se
+pueden consultar tanto algoritmos como todo el proceso de desarrollo en la
+sección \ref{sec:dqassessment-accessibility}. 
+
+Dichos algoritmos se han desarrollado en dos etapas:
+
+\begin{enumerate}
+\item Una primera fase fue desarrollada durante el \acs{PFC} (véase \cite{PFC})
+  de manera centralizada. 
+\item La segunda fase ha sido desarrollada en un contexto Big Data durante el
+  presente trabajo.
+\end{enumerate}
+
+Se pueden consultar los resultados de la comparativa entre desarrollos de
+primitivas en la sección \ref{comparativa}. 
+
+
+\item [O4. Elección de un razonador de reglas para datos semánticos]
+
+Los razonadores incorporados en Jena permiten añadir nuevas triplas a los
+modelos de evaluación en función de las reglas que tomen como base, luego sirven
+al propósito de llevar a cabo evaluaciones considerando el contexto definido en
+esas reglas. 
+
+No obstante para el problema del razonamiento en distribuido se ha concluído que
+requiere de un trabajo más específico y profundo, ofreciéndose aquí una solución
+basada en \acf{UDF} y un módulo extensible de razonamiento incluido en SparkDQ,
+tal y como se ha tratado en la sección \ref{iter6-reasoner}. 
+
+\item [O5. Desarrollo de una aplicación de prueba de concepto]
+
+Se ha elaborado una \acs{PoC} obteniendo unos resultados excelentes a la hora de
+llevar a cabo evaluaciones de calidad de datos en un entorno distribuido,
+emulado en máquinas locales cuyas características se pueden contrastar en la
+sección \ref{equipos-desarrollo}.
+
+El resultado final de la \acs{PoC} puede consultarse en la sección \ref{iteracion7} y los resultados
+comparativos con JenaDQ en la sección \ref{comparativa}. 
+
+\end{definitionlist}
 
 \section{Propuestas de trabajos futuros}
+
+
+\begin{definitionlist}
+
+\item[Adición de nuevas \acs{DQD}]
+
+Incrementar el número de dimensiones de calidad sería una labor sumamente
+interesante de cara a completar un Modelo de Calidad de Datos. En este proyecto
+el desarrollo se ha centrado en dos de ellas, que han sido consideradas de
+crucial importancia para el contexto en el que se enmarcan, pero existen otras
+muchas cuya adición aportaría mucho valor a la extensión de JenaDQ y SparkDQ que se ha
+realizado. 
+  
+
+\end{definitionlist}
+
 \section{Publicaciones}
+??
 \section{Opinión personal}
+bla

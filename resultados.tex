@@ -677,6 +677,18 @@ un grafo distribuido basado en reglas en SparkDQ. Puede consultarse una
 formalización del concepto de regla en Scala en el apéndice
 \ref{reasoning-rule}. 
 
+\subsection{Iteración 6: almacenamiento de resultados en \acs{RDF}}
+\label{onto-results}
+Se ha desacoplado cualquier vocabulario u ontología de la salida de los
+resultados de las evaluaciones en SparkDQ. Esto atiende a dos razones principales: 
+\begin{enumerate}
+\item Delegar en el usuario final qué ontología desea utilizar para representar
+  los resultados de sus evaluaciones. 
+\item Mantener los resultados en estructuras de datos distribuidas nativas de
+  Spark permite la extensibilidad de este trabajo y la interconexión con otros
+  módulos del ecosistema Spark/Hadoop. 
+\end{enumerate}
+
 \section{Fase de Transición}
 
 En esta fase del \acs{PUD} se abordarán dos iteraciones. Por un lado, el
@@ -1024,7 +1036,9 @@ Services:
   \end{center}
 \end{figure}
 
-
+\subsection{Iteración 7: Comparativa de rendimientos entre JenaDQ y SparkDQ}
+\label{comparativa}
+[TODO]
 
 \subsection{Iteración 8: Entrega de TFM}
 
