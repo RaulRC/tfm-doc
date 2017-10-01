@@ -1,0 +1,32 @@
+% COMPLETENESS
+\vspace{1cm}
+\label{tab-sparkdq}
+\begin{tabular}{|p{.2\textwidth}|p{.1\textwidth}|p{.1\textwidth}|p{.1\textwidth}|p{.1\textwidth}|p{.2\textwidth}|}
+  \tabheadformat
+  \tabhead{Evaluation}   &
+  \tabhead{Depth}       &
+  \tabhead{Nodes} &
+  \tabhead{T LoadGraph}   &
+  \tabhead{T Proc}  &
+  \tabhead{T Total}   \\
+
+\hline
+Interlinking    & 3   & 151 &  1.08s & 14.82s  & 15.9s \\
+\hline
+Interlinking    & 3   & 17.441 &  3.56s & 37.3s  & 40.88s \\
+\hline
+Schema      & \xmark   & 151 &  1.17s & 4.12s  & 5.29s \\
+\hline
+Schema      & \xmark   & 9.488 &  12.76s & 21.11s  & 33.88s \\
+\hline
+Schema      & \xmark   & 70.139 &  39.92s & 70.18s  & 107.11s \\
+\hline
+\end{tabular}
+\captionof{table}{Resultados de procesamiento SparkDQ Interlinking para grafo de ejemplo}
+
+
+% Local variables:
+%   coding: utf-8
+%   ispell-local-dictionary: "castellano8"
+%   TeX-master: "main.tex"
+% End:

@@ -892,7 +892,7 @@ para instalar este servicio.
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{nifi-tweet.png} 
+    \includegraphics[width=0.7\textwidth]{nifi-tweet.png} 
     \caption{MS-Dockernifi: captura de tweets}
     \label{fig:nifi-tweet}
   \end{center}
@@ -900,7 +900,7 @@ para instalar este servicio.
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{nifi-ms.png} 
+    \includegraphics[width=0.7\textwidth]{nifi-ms.png} 
     \caption{MS-Dockernifi: recepción de ms.semtweet y envío a almacenamiento distribuido}
     \label{fig:nifi-ms}
   \end{center}
@@ -908,7 +908,7 @@ para instalar este servicio.
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{nifi-s3.png} 
+    \includegraphics[width=0.7\textwidth]{nifi-s3.png} 
     \caption{MS-Dockernifi: captura de S3 y envío a ElasticSearch}
     \label{fig:nifi-s3}
   \end{center}
@@ -925,17 +925,14 @@ las siguientes entidades:
 \item Tweet
 \item User
 \item Coordinates
-\item Entity
-  \begin{itemize}
-  \item Hashtag
-  \end{itemize}
+\item Entity $\to$ Hashstag
 \end{itemize}
 
 El resultado se puede consultar en el anexo \ref{chap:ontotwitter}.
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.8\textwidth]{ontotweet.png} 
+    \includegraphics[width=0.6\textwidth]{ontotweet.png} 
     \caption{Esquema de la ontología de Twitter en Protégé}
     \label{fig:ontotwitterprotege}
   \end{center}
@@ -1022,7 +1019,7 @@ Services:
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{tweetes.png} 
+    \includegraphics[width=0.6\textwidth]{tweetes.png} 
     \caption{Visualización: índice con tweets en bruto}
     \label{fig:es-twitter}
   \end{center}
@@ -1030,7 +1027,7 @@ Services:
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.9\textwidth]{assessment.png} 
+    \includegraphics[width=0.6\textwidth]{assessment.png} 
     \caption{Visualización: índice con resultados de la evaluación}
     \label{fig:es-assessment}
   \end{center}
@@ -1041,7 +1038,39 @@ Services:
 
 A continuación se va a exponer una comparativa entre los resultados obtenidos
 ene el procesamiento de las métricas en JenaDQ y en SparkDQ. Se pueden consultar
-en las tablas \ref{tab-jenadq} y \ref{tab-sparkdq}.
+en las tablas \ref{tab-jenadq} y \ref{tab-sparkdq}. En la tabla \ref{tab-jenadq}
+se evalúa la eficiencia del cálculo de las métricas para Interlinking
+considerando los dos tipos de algoritmos desarrollados para las consultas:
+declarativo e iterativo (véase
+\cite{PFC}). Mientras, en la tabla \ref{tab-sparkdq} se muestran los resultados
+de las evaluaciones en la \acs{PoC}. 
+
+Se puede observar cómo la diferencia de tiempos es notable ante un número de nodos mayor. 
+
+\vspace{1cm}
+Sin embargo conviene considerar los siguientes factores: 
+
+\begin{itemize}
+\item JenaDQ en sus dos algoritmos, debido al número de triplas contenido en un
+  grafo semántico, consulta contra un endpoint \acs{SPARQL} a la hora de
+  recuperar nuevas triplas. Esto produce un sobrecargo en el tiempo de cálculo
+  cada vez que se expanden nodos. 
+\item No obstante, no sería posible procesar de manera centralizada tal volumen
+  de datos, pues se valora en millones de triplas, con lo cual es necesario
+  consultar a un servicio remoto. 
+\item SparkDQ permite una escalabilidad horizontal virtualmente ilimitada, en
+  tanto que cuantos más nodos y más memoria sea asignada a los jobs de Spark que
+  utilicen el stack, se podrá optimizar el tiempo y escalar de manera
+  indefinida. Existen variaciones en los tiempos de carga de los datos (véase
+  tabla \ref{tab-sparkdq}, para evaluaciones de Schema, el salto entre los 10k y
+  70k nodos a la hora de procesar el grafo). Esto es debido al posible
+  \textit{swapping} que los nodos deban hacer al ver llena la memoria. Esta
+  ejecución se ha realizado aprovechando los núcleos de una sola máquina. 
+\item Con estas consideraciones, cabe afirmar que la eficiencia y
+  necesidad de SparkDQ queda de manifiesto ante la diferencia de al menos dos
+  órdenes de magnitud a la hora del procesado de las triplas. 
+\end{itemize}
+
 \input{tables/jenadqresults.tex}
 \input{tables/sparkdqresults.tex}
 

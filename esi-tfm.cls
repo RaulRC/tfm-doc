@@ -32,6 +32,8 @@
 \usepackage[spanish]{babel}
 \usepackage{amssymb}% http://ctan.org/pkg/amssymb
 \usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
 
 \deactivatetilden  % FAQ-CervanTeX-6.html#ss6.7
 
