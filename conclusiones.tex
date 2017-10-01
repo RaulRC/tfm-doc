@@ -95,19 +95,65 @@ comparativos con JenaDQ en la sección \ref{comparativa}.
 
 \begin{definitionlist}
 
-\item[Adición de nuevas \acs{DQD}]
+\item[P1. Heterogeneidad de los formatos de entrada]
+
+Debido a la complejidad de consolidar todos los
+formatos en uno estándar y homogéneo para SparkDQ, el procesamiento de archivos
+\acs{XML} de entrada no es posible y requieren un pre procesamiento para
+pasarlos al formato permitido: \acs{NT}. Actualizar el stack SparkDQ, concretamente SparkRDF para permitir la lectura de
+ficheros en formatos heterogéneos, es decir, que sean tratados y procesados por
+las mismas primitivas datos semánticos almacenados en formatos
+\acs{RDF}/\acs{XML}, \acs{NT} puede suponer un gran avance en términos de
+usabilidad y rendimiento para el stack. 
+
+
+\item[P2. Adición de nuevas \acs{DQD}]
 
 Incrementar el número de dimensiones de calidad sería una labor sumamente
 interesante de cara a completar un Modelo de Calidad de Datos. En este proyecto
-el desarrollo se ha centrado en dos de ellas, que han sido consideradas de
+el desarrollo se ha centrado en dos métricass, que han sido consideradas de
 crucial importancia para el contexto en el que se enmarcan, pero existen otras
 muchas cuya adición aportaría mucho valor a la extensión de JenaDQ y SparkDQ que se ha
 realizado. 
-  
+
+\item[P3. Trabajo específico sobre razonamiento en modelos semánticos
+  distribuidos]
+
+Evaluar el estado de los modelos de razonamiento distribuido y aplicarlo al
+contexto del procesamiento de datos semánticos en estos entornos. Puede
+significar un gran avance en el estado actual de las tecnologías semánticas y de
+la Inteligencia Artificial. Debido a que el problema del procesamiento de datos
+semánticos en entornos distribuidos ha sido sensiblemente tratado en la
+actualidad, no deja de ser uno de muchos campos que podría suponer una línea de
+investigación en sí mismo. 
 
 \end{definitionlist}
 
 \section{Publicaciones}
-??
+
+Del trabajo global llevado a cabo en los últimos años, \acs{PFC} y \acs{TFM},
+han resultado dos proyectos de artículo: 
+
+\begin{itemize}
+\item \textbf{JenaDQ: A Jena Extension to Support Data Quality Context-Aware Assessment
+  of Linked Data}
+
+Resumen de \cite{PFC} con análisis específicos sobre rendimiento, estableciendo
+las bases del análisis contextual de la calida de los datos semánticos. 
+
+\item \textbf{SparkDQ: a Spark Stack to Support Data Quality Context-Aware
+  Assessment of Semantic Triples}
+
+Resumen de resultados sobre el presente trabajo. 
+\end{itemize}
+
+
 \section{Opinión personal}
-bla
+En este apartado abordaré una serie de opiniones en relación a la elección y
+desarrollo del \acs{TFM}.
+
+\subsection{Elección del \acs{TFM}}
+
+\subsection{Elaboración}
+
+\subsection{Trabajo futuro}
