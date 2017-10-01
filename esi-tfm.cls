@@ -30,6 +30,9 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+
 \deactivatetilden  % FAQ-CervanTeX-6.html#ss6.7
 
 %% -- Fundiciones

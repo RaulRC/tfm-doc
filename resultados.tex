@@ -450,6 +450,7 @@ Para abordar esta métrica se distinguen dos fases:
 Finalmente se acaba la iteración con las pruebas correspondientes a la
 funcionalidad desarrollada. 
 
+
 \subsubsection{Ejemplo}
 
 El siguiente ejemplo ilustra el cálculo de la métrica Interlinking para el
@@ -499,8 +500,9 @@ ejemplo pueden consultarse en el apéndice \ref{ex:interlinking}.
 //      +---------+-----+------+------+-------------------+
 
 \end{listing}
-\subsection{Iteración 6: Desarrollo de SparkDQ para la métrica
-  \textit{SchemaCompleteness}}
+\subsection{Iteración 6: Desarrollo de SparkDQ para la métrica \textit{SchemaCompleteness}}
+\label{iteracion6}
+
 
 \input{tables/iter6.tex}
 
@@ -621,6 +623,60 @@ Puede consultarse un ejemplo extraído directamente de las pruebas en el
 apéndice \ref{chap:sparkrdf.test.sc}. Los datos para este caso de pruebas se encuentran a su vez en
 el apéndice \ref{ex:sc}.
 
+
+\subsection{Iteración 6: Razonador para evaluaciones de calidad de datos en SparkDQ}
+
+A la hora de inferir resultados contextuales y puesto que nativamente las
+estructuras de datos de Spark (tales como grafos, \acs{RDD}, o DataFrames) no
+soportan este tipo de operaciones, el razonamiento debe ajustarse a estas formas
+de representación. 
+
+No es posible por lo tanto aplicar directamente razonadores semánticos sobre una
+representación de los datos que no es estrictamente semántica.
+
+No obstante puesto que existe una necesidad real de obtener unos valores
+contextuales en función de los resultados de las métricas, 
+se ha creado un módulo de razonamiento que permite aplicar una
+\acf{UDF} al resultado del cálculo de dichas métricas. La función a aplicar debe
+indicar unos valores umbral de la métrica y devolver como resultado el valor
+contextual que se quiera aplicar. Se ilustra con un ejemplo en los
+listados \ref{spark-udf} y \ref{spark-udf-ex}. 
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Aplicación de \acs{UDF} sobre DataFrame de SparkDQ},captionpos=b, label=spark-udf]
+trait Inference {
+
+  def applyRuleSet(df: DataFrame, targetColumn: String, newColumn: String,
+  ruleSet: UserDefinedFunction): DataFrame= {
+    df.withColumn(newColumn, ruleSet(col(targetColumn)))
+  }
+}
+\end{lstlisting}
+
+\lstset{escapechar=@,language=scala}
+\begin{lstlisting}[caption={Función de inferencia},captionpos=b,
+    label=spark-udf-ex]
+class InterlinkingAssessment(config: DQAssessmentConfiguration, sparkSession:
+           SparkSession, inputFile: String) extends StepTrait with InterlinkingMeasurement
+           with Inference {
+
+  protected val processSparkSession: SparkSession = sparkSession
+  def execute(): Unit = {
+    import processSparkSession.implicits._
+    //[...]
+    def setLevels = udf((value: Double) => {
+      if (value <= 0.34) ``BAD'' else if (value <= 0.67) ``NORMAL'' else ``GOOD''
+    })
+    val result = applyRuleSet(getMeasurementSubgraph(graph.vertices, graph,
+    config.depth),
+      ``measurement'', ``contextualAssessment'', setLevels).toDF()
+\end{lstlisting}
+
+Se propondrá como trabajo futuro el desarrollo de un razonador semántico sobre
+un grafo distribuido basado en reglas en SparkDQ. Puede consultarse una
+formalización del concepto de regla en Scala en el apéndice
+\ref{reasoning-rule}. 
+
 \section{Fase de Transición}
 
 En esta fase del \acs{PUD} se abordarán dos iteraciones. Por un lado, el
@@ -630,7 +686,7 @@ elaboración de todos los documentos necesarios para la entrega del presente
 trabajo, incluyendo manuales, anexos de código y el documento \acs{TFM}. 
 
 \subsection{Iteración 7: Desarrollo de la \acs{PoC}}
-
+\label{iteracion7}
 \input{tables/iter7.tex}
 
 El objetivo de esta \acs{PoC} es ilustrar la capacidad de SparkDQ a través de un

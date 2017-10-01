@@ -1,0 +1,31 @@
+\chapter{SparkDQ: Casos de prueba para \textit{SchemaCompleteness}}
+\label{reasoning-rule}
+\begin{listing}[
+  language = scala,
+  numbers=left,
+  numberstyle=\tiny,
+  stepnumber=5,
+  numbersep=5pt,
+  frame=single,
+  caption  = {SparkDQ: Formalización de reglas en SparkDQ},
+  label    = code:sparkdq.reasoning]
+package org.uclm.alarcos.rrc.reasoning
+
+/**
+  * Created by Raul Reguillo. 
+  */
+
+object Conjunction extends Enumeration {
+  val And, Or = Value
+}
+
+object Operator extends Enumeration {
+  val `>`, `<`, `>=`, `<=`, `==` = Value
+}
+
+case class Antecedent(columnName: String, operator: Operator.Value, value: Double)
+case class Consequent(newColumnName: String, value: Any)
+
+case class Rule(ant: Seq[Antecedent], conjuntion: Conjunction.Value, cons: Consequent)
+case class RuleSet(rules: Seq[Rule])
+\end{listing}
