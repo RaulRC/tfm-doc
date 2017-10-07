@@ -342,10 +342,13 @@ funcionalidad.
 \label{iteracion5}
 \input{tables/iter5.tex}
 
-Se define la métrica \textit{Interlinking} como el índice en el que las
+Se define la métrica \textit{Interlinking} como
+
+\textit{el índice en el que las
 instancias en el conjunto de datos están interconectadas, entendiendo
-interconexión como el \textit{grado} para un determinado nodo del grafo. No
-obstante, se particulariza en el ámbito de los datos enlazados, como el índice de
+interconexión como el \underline{grado} para un determinado nodo del grafo}.
+
+No obstante, se particulariza en el ámbito de los datos enlazados, como el índice de
 conexiones que tiene dicho nodo hacia nodos que no sean hoja, es decir, sigan
 siendo nodos desreferenciables y así tengan un grado mayor a cero. Así,
 para un nodo, se pueden establecer métricas de
@@ -359,7 +362,31 @@ interconexión por niveles:
 \end{itemize}
 
 De esta manera se obtiene una métrica estratificada por niveles. Así, para cada nivel, se
-tendría el número de nodos que son URIs respecto del total de vecinos directos. 
+tendría el número de nodos que son URIs respecto del total de vecinos directos.
+
+\textit{Sea $G$ un grafo formado por un conjunto de nodos $N$ y un conjunto de
+  propiedades de arcos $A$ $<o, d, a>$ de $G$, siendo $o$ un nodo origen de
+  $N$, $d$ un nodo destino de $N$ y $a$ cierta propiedad. Se tiene la métrica
+  como, para un nodo $n$ como: }
+
+
+\vspace{1cm}
+\begin{equation}
+  A_n = \{e \in A \to  o = n\}
+  \label{eq:metricI1}
+\end{equation}
+
+\begin{equation}
+  U_n = \{<o,d_i,a_i> \in A_n \to isURI(a_i) \}
+  \label{eq:metricI2}
+\end{equation}
+
+\begin{equation}
+  DQ_{metricn} = \frac{|U_n|}{|A_n|}
+  \label{eq:metricI3}
+\end{equation}
+
+
 
 Para abordar esta métrica se distinguen dos fases: 
 
