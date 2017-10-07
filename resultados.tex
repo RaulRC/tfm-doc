@@ -45,7 +45,7 @@ Se han obtenido como resultados los siguientes artefactos:
 
 Los requisitos funcionales de cualquier sistema software son aquellos que definen el comportamiento del
 sistema y establecen un punto de partida para elaborar un modelo de casos de
-uso (ver figura \ref{fig:cdu-general}), mientras que los no funcionales son aquellos orientados a aspectos del
+uso (ver figuras \ref{fig:cdu-general1} y  \ref{fig:cdu-general2}), mientras que los no funcionales son aquellos orientados a aspectos del
 sistema que notienen relación con el comportamiento, por ejemplo, el diseño, la
 implementación on la usabilidad. 
 
@@ -140,13 +140,21 @@ Se han identificado dos sistemas, SparkRDF y SparkDQ, con dependencia de éste
 último sobre el primero, conteniendo ambos los casos que se ilustran y se
 detallarán en las iteraciones pertinentes (secciones \ref{iteracion4} y \ref{iteracion5}). 
 
-El modelo general se puede consultar en la figura \ref{fig:cdu-general}.
+El modelo general se puede consultar en las figuras \ref{fig:cdu-general1} y \ref{fig:cdu-general2}.
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{cdu-general2.png} 
-    \caption{Diagrama general de Casos de Uso}
-    \label{fig:cdu-general}
+    \includegraphics[width=0.6\textwidth]{cdu-general2-1.png} 
+    \caption{Diagrama general de Casos de Uso para SparkRDF}
+    \label{fig:cdu-general1}
+  \end{center}
+\end{figure}
+
+\begin{figure}[!h]
+  \begin{center}
+    \includegraphics[width=0.6\textwidth]{cdu-general2-2.png} 
+    \caption{Diagrama general de Casos de Uso para SparkDQ}
+    \label{fig:cdu-general2}
   \end{center}
 \end{figure}
 
@@ -497,7 +505,6 @@ ejemplo pueden consultarse en el apéndice \ref{ex:interlinking}.
   caption  = {SparkDQ: Interlinking. Ilustración.},
   label    = code:sparkdq.inter.ilus]
 
-
 //Graph
 //    A -> B -> D -> F -> G
 //         | \  |
@@ -520,13 +527,7 @@ ejemplo pueden consultarse en el apéndice \ref{ex:interlinking}.
 //      |B        |    3|     0|     3|                0.0|
 //      |C        |    0|     1|     3|               0.25|
 //      |C        |    1|     0|     3|                0.0|
-//      |D        |    0|     2|     3|                0.4|
-//      |D        |    1|     1|     6|0.14285714285714285|
-//      |D        |    2|     0|     3|                0.0|
-//      |E        |    0|     0|     3|                0.0|
-//      |F        |    0|     1|     3|               0.25|
-//      |F        |    1|     0|     3|                0.0|
-//      |G        |    0|     0|     3|                0.0|
+//      .         .     .      .      .                   .
 //      +---------+-----+------+------+-------------------+
 
 \end{listing}
