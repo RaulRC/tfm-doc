@@ -372,7 +372,7 @@ interconexión por niveles:
 De esta manera se obtiene una métrica estratificada por niveles. Así, para cada nivel, se
 tendría el número de nodos que son URIs respecto del total de vecinos directos.
 
-\textit{Sea $G$ un grafo formado por un conjunto de nodos $N$ y un conjunto de
+\textit{Sea $G = <N, A>$ un grafo formado por un conjunto de nodos $N$ y un conjunto de
   propiedades de arcos $A$ $<o, d, a>$ de $G$, siendo $o$ un nodo origen de
   $N$, $d$ un nodo destino de $N$ y $a$ cierta propiedad. Se tiene la métrica
   como, para un nodo $n$ como el número total de objetos no literales para la todas las
@@ -383,12 +383,12 @@ tendría el número de nodos que son URIs respecto del total de vecinos directos
 
 \vspace{1cm}
 \begin{equation}
-  A_n = \{e \in A \to  o = n\}
+  A_n = \{<o_i,d_i,a_i> \in A |  o_i = n\}
   \label{eq:metricI1}
 \end{equation}
 
 \begin{equation}
-  U_n = \{<o,d_i,a_i> \in A_n \to isURI(a_i) \}
+  U_n = \{<o,d_i,a_i> \in A_n | isURI(a_i) \}
   \label{eq:metricI2}
 \end{equation}
 
@@ -551,17 +551,23 @@ estratificado por niveles del grafo puesto que cada nodo vecino del inicial ya
 será una entidad en sí mismo, y la métrica aplicada para ese nodo en ese nivel
 corresponde únicamente a ese sujeto. Se puede enunciar formalmente así: 
 
-\textit{Sea $G$ un grafo formado por un conjunto de nodos $N$ y un conjunto de
-  propiedades para los arcos $A$ de $G$. Sea $PD$ un conjunto de propiedades deseables. El valor de la
+\textit{Sea $G = <N,A>$ un grafo formado por un conjunto de nodos $N$ y un conjunto de
+  propiedades para los arcos $A=<o,d,a>$ de $G$. Sea $PD = \{p_1, p_2,\ldots , p_k \}$ un conjunto de propiedades deseables. El valor de la
 métrica vendrá dado por el número de propiedades de $PD$ que se
 encuentran en $A$, dividido entre el número total de propiedades
 deseables. }
 
-La medida vendrá determinada por las ecuaciones \ref{eq:metricSC1} y \ref{eq:metricSC2}:
+La medida para un nodo $n$ vendrá determinada por las ecuaciones
+\ref{eq:metricSC0}, \ref{eq:metricSC1} y \ref{eq:metricSC2}:
 
 \vspace{1cm}
 \begin{equation}
-R = p \in PD \cap A
+A_n = \{ a_j \in A | o_j = n  \}
+  \label{eq:metricSC0}
+\end{equation}
+
+\begin{equation}
+R = \{ p \in (PD \cap A_n) \}
   \label{eq:metricSC1}
 \end{equation}
 

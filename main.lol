@@ -9,7 +9,7 @@
 \contentsline {lstlisting}{\numberline {5.6}SparkDQ: Interlinking. Ilustraci\IeC {\'o}n.}{71}{lstlisting.5.6}
 \contentsline {lstlisting}{\numberline {5.7}C\IeC {\'a}lculo del ratio}{73}{lstlisting.5.7}
 \contentsline {lstlisting}{\numberline {5.8}C\IeC {\'a}lculo de la m\IeC {\'e}trica en el grafo}{73}{lstlisting.5.8}
-\contentsline {lstlisting}{\numberline {5.9}C\IeC {\'a}lculo de la m\IeC {\'e}trica en colecci\IeC {\'o}n de nodos}{73}{lstlisting.5.9}
+\contentsline {lstlisting}{\numberline {5.9}C\IeC {\'a}lculo de la m\IeC {\'e}trica en colecci\IeC {\'o}n de nodos}{74}{lstlisting.5.9}
 \contentsline {lstlisting}{\numberline {5.10}Aplicaci\IeC {\'o}n de \acs {UDF} sobre DataFrame de SparkDQ}{74}{lstlisting.5.10}
 \contentsline {lstlisting}{\numberline {5.11}Funci\IeC {\'o}n de inferencia}{75}{lstlisting.5.11}
 \contentsline {lstlisting}{\numberline {5.12}Tipos de ejecuci\IeC {\'o}n del job}{76}{lstlisting.5.12}
