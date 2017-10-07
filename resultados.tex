@@ -379,9 +379,6 @@ tendría el número de nodos que son URIs respecto del total de vecinos directos
   triplas del nodo entre el número total de objetos del nodo, en un determinado
   nivel de profundidad.} (Véanse ecuaciones \ref{eq:metricI1}, \ref{eq:metricI2} y \ref{eq:metricI3}).
 
-
-
-\vspace{1cm}
 \begin{equation}
   A_n = \{<o_i,d_i,a_i> \in A |  o_i = n\}
   \label{eq:metricI1}
@@ -396,8 +393,6 @@ tendría el número de nodos que son URIs respecto del total de vecinos directos
   DQ_{metricn} = \frac{|U_n|}{|A_n|}
   \label{eq:metricI3}
 \end{equation}
-
-
 
 Para abordar esta métrica se distinguen dos fases: 
 
@@ -560,7 +555,6 @@ deseables. }
 La medida para un nodo $n$ vendrá determinada por las ecuaciones
 \ref{eq:metricSC0}, \ref{eq:metricSC1} y \ref{eq:metricSC2}:
 
-\vspace{1cm}
 \begin{equation}
 A_n = \{ a_j \in A | o_j = n  \}
   \label{eq:metricSC0}
@@ -576,7 +570,6 @@ R = \{ p \in (PD \cap A_n) \}
   \frac{|R|}{|PD|}
   \label{eq:metricSC2}
 \end{equation}
-\vspace{1cm}    
 
 El cálculo de esta métrica requiere de una serie de pasos que se van a ilustrar
 en los siguientes listados. 
@@ -1032,7 +1025,7 @@ Se han contratado para la \acs{PoC} los siguientes servicios de Amazon Web
 Services: 
 
 \begin{itemize}
-\item Amazon S3: como almacenamiento escalable y distribuído. Existirán tres
+\item Amazon S3: como almacenamiento escalable y distribuído. Existirán dos
   directorios principales: 
   \begin{itemize}
   \item \texttt{poc-tfm-nifi}: como directorio para el almacenamiento de tweets
