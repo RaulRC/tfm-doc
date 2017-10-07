@@ -385,7 +385,7 @@ tendría el número de nodos que son URIs respecto del total de vecinos directos
 \end{equation}
 
 \begin{equation}
-  U_n = \{<o,d_i,a_i> \in A_n | isURI(a_i) \}
+  U_n = \{<o,d_j,a_j> \in A_n | isURI(a_j) \}
   \label{eq:metricI2}
 \end{equation}
 
@@ -531,8 +531,6 @@ ejemplo pueden consultarse en el apéndice \ref{ex:interlinking}.
 \label{iteracion6}
 
 
-\input{tables/iter6.tex}
-
 Se define la métrica \textit{SchemaCompleteness} como el grado en el que las
 clases y propiedades de una ontología están representadas. 
 
@@ -541,10 +539,12 @@ tanto, dado un conjunto de propiedades o relaciones entre sujetos y objetos, la
 métrica se computa como el ratio de relaciones que un determinado sujeto tiene
 con otras entidades. 
 
+
 En este particular no tiene sentido especificar un grado de esta métrica
 estratificado por niveles del grafo puesto que cada nodo vecino del inicial ya
 será una entidad en sí mismo, y la métrica aplicada para ese nodo en ese nivel
-corresponde únicamente a ese sujeto. Se puede enunciar formalmente así: 
+corresponde únicamente a ese sujeto. Se puede enunciar formalmente así:
+
 
 \textit{Sea $G = <N,A>$ un grafo formado por un conjunto de nodos $N$ y un conjunto de
   propiedades para los arcos $A=<o,d,a>$ de $G$. Sea $PD = \{p_1, p_2,\ldots , p_k \}$ un conjunto de propiedades deseables. El valor de la
@@ -570,6 +570,9 @@ R = \{ p \in (PD \cap A_n) \}
   \frac{|R|}{|PD|}
   \label{eq:metricSC2}
 \end{equation}
+
+\input{tables/iter6.tex}
+
 
 El cálculo de esta métrica requiere de una serie de pasos que se van a ilustrar
 en los siguientes listados. 
@@ -698,6 +701,7 @@ trait Inference {
 }
 \end{lstlisting}
 
+\newpage
 \lstset{escapechar=@,language=scala}
 \begin{lstlisting}[caption={Función de inferencia},captionpos=b,
     label=spark-udf-ex]
@@ -726,13 +730,14 @@ formalización del concepto de regla en Scala en el apéndice
 \label{onto-results}
 Se ha desacoplado cualquier vocabulario u ontología de la salida de los
 resultados de las evaluaciones en SparkDQ. Esto atiende a dos razones principales: 
-\begin{enumerate}
-\item Delegar en el usuario final qué ontología desea utilizar para representar
-  los resultados de sus evaluaciones. 
-\item Mantener los resultados en estructuras de datos distribuidas nativas de
-  Spark permite la extensibilidad de este trabajo y la interconexión con otros
-  módulos del ecosistema Spark/Hadoop. 
-\end{enumerate}
+
+En primer lugar, la de delegar en el usuario final qué ontología desea utilizar para representar
+los resultados de sus evaluaciones.
+
+En segundo lugar, mantener los resultados en estructuras de datos distribuidas nativas de
+Spark permite la extensibilidad de este trabajo y la interconexión con otros
+módulos del ecosistema Spark/Hadoop. 
+
 
 \section{Fase de Transición}
 

@@ -11,7 +11,7 @@
 \contentsline {lstlisting}{\numberline {5.8}C\IeC {\'a}lculo de la m\IeC {\'e}trica en el grafo}{73}{lstlisting.5.8}
 \contentsline {lstlisting}{\numberline {5.9}C\IeC {\'a}lculo de la m\IeC {\'e}trica en colecci\IeC {\'o}n de nodos}{73}{lstlisting.5.9}
 \contentsline {lstlisting}{\numberline {5.10}Aplicaci\IeC {\'o}n de \acs {UDF} sobre DataFrame de SparkDQ}{74}{lstlisting.5.10}
-\contentsline {lstlisting}{\numberline {5.11}Funci\IeC {\'o}n de inferencia}{74}{lstlisting.5.11}
+\contentsline {lstlisting}{\numberline {5.11}Funci\IeC {\'o}n de inferencia}{75}{lstlisting.5.11}
 \contentsline {lstlisting}{\numberline {5.12}Tipos de ejecuci\IeC {\'o}n del job}{76}{lstlisting.5.12}
 \contentsline {lstlisting}{\numberline {5.13}Archivo de configuraci\IeC {\'o}n del job}{77}{lstlisting.5.13}
 \contentsline {lstlisting}{\numberline {5.14}Campos de salida para las m\IeC {\'e}tricas estad\IeC {\'\i }sticas sobre la evaluaci\IeC {\'o}n de calidad}{78}{lstlisting.5.14}
