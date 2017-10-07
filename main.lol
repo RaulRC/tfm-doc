@@ -16,13 +16,13 @@
 \contentsline {lstlisting}{\numberline {5.13}Archivo de configuraci\IeC {\'o}n del job}{77}{lstlisting.5.13}
 \contentsline {lstlisting}{\numberline {5.14}Campos de salida para las m\IeC {\'e}tricas estad\IeC {\'\i }sticas sobre la evaluaci\IeC {\'o}n de calidad}{78}{lstlisting.5.14}
 \contentsline {lstlisting}{\numberline {5.15}Entidades de transformaci\IeC {\'o}n en Scala}{82}{lstlisting.5.15}
-\contentsline {lstlisting}{\numberline {A.1}Ontolog\IeC {\'\i }a de tweets: Ontotwitter}{95}{lstlisting.Alph1.1}
-\contentsline {lstlisting}{\numberline {B.1}Vocabulario utilizado para los resultados finales}{101}{lstlisting.Alph2.1}
-\contentsline {lstlisting}{\numberline {C.1}Microservicio DockerNiFi: DockerFIle}{107}{lstlisting.Alph3.1}
-\contentsline {lstlisting}{\numberline {D.1}ms.semtweet: transformaci\IeC {\'o}n a triplas}{109}{lstlisting.Alph4.1}
-\contentsline {lstlisting}{\numberline {E.1}ms.semtweet: DockerFile}{113}{lstlisting.Alph5.1}
-\contentsline {lstlisting}{\numberline {F.1}SparkDQ: Fragmento de tests unitarios para Schema Completeness}{115}{lstlisting.Alph6.1}
-\contentsline {lstlisting}{\numberline {G.1}SparkDQ: Fragmento de tests unitarios para Interlinking}{117}{lstlisting.Alph7.1}
-\contentsline {lstlisting}{\numberline {H.1}SparkDQ: Formalizaci\IeC {\'o}n de reglas en SparkDQ}{119}{lstlisting.Alph8.1}
-\contentsline {lstlisting}{\numberline {I.1}Datos utilizados para el ejemplo Interlinking}{121}{lstlisting.Alph9.1}
-\contentsline {lstlisting}{\numberline {J.1}Datos utilizados para el ejemplo SchemaCompleteness}{123}{lstlisting.Alph10.1}
+\contentsline {lstlisting}{\numberline {A.1}Ontolog\IeC {\'\i }a de tweets: Ontotwitter}{93}{lstlisting.Alph1.1}
+\contentsline {lstlisting}{\numberline {B.1}Vocabulario utilizado para los resultados finales}{99}{lstlisting.Alph2.1}
+\contentsline {lstlisting}{\numberline {C.1}Microservicio DockerNiFi: DockerFIle}{105}{lstlisting.Alph3.1}
+\contentsline {lstlisting}{\numberline {D.1}ms.semtweet: transformaci\IeC {\'o}n a triplas}{107}{lstlisting.Alph4.1}
+\contentsline {lstlisting}{\numberline {E.1}ms.semtweet: DockerFile}{111}{lstlisting.Alph5.1}
+\contentsline {lstlisting}{\numberline {F.1}SparkDQ: Fragmento de tests unitarios para Schema Completeness}{113}{lstlisting.Alph6.1}
+\contentsline {lstlisting}{\numberline {G.1}SparkDQ: Fragmento de tests unitarios para Interlinking}{115}{lstlisting.Alph7.1}
+\contentsline {lstlisting}{\numberline {H.1}SparkDQ: Formalizaci\IeC {\'o}n de reglas en SparkDQ}{117}{lstlisting.Alph8.1}
+\contentsline {lstlisting}{\numberline {I.1}Datos utilizados para el ejemplo Interlinking}{119}{lstlisting.Alph9.1}
+\contentsline {lstlisting}{\numberline {J.1}Datos utilizados para el ejemplo SchemaCompleteness}{121}{lstlisting.Alph10.1}
