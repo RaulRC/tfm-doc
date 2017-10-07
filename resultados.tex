@@ -281,7 +281,7 @@ documentos en formato \texttt{TTL} o \texttt{NT}, es decir, en forma de triplas,
 del fichero tiene tres campos separados por espacio, siendo dichos campos sujeto,
 predicado y objeto, respectivamente. El listado \ref{rdflector} muestra un
 fragmento de código encargado de la lectura de triplas y almacenamiento en un
-RDD. 
+\acs{RDD}. Se define \acs{RDD} en la sección \ref{sec:eco-hadoop}.
 
 \lstset{escapechar=@,language=scala}
 \begin{lstlisting}[caption={Fragmento del lector de triplas},captionpos=b, label=rdflector]
@@ -296,7 +296,7 @@ def loadTriplets(sparkSession: SparkSession, path: String): RDD[Triple] = {
 \end{lstlisting}
 
 Una vez cargadas las triplas y puesto que la información semántica es
-inherentemente un grafo, se utiliza la extensión GraphX de Spark para generar un
+inherentemente un grafo, se utiliza la extensión GraphX (véase sección \ref{sec:eco-hadoop}) de Spark para generar un
 grafo dirigido de triplas semánticas, en el que los nodos son sujetos y objetos y los
 arcos son las relaciones entre los nodos. El listado \ref{graphcomposer} ilustra
 esta funcionalidad. 
@@ -320,7 +320,7 @@ private def getSemanticGraph(tripleRDD: RDD[Triple]): org.apache.spark.graphx.Gr
 }
 \end{lstlisting}
 
-El tratamiento de los datos RDF y por ende las responsabilidades de este
+El tratamiento de los datos \acs{RDF} y por ende las responsabilidades de este
 artefacto no terminan solamente con la lectura y transformación a una estructura
 de grafo distribuida, sino que cualquier operación de tratamiento y consulta de
 estos datos debe delegar en esta capa de abstracción. Así pues, además de las
@@ -330,7 +330,8 @@ objetos o funciones de consulta como las de buscar nodos que cumplan cierta
 propiedad. 
 
 Como se verá en la siguiente sección, existe una función clave para el
-desarrollo de este proyecto y el cálculo de las métricas, que queda delegada a
+desarrollo de este proyecto y el cálculo de las métricas que consiste en la
+expansión de nodos de un grafo en varios niveles de profundidad y que queda delegada a
 SparkRDF:
 
 \lstset{escapechar=@,language=scala}
@@ -342,17 +343,12 @@ def expandNodesNLevel(nodes: VertexRDD[Node],
                         levels: Int = 1): Dataset[Row]   
 \end{lstlisting}
 
-Su funcionalidad es la de, dada una colección de nodos, expandir en N capas esos
-nodos. En la siguiente sección se explicará en detalle la necesidad de esta
-funcionalidad. 
 
 \subsection{Iteración 5: Desarrollo de SparkDQ para la métrica \textit{Interlinking}}
 \label{iteracion5}
 \input{tables/iter5.tex}
 
-Se define la métrica \textit{Interlinking} como
-
-\textit{el índice en el que las
+Se define la métrica \textit{Interlinking} como \textit{el índice en el que las
 instancias en el conjunto de datos están interconectadas, entendiendo
 interconexión como el \underline{grado} para un determinado nodo del grafo}.
 
@@ -580,7 +576,7 @@ en los siguientes listados.
 \begin{itemize}
 \item En primer lugar, se define una función que calcula el valor de la métrica en sí
 mismo, esto es, el ratio entre el total de relaciones para un nodo que están
-incluídas en la lista de propiedades. Esta función se muestra en el listado
+incluidas en la lista de propiedades. Esta función se muestra en el listado
 \ref{graphmetricRatio}. Cabe destacar la secuencia de control de la métrica para
 valores mayores que 1. Pueden darse en el caso de que un nodo esté conectado con
 otros a través de la misma propiedad más de una vez, por ello es importante
@@ -597,7 +593,7 @@ propiedades.
 \item Aplicando la función inicial para cada nodo del grafo, se obtiene la métrica
 global para todos los nodos. 
 \item En el paso final, se filtran los nodos del grafo para los nodos candidatos que
-quieran evaluarse, como se muestra en el listado \ref{graphmetricSC}.
+quieran evaluarse, considerando únicamente un subconjunto del grafo total. Se muestra en el listado \ref{graphmetricSC}.
 
 \end{itemize}
 
