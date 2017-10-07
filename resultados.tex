@@ -367,7 +367,10 @@ tendría el número de nodos que son URIs respecto del total de vecinos directos
 \textit{Sea $G$ un grafo formado por un conjunto de nodos $N$ y un conjunto de
   propiedades de arcos $A$ $<o, d, a>$ de $G$, siendo $o$ un nodo origen de
   $N$, $d$ un nodo destino de $N$ y $a$ cierta propiedad. Se tiene la métrica
-  como, para un nodo $n$ como: }
+  como, para un nodo $n$ como el número total de objetos no literales para la todas las
+  triplas del nodo entre el número total de objetos del nodo, en un determinado
+  nivel de profundidad.} (Véanse ecuaciones \ref{eq:metricI1}, \ref{eq:metricI2} y \ref{eq:metricI3}).
+
 
 
 \vspace{1cm}
@@ -560,7 +563,6 @@ R = p \in PD \cap A
   \label{eq:metricSC1}
 \end{equation}
 
-\vspace{1cm}
 \begin{equation}
   DQ_{Measure} = 
   \frac{|R|}{|PD|}
@@ -614,27 +616,27 @@ quieran evaluarse, como se muestra en el listado \ref{graphmetricSC}.
     import processSparkSession.implicits._
     val edgeRDD = graph.edges.filter(l => true)
 
-    val propIdsRDD = properties.map(p => edgeRDD.filter(l =>
-    l.attr.hasURI(p))).reduce(_ union _)
-    //TODO toDF().distinct by srcId, attr.URI(bla)
-      .map(l => l.srcId).cache()
+        val propIdsRDD = properties.map(p => edgeRDD.map(ll => (ll.srcId,
+        ll.attr)).distinct().filter(l => l._2.hasURI(p))).reduce(_ union _)
+        .map(l => l._1).cache()
 
-
-    val nonPropsDF = edgeRDD.map(l => l.srcId).toDF(Seq(``source''): _*)
-    nonPropsDF.join(propIdsRDD
-      .toDF(Seq(``sourceProp''): _*)
-      .groupBy($''sourceProp'').agg(count($''sourceProp'') as ``propCount'')
-      .withColumn(``totalProperties'', lit(properties.length))
-      .withColumn(``meas'', getRatio($''propCount'', $''totalProperties''))
-      .drop($''propCount'')
-      .drop($''totalProperties'')
-      .drop($''srcId''), $''source'' === $''sourceProp'', ``leftouter'')
-      .drop($''sourceProp'')
+        val nonPropsDF = edgeRDD.map(l => l.srcId).toDF(Seq(``source''): _*)
+        nonPropsDF.join(propIdsRDD
+        .toDF(Seq(``sourceProp''): _*)
+              .groupBy($''sourceProp'').agg(count($''sourceProp'') as
+        ``propCount'')
+        .withColumn(``totalProperties'', lit(properties.length))
+              .withColumn(``meas'', getRatio($''propCount'',
+        $''totalProperties''))
+        .drop($''propCount'')
+        .drop($''totalProperties'')
+        .drop($''srcId''), $''source'' === $''sourceProp'', ``leftouter'')
+        .drop($''sourceProp'')
         .withColumn(``measurement'', when(
-          col(``meas'').isNull, 0.0
+        col(``meas'').isNull, 0.0
         ).otherwise(col(``meas'')))
-      .drop($''meas'')
-      .distinct()
+        .drop($''meas'')
+              .distinct()
   }
 
 \end{lstlisting}
