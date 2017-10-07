@@ -144,7 +144,7 @@ El modelo general se puede consultar en la figura \ref{fig:cdu-general}.
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{cdu-general.png} 
+    \includegraphics[width=0.6\textwidth]{cdu-general2.png} 
     \caption{Diagrama general de Casos de Uso}
     \label{fig:cdu-general}
   \end{center}
@@ -261,7 +261,7 @@ construcción tendrá lugar el desarrollo del núcleo de la aplicación, esto es
 los artefactos clave de desarrollo: SparkRDF y SparkDQ, en las iteraciones 4 y 5
 respectivamente. Se considera el ciclo completo de desarrollo en estos puntos:
 Análisis, Diseño, Implementación y Pruebas. Dichas pruebas tendrán lugar en la
-fase final como parte de un paso de \acf{QA}, y serán indicativas sobre la
+fase final como parte de un paso de \acs{QA}, y serán indicativas sobre la
 repetición del ciclo en caso de que los resultados no sean los esperados. 
 
 \subsection{Iteración 4: Desarrollo de SparkRDF}
@@ -519,10 +519,27 @@ estratificado por niveles del grafo puesto que cada nodo vecino del inicial ya
 será una entidad en sí mismo, y la métrica aplicada para ese nodo en ese nivel
 corresponde únicamente a ese sujeto. Se puede enunciar formalmente así: 
 
-Sea G un grafo formado por un conjunto de nodos N y un conjunto de arcos A. Sea PD un conjunto de propiedades deseables. El valor de la
-métrica vendrá dado por el número de propiedades de PD que se
-encuentran reflejados en A, dividido entre el número total de propiedades
-deseables. 
+\textit{Sea $G$ un grafo formado por un conjunto de nodos $N$ y un conjunto de
+  propiedades para los arcos $A$ de $G$. Sea $PD$ un conjunto de propiedades deseables. El valor de la
+métrica vendrá dado por el número de propiedades de $PD$ que se
+encuentran en $A$, dividido entre el número total de propiedades
+deseables. }
+
+La medida vendrá determinada por las ecuaciones \ref{eq:metricSC1} y \ref{eq:metricSC2}:
+
+\vspace{1cm}
+\begin{equation}
+R = p \in PD \cap A
+  \label{eq:metricSC1}
+\end{equation}
+
+\vspace{1cm}
+\begin{equation}
+  DQ_{Measure} = 
+  \frac{|R|}{|PD|}
+  \label{eq:metricSC2}
+\end{equation}
+\vspace{1cm}    
 
 El cálculo de esta métrica requiere de una serie de pasos que se van a ilustrar
 en los siguientes listados. 
@@ -561,8 +578,6 @@ quieran evaluarse, como se muestra en el listado \ref{graphmetricSC}.
   })
 \end{lstlisting}
 
-
-//TODO IN CODE: filtro en propIdsRDD para hacer distinct de propiedades. 
 
 \lstset{escapechar=@,language=scala}
 \begin{lstlisting}[caption={Cálculo de la métrica en el grafo},captionpos=b, label=graphmetricSCglobal]
@@ -1090,13 +1105,11 @@ Sin embargo conviene considerar los siguientes factores:
 
 \input{tables/iter8.tex}
 
-La última de las iteraciones ha consistido en un trabajo de documentación
-detallado de todos los pasos que han tenido lugar para la elaboración del
+La última de las iteraciones ha consistido en la entrega del
 presente trabajo, dando como resultado los siguientes elementos: 
 
 \begin{itemize}
-\item Memoria del \acs{TFM}.
-\item ScalaDoc de SparkRDF y SparkDQ.
+\item Memoria del \acs{TFM} revisada.
 \item Anexos.
   \begin{itemize}
   \item Ontología de tweets.
@@ -1110,4 +1123,4 @@ La totalidad de la memoria ha sido realizada en \LaTeX, mientras que la
 documentación de las diferentes \acs{API}s se ha generado con ScalaDoc, análogo
 a JavaDoc. 
 
-Todos los archivos de ontologías han sido incluidos en la documentación. 
+Todos los archivos de ontologías han sido incluidos en la memoria.
