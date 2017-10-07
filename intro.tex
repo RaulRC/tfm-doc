@@ -53,8 +53,7 @@ más concretamente por calidad de los datos (\acs{DQ}).
 
 
 Existen varias definiciones de calidad que conviene considerar a la hora de
-abordar el proyecto. En primer lugar, se va a exponer la definición que la Real
-Academia Española de la lengua otorga a este término: 
+abordar el proyecto. Se entiende como calidad a: 
 
 \textit{Propiedad o conjunto de propiedades
   inherentes a algo que permiten juzgar su valor}.
@@ -92,10 +91,13 @@ Con la irrupción de las tecnologías Big Data y dadas las necesidades que exist
 de procesamiento distribuido sobre grandes volúmenes de información, encontramos
 que el problema de la evaluación de la calidad de los datos semánticos se
 extiende a este ámbito, no pudiendo encontrar ningún framework que permita
-trabajar la calidad de los datos semánticos de manera distribuida. 
+trabajar la calidad de los datos semánticos de manera distribuida.
 
-Considerando la no disponibilidad de operaciones de evaluación de calidad de datos en los
-frameworks de desarrollo de tecnologías semánticas, el objetivo del \acf{TFM}
+
+
+Siendo el problema la ausencia de herramientas que permitan el procesamiento
+distribuido de datos semánticos y por otra parte la necesidad de llevar a cabo
+evaluaciones de calidad sobre grandes volúmenes de datos semánticos, el objetivo del \acf{TFM}
 consiste en el desarrollo de una capa tecnológica (stack) para uno de estos frameworks. La finalidad de
 dicho stack será la de diseñar, implementar y poner a disposición de la
 comunidad un conjunto de primitivas de evaluación de calidad de datos para uno de
@@ -190,8 +192,10 @@ Como incremento respecto al PFC, cabe destacar los siguientes aspectos:
 
 \section{Logro de competencias planteadas}
 
+A continuación se expone un listado de competencias planteadas:
+
 \begin{itemize}
-\item[\textbf{CE1*}] Capacidad para la integración de tecnologías, aplicaciones, servicios
+\item[\textbf{CE1}] Capacidad para la integración de tecnologías, aplicaciones, servicios
   y sistemas propios de la Ingeniería Informática, con carácter generalista, y
   en contextos más
 amplios y multidisciplinares
@@ -207,7 +211,7 @@ medioambientales y en entornos de trabajo multidisciplinares.
   desarrollo e innovación, en empresas y centros tecnológicos, con garantía de
   la seguridad para
 las personas y bienes, la calidad final de los productos y su homologación. 
-\item [\textbf{CE4*}] Capacidad para modelar, diseñar, definir la arquitectura, implantar,
+\item [\textbf{CE4}] Capacidad para modelar, diseñar, definir la arquitectura, implantar,
 gestionar,
 operar, administrar y mantener aplicaciones, redes, sistemas, servicios y
 contenidos informáticos.
@@ -217,7 +221,7 @@ de
 Internet, las tecnologías y protocolos de redes de nueva generación, los modelos
 de componentes, software intermediario y servicios.
 
-\item[\textbf{CE6*}] Capacidad para asegurar, gestionar, auditar y certificar la calidad de los
+\item[\textbf{CE6}] Capacidad para asegurar, gestionar, auditar y certificar la calidad de los
 desarrollos, procesos, sistemas, servicios, aplicaciones y productos
 informáticos.
 
@@ -249,13 +253,44 @@ inteligentes y sistemas basados en el conocimiento.
 programas
 de uso específico, normas y estándares de computación gráfica.
 
-\item[\textbf{CE14*}] Capacidad para conceptualizar, diseñar, desarrollar y evaluar la
+\item[\textbf{CE14}] Capacidad para conceptualizar, diseñar, desarrollar y evaluar la
 interacción
 persona-ordenador de productos, sistemas, aplicaciones y servicios informáticos.
-\item[\textbf{CE15*}] Capacidad para la creación y explotación de entornos virtuales, y para la
-creación, gestión y distribución de contenidos multimedia.
+\item[\textbf{CE15}] Capacidad para la creación y explotación de entornos virtuales.
+
 
 \end{itemize}
+
+La competencia \textbf{CE1} se ha alcanzado a través de la integración de
+diversas tecnologías en distintos ámbitos. Aplicaciones, servicios cloud
+ofrecidos por Amazon Web Services, integración y creación de elementos para
+frameworks y aplicaciones \textit{end to end} que involucran aspectos desde
+enrutamiento de datos hasta visualización de los mismos. 
+
+La competencia \textbf{CE4} se ha logrado mediante el diseño e implementación de
+la arquitectura elaborada en este TFM, así como la configuración y despliegue
+de los servidores y almacenamiento distribuido usando tecnologías cloud,
+securizándolas, e incluyendo elementos en el \textit{end to end} del
+ecosistema Apache Hadoop. 
+
+
+Se ha alcanzado la competencia \textbf{CE6} mediante la rigurosa fase de calidad
+y pruebas, \acf{QA}, ya sea a través de test unitarios como por test
+automatizados por parte de los proveedores de la nube. Se ha sometido a todo artefacto presente en el
+trabajo a un riguroso proceso de calidad. Igualmente, la calidad de los datos ha tenido especial relevancia debido al
+problema que se resuelve en este proyecto, desarrollando métricas para
+evaluarla. 
+
+
+Para la competencia \textbf{CE14} se ha hecho especial hincapié en la
+visualización de los resultados de las evaluaciones así como recalcar la
+importancia del visionado del procesamiento de los datos a través de
+herramientas conceptuales tales como \acf{DAG}. 
+
+La competencia \textbf{CE15} ha tenido un peso especial para el desarrollo de
+este proyecto debido a la necesidad de virtualización existente para cada uno de
+los componentes. Se ha alcanzado la competencia a través de la virtualización de
+diversos servicios, tanto locales como en la nube. 
 
 \section{Estructura del documento}
 
