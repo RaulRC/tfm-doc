@@ -203,10 +203,10 @@ Ra\'ul Reguillo~Carmona y Ismael Caballero Mu\~noz Reja.
 {RDF} - Semantic Web Standards.
 \newblock url: \url{http://www.w3.org/RDF/}.
 
-\bibitem[RJB]{rumbaugh_jacobson_pud}
+\bibitem[RJB00]{rumbaugh_jacobson_pud}
 James Rumbaugh, Ivar Jacobson, y Grady Booch.
 \newblock {\em {EL} {PROCESO} {UNIFICADO} {DE} {DESARROLLO} {DE} {SOFTWARE}}.
-\newblock Addison Wesley.
+\newblock Addison Wesley, Julio 2000.
 
 \bibitem[RJB04]{rumbaugh_unified_2004}
 James Rumbaugh, Ivar Jacobson, y Grady Booch.
