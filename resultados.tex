@@ -144,7 +144,7 @@ El modelo general se puede consultar en las figuras \ref{fig:cdu-general1} y \re
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{cdu-general2-1.png} 
+    \includegraphics[width=1.0\textwidth]{cdu-general2-1.png} 
     \caption{Diagrama general de Casos de Uso para SparkRDF}
     \label{fig:cdu-general1}
   \end{center}
@@ -152,7 +152,7 @@ El modelo general se puede consultar en las figuras \ref{fig:cdu-general1} y \re
 
 \begin{figure}[!h]
   \begin{center}
-    \includegraphics[width=0.6\textwidth]{cdu-general2-2.png} 
+    \includegraphics[width=1.0\textwidth]{cdu-general2-2.png} 
     \caption{Diagrama general de Casos de Uso para SparkDQ}
     \label{fig:cdu-general2}
   \end{center}
@@ -274,6 +274,7 @@ repetición del ciclo en caso de que los resultados no sean los esperados.
 
 \subsection{Iteración 4: Desarrollo de SparkRDF}
 \label{iteracion4}
+
 \input{tables/iter4.tex}
 
 SparkRDF utiliza un sub-módulo de Apache Jena (riot) para la lectura de
@@ -282,6 +283,7 @@ del fichero tiene tres campos separados por espacio, siendo dichos campos sujeto
 predicado y objeto, respectivamente. El listado \ref{rdflector} muestra un
 fragmento de código encargado de la lectura de triplas y almacenamiento en un
 \acs{RDD}. Se define \acs{RDD} en la sección \ref{sec:eco-hadoop}.
+
 
 \lstset{escapechar=@,language=scala}
 \begin{lstlisting}[caption={Fragmento del lector de triplas},captionpos=b, label=rdflector]
